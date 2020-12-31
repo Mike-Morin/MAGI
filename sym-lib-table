@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name PNN_PS_01-rescue)(type Legacy)(uri ${KIPRJMOD}/PNN_PS_01-rescue.lib)(options "")(descr ""))
-)
