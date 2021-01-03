@@ -2266,7 +2266,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 4725 4925 4725
 Wire Wire Line
-	4925 4725 5100 4725
+	4925 4725 5025 4725
 Connection ~ 4925 4725
 Wire Wire Line
 	5025 5300 5125 5300
@@ -2579,10 +2579,60 @@ Wire Wire Line
 Connection ~ 5825 6550
 Connection ~ 6675 6275
 Wire Wire Line
-	5500 4725 6275 4725
+	5500 4725 5875 4725
 Wire Wire Line
 	6275 4725 6275 5050
 Wire Wire Line
 	6275 5050 6675 5050
 Connection ~ 6675 5050
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:DMG2305UX-13 Q?
+U 1 1 6324FA80
+P 5675 4400
+F 0 "Q?" V 5942 4400 60  0000 C CNN
+F 1 "Si2347DS" V 5836 4400 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 5875 4600 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" H 5875 4700 60  0001 L CNN
+F 4 "DMG2305UX-13DICT-ND" H 5875 4800 60  0001 L CNN "Digi-Key_PN"
+F 5 "DMG2305UX-13" H 5875 4900 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 5875 5000 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 5875 5100 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" H 5875 5200 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/DMG2305UX-13/DMG2305UX-13DICT-ND/4251589" H 5875 5300 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET P-CH 20V 4.2A SOT23" H 5875 5400 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 5875 5500 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5875 5600 60  0001 L CNN "Status"
+	1    5675 4400
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5575 4775 5575 4700
+$Comp
+L Device:R_Small_US R?
+U 1 1 6324FA87
+P 5575 4875
+F 0 "R?" H 5643 4921 50  0000 L CNN
+F 1 "100R" H 5643 4830 50  0000 L CNN
+F 2 "" H 5575 4875 50  0001 C CNN
+F 3 "~" H 5575 4875 50  0001 C CNN
+	1    5575 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 4400 5025 4400
+Wire Wire Line
+	5025 4400 5025 4725
+Connection ~ 5025 4725
+Wire Wire Line
+	5025 4725 5100 4725
+Wire Wire Line
+	5875 4400 5875 4725
+Connection ~ 5875 4725
+Wire Wire Line
+	5875 4725 6275 4725
+Wire Wire Line
+	5575 4975 5575 5300
+Wire Wire Line
+	5575 5300 5200 5300
+Connection ~ 5200 5300
 $EndSCHEMATC
