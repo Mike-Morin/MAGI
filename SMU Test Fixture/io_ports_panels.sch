@@ -383,11 +383,11 @@ ext_50_ohm_r
 Wire Wire Line
 	2800 1575 2675 1575
 Text GLabel 7600 4800 1    50   Output ~ 0
-ext_acdc_a_s
+ext_acdc_a_p_s
 Wire Wire Line
 	7600 4800 7725 4800
 Text GLabel 8450 4800 1    50   Output ~ 0
-ext_acdc_a_r
+ext_acdc_a_p_r
 Wire Wire Line
 	8450 4800 8325 4800
 Text GLabel 3725 5075 1    50   Output ~ 0
@@ -850,17 +850,17 @@ ext_meas_sel_b_s
 Text GLabel 3600 4875 1    50   Output ~ 0
 ext_meas_sel_b_r
 Text GLabel 6450 4800 1    50   Output ~ 0
-ext_acdc_b_s
+ext_acdc_b_p_s
 Text GLabel 7300 4800 1    50   Output ~ 0
-ext_acdc_b_r
+ext_acdc_b_p_r
 Wire Wire Line
 	6450 4800 6575 4800
 Wire Wire Line
 	7175 4800 7300 4800
 Text GLabel 5450 1750 1    50   Output ~ 0
-ext_acdc_a_s
+ext_acdc_a_n_s
 Text GLabel 6350 1750 1    50   Output ~ 0
-ext_acdc_a_r
+ext_acdc_a_n_r
 Wire Wire Line
 	5450 1775 5450 1750
 Wire Wire Line

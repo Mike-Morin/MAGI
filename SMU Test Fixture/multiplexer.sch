@@ -135,9 +135,9 @@ Wire Wire Line
 	3425 4350 3425 4650
 Connection ~ 3425 4650
 Text Label 6175 4725 0    50   ~ 0
-scope_2
+scope_2_p
 Text Label 6175 4200 0    50   ~ 0
-scope_1
+scope_1_p
 Wire Wire Line
 	6175 4200 6075 4200
 Text GLabel 3925 3250 1    50   Input ~ 0
