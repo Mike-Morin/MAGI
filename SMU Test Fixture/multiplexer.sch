@@ -34,14 +34,6 @@ F6 "IV_src_input" I L 1875 3750 50
 F7 "ammeter_meas_output" O R 3275 4150 50 
 F8 "phi_int_output" O R 3275 3950 50 
 $EndSheet
-$Sheet
-S 3625 4900 850  200 
-U 600C9795
-F0 "DUT Selector" 50
-F1 "DUT_Selector.sch" 50
-F2 "dut_p" I L 3625 5000 50 
-F3 "dut_n" I R 4475 5000 50 
-$EndSheet
 $Comp
 L power:GND #PWR05
 U 1 1 6044978E
@@ -58,7 +50,7 @@ Wire Wire Line
 Wire Wire Line
 	4625 5000 4475 5000
 $Sheet
-S 4950 925  675  1100
+S 4950 925  800  1175
 U 5FC2AF5A
 F0 "I/O Ports & Panels" 50
 F1 "io_ports_panels.sch" 50
@@ -72,6 +64,7 @@ F8 "ext_source" O L 4950 1625 50
 F9 "ext_meas_dut" O L 4950 1725 50 
 F10 "ext_meas_phiqi" O L 4950 1825 50 
 F11 "ph_meter" I L 4950 1925 50 
+F12 "ad2_cal_scope_p" I L 4950 2025 50 
 $EndSheet
 $Comp
 L Relay:EE2-12SNUH K?
@@ -343,10 +336,10 @@ Text Label 5100 4600 2    50   ~ 0
 ph_meter
 Wire Wire Line
 	5100 4600 5175 4600
-Text Label 4825 1925 2    50   ~ 0
+Text Label 4875 1925 2    50   ~ 0
 ph_meter
 Wire Wire Line
-	4825 1925 4950 1925
+	4875 1925 4950 1925
 Wire Wire Line
 	5000 4650 5000 4725
 Wire Wire Line
@@ -370,6 +363,7 @@ F6 "outputa" O R 5975 4200 50
 F7 "input_5a" I L 5175 4600 50 
 F8 "outputb" O R 5975 4725 50 
 F9 "input_1b" I L 5175 4725 50 
+F10 "ad2_cal_scope_p" I L 5175 4875 50 
 $EndSheet
 Wire Wire Line
 	6075 4725 6075 4825
@@ -526,4 +520,20 @@ U 64A89145
 F0 "Power Supplies" 50
 F1 "power_supplies.sch" 50
 $EndSheet
+$Sheet
+S 3625 4900 850  200 
+U 600C9795
+F0 "DUT Selector" 50
+F1 "DUT_Selector.sch" 50
+F2 "dut_p" I L 3625 5000 50 
+F3 "dut_n" I R 4475 5000 50 
+$EndSheet
+Text Label 4875 2025 2    50   ~ 0
+ad2_cal_scope_p
+Wire Wire Line
+	4875 2025 4950 2025
+Text Label 5100 4875 2    50   ~ 0
+ad2_cal_scope_p
+Wire Wire Line
+	5100 4875 5175 4875
 $EndSCHEMATC

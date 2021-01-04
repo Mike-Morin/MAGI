@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 8
+Sheet 4 8
 Title "I / O and Panel"
 Date "2020-11-29"
 Rev "A"
@@ -14,12 +14,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_Coaxial J4
+L Connector:Conn_Coaxial J3
 U 1 1 60665C26
 P 3025 1900
-AR Path="/5FC2AF5A/60665C26" Ref="J4"  Part="1" 
+AR Path="/5FC2AF5A/60665C26" Ref="J3"  Part="1" 
 AR Path="/60665C26" Ref="J?"  Part="1" 
-F 0 "J4" H 3125 1875 50  0000 L CNN
+F 0 "J3" H 3125 1875 50  0000 L CNN
 F 1 "WG1" H 3125 1784 50  0000 L CNN
 F 2 "" H 3025 1900 50  0001 C CNN
 F 3 " ~" H 3025 1900 50  0001 C CNN
@@ -27,12 +27,12 @@ F 3 " ~" H 3025 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J11
+L Connector:Conn_Coaxial J10
 U 1 1 60665C2C
 P 9150 5200
-AR Path="/5FC2AF5A/60665C2C" Ref="J11"  Part="1" 
+AR Path="/5FC2AF5A/60665C2C" Ref="J10"  Part="1" 
 AR Path="/60665C2C" Ref="J?"  Part="1" 
-F 0 "J11" H 9250 5175 50  0000 L CNN
+F 0 "J10" H 9250 5175 50  0000 L CNN
 F 1 "Scope 1+" H 9250 5084 50  0000 L CNN
 F 2 "" H 9150 5200 50  0001 C CNN
 F 3 " ~" H 9150 5200 50  0001 C CNN
@@ -40,12 +40,12 @@ F 3 " ~" H 9150 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J5
+L Connector:Conn_Coaxial J4
 U 1 1 60665C32
 P 3025 2450
-AR Path="/5FC2AF5A/60665C32" Ref="J5"  Part="1" 
+AR Path="/5FC2AF5A/60665C32" Ref="J4"  Part="1" 
 AR Path="/60665C32" Ref="J?"  Part="1" 
-F 0 "J5" H 3125 2425 50  0000 L CNN
+F 0 "J4" H 3125 2425 50  0000 L CNN
 F 1 "WG2" H 3125 2334 50  0000 L CNN
 F 2 "" H 3025 2450 50  0001 C CNN
 F 3 " ~" H 3025 2450 50  0001 C CNN
@@ -53,12 +53,12 @@ F 3 " ~" H 3025 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J12
+L Connector:Conn_Coaxial J11
 U 1 1 60665C38
 P 9150 5600
-AR Path="/5FC2AF5A/60665C38" Ref="J12"  Part="1" 
+AR Path="/5FC2AF5A/60665C38" Ref="J11"  Part="1" 
 AR Path="/60665C38" Ref="J?"  Part="1" 
-F 0 "J12" H 9250 5575 50  0000 L CNN
+F 0 "J11" H 9250 5575 50  0000 L CNN
 F 1 "Scope 2+" H 9250 5484 50  0000 L CNN
 F 2 "" H 9150 5600 50  0001 C CNN
 F 3 " ~" H 9150 5600 50  0001 C CNN
@@ -66,12 +66,12 @@ F 3 " ~" H 9150 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J10
+L Connector:Conn_Coaxial J9
 U 1 1 60665C3E
 P 9050 1950
-AR Path="/5FC2AF5A/60665C3E" Ref="J10"  Part="1" 
+AR Path="/5FC2AF5A/60665C3E" Ref="J9"  Part="1" 
 AR Path="/60665C3E" Ref="J?"  Part="1" 
-F 0 "J10" H 9150 1925 50  0000 L CNN
+F 0 "J9" H 9150 1925 50  0000 L CNN
 F 1 "Ext. Source" H 9150 1834 50  0000 L CNN
 F 2 "" H 9050 1950 50  0001 C CNN
 F 3 " ~" H 9050 1950 50  0001 C CNN
@@ -79,12 +79,12 @@ F 3 " ~" H 9050 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1102-001 J6
+L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1102-001 J5
 U 1 1 60665C4D
 P 4725 5325
-AR Path="/5FC2AF5A/60665C4D" Ref="J6"  Part="1" 
+AR Path="/5FC2AF5A/60665C4D" Ref="J5"  Part="1" 
 AR Path="/60665C4D" Ref="J?"  Part="1" 
-F 0 "J6" H 4803 5313 50  0000 L CNN
+F 0 "J5" H 4803 5313 50  0000 L CNN
 F 1 "105-1102-001" H 4803 5222 50  0000 L CNN
 F 2 "digikey-footprints:Test_Jack_Horiz" H 4925 5525 60  0001 L CNN
 F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 4925 5625 60  0001 L CNN
@@ -101,12 +101,12 @@ F 12 "Active" H 4925 6525 60  0001 L CNN "Status"
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1102-001 J7
+L dk_Banana-and-Tip-Connectors-Jacks-Plugs:105-1102-001 J6
 U 1 1 60665C5C
 P 5150 5325
-AR Path="/5FC2AF5A/60665C5C" Ref="J7"  Part="1" 
+AR Path="/5FC2AF5A/60665C5C" Ref="J6"  Part="1" 
 AR Path="/60665C5C" Ref="J?"  Part="1" 
-F 0 "J7" H 5228 5313 50  0000 L CNN
+F 0 "J6" H 5228 5313 50  0000 L CNN
 F 1 "105-1102-001" H 5228 5222 50  0000 L CNN
 F 2 "digikey-footprints:Test_Jack_Horiz" H 5350 5525 60  0001 L CNN
 F 3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" H 5350 5625 60  0001 L CNN
@@ -146,8 +146,8 @@ P 2375 1975
 AR Path="/600C9795/6066B19E" Ref="K?"  Part="1" 
 AR Path="/62B74232/6066B19E" Ref="K?"  Part="1" 
 AR Path="/6066B19E" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/6066B19E" Ref="K27"  Part="1" 
-F 0 "K27" V 1825 2225 50  0000 L CNN
+AR Path="/5FC2AF5A/6066B19E" Ref="K11"  Part="1" 
+F 0 "K11" V 1825 2225 50  0000 L CNN
 F 1 "50 Ohm Ena" V 1675 1775 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 2375 1975 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 2375 1975 50  0001 C CNN
@@ -162,8 +162,8 @@ P 8025 5200
 AR Path="/600C9795/6066B92E" Ref="K?"  Part="1" 
 AR Path="/62B74232/6066B92E" Ref="K?"  Part="1" 
 AR Path="/6066B92E" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/6066B92E" Ref="K33"  Part="1" 
-F 0 "K33" V 7475 5450 50  0000 L CNN
+AR Path="/5FC2AF5A/6066B92E" Ref="K16"  Part="1" 
+F 0 "K16" V 7475 5450 50  0000 L CNN
 F 1 "AC/DC Couple A" V 7350 4950 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 8025 5200 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 8025 5200 50  0001 C CNN
@@ -296,10 +296,6 @@ Connection ~ 8625 5825
 Wire Wire Line
 	8625 5825 8625 5800
 Wire Wire Line
-	7025 5925 7225 5925
-Wire Wire Line
-	7075 6025 7275 6025
-Wire Wire Line
 	2075 1875 1875 1875
 Wire Wire Line
 	2075 2275 1875 2275
@@ -383,11 +379,11 @@ ext_50_ohm_r
 Wire Wire Line
 	2800 1575 2675 1575
 Text GLabel 7600 4800 1    50   Output ~ 0
-ext_acdc_a_p_s
+ext_acdc_p_s
 Wire Wire Line
 	7600 4800 7725 4800
 Text GLabel 8450 4800 1    50   Output ~ 0
-ext_acdc_a_p_r
+ext_acdc_p_r
 Wire Wire Line
 	8450 4800 8325 4800
 Text GLabel 3725 5075 1    50   Output ~ 0
@@ -410,12 +406,12 @@ F 3 "~" H 8750 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J8
+L Connector:Conn_Coaxial J7
 U 1 1 607A8690
 P 7050 2175
-AR Path="/5FC2AF5A/607A8690" Ref="J8"  Part="1" 
+AR Path="/5FC2AF5A/607A8690" Ref="J7"  Part="1" 
 AR Path="/607A8690" Ref="J?"  Part="1" 
-F 0 "J8" H 7150 2150 50  0000 L CNN
+F 0 "J7" H 7150 2150 50  0000 L CNN
 F 1 "Scope 1-" H 7150 2059 50  0000 L CNN
 F 2 "" H 7050 2175 50  0001 C CNN
 F 3 " ~" H 7050 2175 50  0001 C CNN
@@ -423,12 +419,12 @@ F 3 " ~" H 7050 2175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J9
+L Connector:Conn_Coaxial J8
 U 1 1 607A8696
 P 7050 2575
-AR Path="/5FC2AF5A/607A8696" Ref="J9"  Part="1" 
+AR Path="/5FC2AF5A/607A8696" Ref="J8"  Part="1" 
 AR Path="/607A8696" Ref="J?"  Part="1" 
-F 0 "J9" H 7150 2550 50  0000 L CNN
+F 0 "J8" H 7150 2550 50  0000 L CNN
 F 1 "Scope 2-" H 7150 2459 50  0000 L CNN
 F 2 "" H 7050 2575 50  0001 C CNN
 F 3 " ~" H 7050 2575 50  0001 C CNN
@@ -442,8 +438,8 @@ P 5925 2175
 AR Path="/600C9795/607A869D" Ref="K?"  Part="1" 
 AR Path="/62B74232/607A869D" Ref="K?"  Part="1" 
 AR Path="/607A869D" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/607A869D" Ref="K31"  Part="1" 
-F 0 "K31" V 5375 2425 50  0000 L CNN
+AR Path="/5FC2AF5A/607A869D" Ref="K15"  Part="1" 
+F 0 "K15" V 5375 2425 50  0000 L CNN
 F 1 "AC/DC Couple" V 5250 1925 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 5925 2175 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 5925 2175 50  0001 C CNN
@@ -574,8 +570,8 @@ P 4475 2175
 AR Path="/600C9795/607AF36B" Ref="K?"  Part="1" 
 AR Path="/62B74232/607AF36B" Ref="K?"  Part="1" 
 AR Path="/607AF36B" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/607AF36B" Ref="K30"  Part="1" 
-F 0 "K30" V 3925 2425 50  0000 L CNN
+AR Path="/5FC2AF5A/607AF36B" Ref="K14"  Part="1" 
+F 0 "K14" V 3925 2425 50  0000 L CNN
 F 1 "Single/Diff Switch" V 3800 1850 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 4475 2175 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 4475 2175 50  0001 C CNN
@@ -637,9 +633,9 @@ Text HLabel 5175 2925 2    50   Output ~ 0
 ext_scope_1n
 Text HLabel 5175 3050 2    50   Output ~ 0
 ext_scope_2n
-Text HLabel 7025 5925 0    50   Output ~ 0
+Text HLabel 7150 5200 0    50   Output ~ 0
 ext_scope_1p
-Text HLabel 7075 6025 0    50   Output ~ 0
+Text HLabel 7150 5600 0    50   Output ~ 0
 ext_scope_2p
 Text HLabel 1575 1975 0    50   Output ~ 0
 ext_wg_1
@@ -668,10 +664,10 @@ ph_meter
 Wire Wire Line
 	10250 1950 10425 1950
 $Comp
-L Connector_Generic:Conn_01x03 J13
+L Connector_Generic:Conn_01x03 J12
 U 1 1 60A5F96A
 P 10625 2050
-F 0 "J13" H 10705 2092 50  0000 L CNN
+F 0 "J12" H 10705 2092 50  0000 L CNN
 F 1 "Conn_01x03" H 10705 2001 50  0000 L CNN
 F 2 "" H 10625 2050 50  0001 C CNN
 F 3 "~" H 10625 2050 50  0001 C CNN
@@ -712,8 +708,8 @@ P 3150 5275
 AR Path="/600C9795/60035407" Ref="K?"  Part="1" 
 AR Path="/62B74232/60035407" Ref="K?"  Part="1" 
 AR Path="/60035407" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/60035407" Ref="K28"  Part="1" 
-F 0 "K28" V 2600 5525 50  0000 L CNN
+AR Path="/5FC2AF5A/60035407" Ref="K12"  Part="1" 
+F 0 "K12" V 2600 5525 50  0000 L CNN
 F 1 "Ext Meas Sel B" V 2475 5025 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 3150 5275 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 3150 5275 50  0001 C CNN
@@ -752,42 +748,16 @@ F 3 "" H 10275 2150 50  0001 C CNN
 	1    10275 2150
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Relay:EE2-12SNUH K?
-U 1 1 600A64CE
-P 6875 5200
-AR Path="/600C9795/600A64CE" Ref="K?"  Part="1" 
-AR Path="/62B74232/600A64CE" Ref="K?"  Part="1" 
-AR Path="/600A64CE" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/600A64CE" Ref="K32"  Part="1" 
-F 0 "K32" V 6325 5450 50  0000 L CNN
-F 1 "AC/DC Couple B" V 6200 4950 50  0000 L CNN
-F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 6875 5200 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 6875 5200 50  0001 C CNN
-F 4 "EC2-12SNU" V 6875 5200 50  0001 C CNN "PN"
-	1    6875 5200
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	7375 5100 7375 5200
 Wire Wire Line
 	7375 5500 7375 5600
-Wire Wire Line
-	7175 5200 7225 5200
 Connection ~ 7375 5200
 Wire Wire Line
 	7375 5200 7375 5300
-Wire Wire Line
-	7175 5600 7275 5600
 Connection ~ 7375 5600
 Wire Wire Line
 	7375 5600 7375 5700
-Wire Wire Line
-	6575 5300 6475 5300
-Wire Wire Line
-	6475 5300 6475 5700
-Wire Wire Line
-	6475 5700 6575 5700
 $Comp
 L Relay:EE2-12SNUH K?
 U 1 1 60697D2A
@@ -795,8 +765,8 @@ P 4175 5475
 AR Path="/600C9795/60697D2A" Ref="K?"  Part="1" 
 AR Path="/62B74232/60697D2A" Ref="K?"  Part="1" 
 AR Path="/60697D2A" Ref="K?"  Part="1" 
-AR Path="/5FC2AF5A/60697D2A" Ref="K29"  Part="1" 
-F 0 "K29" V 3625 5725 50  0000 L CNN
+AR Path="/5FC2AF5A/60697D2A" Ref="K13"  Part="1" 
+F 0 "K13" V 3625 5725 50  0000 L CNN
 F 1 "Ext Meas Sel A" V 3500 5225 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 4175 5475 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 4175 5475 50  0001 C CNN
@@ -805,29 +775,10 @@ F 4 "EC2-12SNU" V 4175 5475 50  0001 C CNN "PN"
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	6475 5700 5625 5700
-Wire Wire Line
-	5625 5700 5625 5875
-Wire Wire Line
-	5625 5875 4475 5875
-Connection ~ 6475 5700
-Wire Wire Line
 	3625 5775 3875 5775
 Connection ~ 2800 5775
 Wire Wire Line
 	2800 5775 2850 5775
-Wire Wire Line
-	7225 5925 7225 5200
-Connection ~ 7225 5200
-Wire Wire Line
-	7225 5200 7375 5200
-Wire Wire Line
-	7275 6025 7275 5600
-Connection ~ 7275 5600
-Wire Wire Line
-	7275 5600 7375 5600
-NoConn ~ 6575 5100
-NoConn ~ 6575 5500
 $Comp
 L power:GND #PWR034
 U 1 1 5FE28C75
@@ -849,18 +800,10 @@ Text GLabel 2725 4875 1    50   Output ~ 0
 ext_meas_sel_b_s
 Text GLabel 3600 4875 1    50   Output ~ 0
 ext_meas_sel_b_r
-Text GLabel 6450 4800 1    50   Output ~ 0
-ext_acdc_b_p_s
-Text GLabel 7300 4800 1    50   Output ~ 0
-ext_acdc_b_p_r
-Wire Wire Line
-	6450 4800 6575 4800
-Wire Wire Line
-	7175 4800 7300 4800
 Text GLabel 5450 1750 1    50   Output ~ 0
-ext_acdc_a_n_s
+ext_acdc_n_s
 Text GLabel 6350 1750 1    50   Output ~ 0
-ext_acdc_a_n_r
+ext_acdc_n_r
 Wire Wire Line
 	5450 1775 5450 1750
 Wire Wire Line
@@ -869,4 +812,12 @@ Wire Wire Line
 	2850 4875 2725 4875
 Wire Wire Line
 	3450 4875 3600 4875
+Text HLabel 4550 5875 2    50   Input ~ 0
+ad2_cal_scope_p
+Wire Wire Line
+	4550 5875 4475 5875
+Wire Wire Line
+	7150 5200 7375 5200
+Wire Wire Line
+	7150 5600 7375 5600
 $EndSCHEMATC

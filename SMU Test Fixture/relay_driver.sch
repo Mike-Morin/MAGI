@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 8
+Sheet 5 8
 Title "Relay Driver Matrix"
 Date "2020-11-29"
 Rev ""
@@ -13,45 +13,41 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 2800 1825 2    50   Input ~ 0
+Text GLabel 1775 1825 2    50   Input ~ 0
 3x_gain_en_s
-Text GLabel 3400 2600 1    50   Input ~ 0
+Text GLabel 2375 2600 1    50   Input ~ 0
 3x_gain_en_r
-Text GLabel 3700 1825 2    50   Input ~ 0
+Text GLabel 5925 2850 2    50   Input ~ 0
 shunt_sens_sel_s
-Text GLabel 4375 2600 1    50   Input ~ 0
+Text GLabel 6375 3600 1    50   Input ~ 0
 shunt_sens_sel_r
 Text GLabel 775  1825 2    50   Input ~ 0
 shunt_sel_s
 Text GLabel 1375 2575 1    50   Input ~ 0
 shunt_sel_r
-Text GLabel 1775 1825 2    50   Input ~ 0
-sense_sel_s
-Text GLabel 2375 2600 1    50   Input ~ 0
-sense_sel_r
-Text GLabel 2750 2850 2    50   Input ~ 0
+Text GLabel 3800 4875 2    50   Input ~ 0
 dut_sel_1_s
-Text GLabel 3400 3625 1    50   Input ~ 0
+Text GLabel 4375 5625 1    50   Input ~ 0
 dut_sel_1_r
-Text GLabel 1750 2850 2    50   Input ~ 0
+Text GLabel 2800 4875 2    50   Input ~ 0
 dut_sel_2_s
-Text GLabel 2350 3625 1    50   Input ~ 0
+Text GLabel 3375 5625 1    50   Input ~ 0
 dut_sel_2_r
-Text GLabel 775  2850 2    50   Input ~ 0
+Text GLabel 1750 4875 2    50   Input ~ 0
 dut_sel_3_s
-Text GLabel 1400 3625 1    50   Input ~ 0
+Text GLabel 2400 5625 1    50   Input ~ 0
 dut_sel_3_r
-Text GLabel 5750 3875 2    50   Input ~ 0
+Text GLabel 775  4875 2    50   Input ~ 0
 dut_sel_4_s
-Text GLabel 6350 4625 1    50   Input ~ 0
+Text GLabel 1400 5625 1    50   Input ~ 0
 dut_sel_4_r
-Text GLabel 4775 3875 2    50   Input ~ 0
+Text GLabel 5700 5850 2    50   Input ~ 0
 dut_sel_5_s
-Text GLabel 5400 4625 1    50   Input ~ 0
+Text GLabel 6375 6625 1    50   Input ~ 0
 dut_sel_5_r
-Text GLabel 3800 3875 2    50   Input ~ 0
+Text GLabel 4675 5850 2    50   Input ~ 0
 dut_sel_6_s
-Text GLabel 4400 4625 1    50   Input ~ 0
+Text GLabel 5375 6625 1    50   Input ~ 0
 dut_sel_6_r
 Wire Wire Line
 	1550 1725 1550 1825
@@ -155,79 +151,73 @@ Wire Wire Line
 Connection ~ 10425 1175
 Wire Wire Line
 	10425 1175 10425 1050
-Text GLabel 2775 3875 2    50   Input ~ 0
-dut_sel_7_s
-Text GLabel 3400 4600 1    50   Input ~ 0
-dut_sel_7_r
-Text GLabel 2400 4600 1    50   Input ~ 0
-dut_sel_8_r
-Text GLabel 4800 4875 2    50   Input ~ 0
-dut_sel_11_s
-Text GLabel 5400 5625 1    50   Input ~ 0
-dut_sel_11_r
-Text GLabel 3800 4875 2    50   Input ~ 0
-dut_sel_12_s
-Text GLabel 4375 5625 1    50   Input ~ 0
-dut_sel_12_r
-Text GLabel 2800 4875 2    50   Input ~ 0
-dut_sel_13_s
-Text GLabel 3375 5625 1    50   Input ~ 0
-dut_sel_13_r
-Text GLabel 1750 4875 2    50   Input ~ 0
-dut_sel_14_s
-Text GLabel 2400 5625 1    50   Input ~ 0
-dut_sel_14_r
-Text GLabel 775  4875 2    50   Input ~ 0
-dut_sel_15_s
-Text GLabel 1400 5625 1    50   Input ~ 0
-dut_sel_15_r
-Text GLabel 750  5850 2    50   Input ~ 0
-dut_sel_16_s
-Text GLabel 1375 6575 1    50   Input ~ 0
-dut_sel_16_r
-Text GLabel 700  6875 2    50   Input ~ 0
-scope1_mux_a_s
-Text GLabel 1400 7625 1    50   Input ~ 0
-scope1_mux_a_r
-Text GLabel 5700 5850 2    50   Input ~ 0
-scope1_mux_b_s
-Text GLabel 6375 6625 1    50   Input ~ 0
-scope1_mux_b_r
-Text GLabel 2725 5850 2    50   Input ~ 0
-impa_sel_a_s
-Text GLabel 3400 6575 1    50   Input ~ 0
-impa_sel_a_r
-Text GLabel 1725 5850 2    50   Input ~ 0
-impa_sel_b_s
-Text GLabel 2400 6600 1    50   Input ~ 0
-impa_sel_b_r
-Text GLabel 5775 6875 2    50   Input ~ 0
-impa_sel_c_s
-Text GLabel 6375 7575 1    50   Input ~ 0
-impa_sel_c_r
-Text GLabel 3825 6875 2    50   Output ~ 0
-ext_50_ohm_s
-Text GLabel 4400 7600 1    50   Output ~ 0
-ext_50_ohm_r
-Text GLabel 4725 6875 2    50   Output ~ 0
-ext_meas_sel_a_s
-Text GLabel 5375 7625 1    50   Output ~ 0
-ext_meas_sel_a_r
-Text GLabel 2750 6875 2    50   Output ~ 0
-ext_acdc_a_s
-Text GLabel 3400 7600 1    50   Output ~ 0
-ext_acdc_a_r
-Text GLabel 1800 6875 2    50   Output ~ 0
-ext_single_diff_s
-Text GLabel 2400 7575 1    50   Output ~ 0
-ext_single_diff_r
-Text GLabel 4675 5850 2    50   Input ~ 0
-scope1_mux_c_s
-Text GLabel 5375 6625 1    50   Input ~ 0
-scope1_mux_c_r
 Text GLabel 3725 5850 2    50   Input ~ 0
-scope2_mux_s
+dut_sel_7_s
 Text GLabel 4350 6600 1    50   Input ~ 0
+dut_sel_7_r
+Text GLabel 3400 6575 1    50   Input ~ 0
+dut_sel_8_r
+Text GLabel 5775 6875 2    50   Input ~ 0
+dut_sel_11_s
+Text GLabel 6375 7575 1    50   Input ~ 0
+dut_sel_11_r
+Text GLabel 4725 6875 2    50   Input ~ 0
+dut_sel_12_s
+Text GLabel 5375 7625 1    50   Input ~ 0
+dut_sel_12_r
+Text GLabel 3825 6875 2    50   Input ~ 0
+dut_sel_13_s
+Text GLabel 4400 7600 1    50   Input ~ 0
+dut_sel_13_r
+Text GLabel 2750 6875 2    50   Input ~ 0
+dut_sel_14_s
+Text GLabel 3400 7600 1    50   Input ~ 0
+dut_sel_14_r
+Text GLabel 1800 6875 2    50   Input ~ 0
+dut_sel_15_s
+Text GLabel 2400 7575 1    50   Input ~ 0
+dut_sel_15_r
+Text GLabel 700  6875 2    50   Input ~ 0
+dut_sel_16_s
+Text GLabel 1400 7625 1    50   Input ~ 0
+dut_sel_16_r
+Text GLabel 1800 3875 2    50   Input ~ 0
+scope1_mux_a_s
+Text GLabel 2400 4600 1    50   Input ~ 0
+scope1_mux_a_r
+Text GLabel 775  3875 2    50   Input ~ 0
+scope1_mux_b_s
+Text GLabel 1400 4625 1    50   Input ~ 0
+scope1_mux_b_r
+Text GLabel 5375 2675 1    50   Input ~ 0
+impa_sel_a_r
+Text GLabel 3700 1825 2    50   Input ~ 0
+impa_sel_b_s
+Text GLabel 4375 2600 1    50   Input ~ 0
+impa_sel_b_r
+Text GLabel 2800 1825 2    50   Input ~ 0
+impa_sel_c_s
+Text GLabel 3400 2600 1    50   Input ~ 0
+impa_sel_c_r
+Text GLabel 1750 2850 2    50   Output ~ 0
+ext_50_ohm_s
+Text GLabel 2350 3625 1    50   Output ~ 0
+ext_50_ohm_r
+Text GLabel 5750 3875 2    50   Output ~ 0
+ext_meas_sel_a_s
+Text GLabel 6350 4625 1    50   Output ~ 0
+ext_meas_sel_a_r
+Text GLabel 4775 3875 2    50   Output ~ 0
+ext_single_diff_s
+Text GLabel 5400 4625 1    50   Output ~ 0
+ext_single_diff_r
+Text GLabel 5800 4875 2    50   Input ~ 0
+scope1_mux_c_s
+Text GLabel 6375 5600 1    50   Input ~ 0
+scope1_mux_c_r
+Text GLabel 4800 4875 2    50   Input ~ 0
+scope2_mux_s
+Text GLabel 5400 5625 1    50   Input ~ 0
 scope2_mux_r
 $Comp
 L Analog_Switch:ADG1414BRU U7
@@ -271,9 +261,9 @@ Text GLabel 6375 2550 1    50   BiDi ~ 0
 ext_src_sel_r
 Text GLabel 5725 1825 2    50   BiDi ~ 0
 ext_src_sel_s
-Text GLabel 4650 1825 2    50   Input ~ 0
+Text GLabel 4600 2850 2    50   Input ~ 0
 cur_volt_mode_sel_s
-Text GLabel 5375 2675 1    50   Input ~ 0
+Text GLabel 5400 3700 1    50   Input ~ 0
 cur_volt_mode_sel_r
 NoConn ~ 5250 2275
 Wire Wire Line
@@ -554,12 +544,12 @@ Wire Wire Line
 Wire Wire Line
 	5925 2850 5550 2850
 Wire Wire Line
-	5400 3625 5400 3725
+	5400 3700 5400 3725
 Connection ~ 5400 3725
 Wire Wire Line
 	5400 3725 6050 3725
 Wire Wire Line
-	4800 2850 4550 2850
+	4600 2850 4550 2850
 Connection ~ 4550 2850
 Wire Wire Line
 	4550 2850 4550 3000
@@ -1405,20 +1395,6 @@ Wire Wire Line
 	7175 5425 7400 5425
 $Comp
 L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 5FEA1D62
-P 2050 2275
-AR Path="/6011CEB7/5FEA1D62" Ref="D?"  Part="1" 
-AR Path="/602F30C4/5FEA1D62" Ref="D7"  Part="1" 
-F 0 "D7" V 2004 2355 50  0000 L CNN
-F 1 "Vz=+-12V" V 2095 2355 50  0000 L CNN
-F 2 "" H 2050 2275 50  0001 C CNN
-F 3 "~" H 2050 2275 50  0001 C CNN
-F 4 "SZMMBZH12VAWT1G" V 2050 2275 50  0001 C CNN "PN"
-	1    2050 2275
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
 U 1 1 5FECB5C0
 P 3050 2275
 AR Path="/6011CEB7/5FECB5C0" Ref="D?"  Part="1" 
@@ -1839,20 +1815,6 @@ F 4 "SZMMBZH12VAWT1G" V 2050 7300 50  0001 C CNN "PN"
 $EndComp
 $Comp
 L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 6042A2B0
-P 3050 7300
-AR Path="/6011CEB7/6042A2B0" Ref="D?"  Part="1" 
-AR Path="/602F30C4/6042A2B0" Ref="D18"  Part="1" 
-F 0 "D18" V 3004 7380 50  0000 L CNN
-F 1 "Vz=+-12V" V 3095 7380 50  0000 L CNN
-F 2 "" H 3050 7300 50  0001 C CNN
-F 3 "~" H 3050 7300 50  0001 C CNN
-F 4 "SZMMBZH12VAWT1G" V 3050 7300 50  0001 C CNN "PN"
-	1    3050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
 U 1 1 60453BDA
 P 4050 7300
 AR Path="/6011CEB7/60453BDA" Ref="D?"  Part="1" 
@@ -1915,28 +1877,24 @@ F 3 "" H 8625 4400 50  0001 C CNN
 	1    8625 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 1800 3875 2    50   Input ~ 0
+Text GLabel 2725 5850 2    50   Input ~ 0
 dut_sel_8_s
-Text GLabel 1400 4625 1    50   Input ~ 0
+Text GLabel 2400 6600 1    50   Input ~ 0
 dut_sel_9_r
-Text GLabel 775  3875 2    50   Input ~ 0
+Text GLabel 1725 5850 2    50   Input ~ 0
 dut_sel_9_s
-Text GLabel 6375 5600 1    50   Input ~ 0
+Text GLabel 1375 6575 1    50   Input ~ 0
 dut_sel_10_r
-Text GLabel 5800 4875 2    50   Input ~ 0
+Text GLabel 750  5850 2    50   Input ~ 0
 dut_sel_10_s
-Text GLabel 4350 3625 1    50   Input ~ 0
+Text GLabel 3400 3625 1    50   Input ~ 0
 int_rst_r
-Text GLabel 3775 2850 2    50   Input ~ 0
+Text GLabel 2750 2850 2    50   Input ~ 0
 int_rst_s
-Text GLabel 4800 2850 2    50   Output ~ 0
+Text GLabel 775  2850 2    50   Output ~ 0
 ext_meas_sel_b_s
-Text GLabel 5400 3625 1    50   Output ~ 0
+Text GLabel 1400 3625 1    50   Output ~ 0
 ext_meas_sel_b_r
-Text GLabel 5925 2850 2    50   Output ~ 0
-ext_acdc_b_s
-Text GLabel 6375 3600 1    50   Output ~ 0
-ext_acdc_b_r
 $Comp
 L power:GND #PWR046
 U 1 1 5FFD6724
@@ -1959,4 +1917,46 @@ F 3 "" H 7175 5425 50  0001 C CNN
 	1    7175 5425
 	1    0    0    -1  
 $EndComp
+Text GLabel 4400 4625 1    50   Output ~ 0
+ext_acdc_n_r
+Text GLabel 3800 3875 2    50   Output ~ 0
+ext_acdc_n_s
+Text GLabel 4650 1825 2    50   Input ~ 0
+impa_sel_a_s
+$Comp
+L Device:D_Zener_x2_ACom_AKK D?
+U 1 1 5FEA1D62
+P 2050 2275
+AR Path="/6011CEB7/5FEA1D62" Ref="D?"  Part="1" 
+AR Path="/602F30C4/5FEA1D62" Ref="D7"  Part="1" 
+F 0 "D7" V 2004 2355 50  0000 L CNN
+F 1 "Vz=+-12V" V 2095 2355 50  0000 L CNN
+F 2 "" H 2050 2275 50  0001 C CNN
+F 3 "~" H 2050 2275 50  0001 C CNN
+F 4 "SZMMBZH12VAWT1G" V 2050 2275 50  0001 C CNN "PN"
+	1    2050 2275
+	0    -1   1    0   
+$EndComp
+Text GLabel 4350 3625 1    50   Input ~ 0
+sense_sel_r
+Text GLabel 3775 2850 2    50   Input ~ 0
+sense_sel_s
+$Comp
+L Device:D_Zener_x2_ACom_AKK D?
+U 1 1 6042A2B0
+P 3050 7300
+AR Path="/6011CEB7/6042A2B0" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6042A2B0" Ref="D18"  Part="1" 
+F 0 "D18" V 3004 7380 50  0000 L CNN
+F 1 "Vz=+-12V" V 3095 7380 50  0000 L CNN
+F 2 "" H 3050 7300 50  0001 C CNN
+F 3 "~" H 3050 7300 50  0001 C CNN
+F 4 "SZMMBZH12VAWT1G" V 3050 7300 50  0001 C CNN "PN"
+	1    3050 7300
+	0    -1   1    0   
+$EndComp
+Text GLabel 3400 4600 1    50   Output ~ 0
+ext_acdc_p_r
+Text GLabel 2775 3875 2    50   Output ~ 0
+ext_acdc_p_s
 $EndSCHEMATC

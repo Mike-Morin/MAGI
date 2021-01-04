@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 8
+Sheet 8 8
 Title ""
 Date ""
 Rev ""
@@ -75,8 +75,8 @@ U 1 1 6021E5C6
 P 9900 1450
 AR Path="/5FE064B5/6021E5C6" Ref="J?"  Part="1" 
 AR Path="/6021E5C6" Ref="J?"  Part="1" 
-AR Path="/600C9795/6021E5C6" Ref="J3"  Part="1" 
-F 0 "J3" H 9950 2250 50  0000 C CNN
+AR Path="/600C9795/6021E5C6" Ref="J14"  Part="1" 
+F 0 "J14" H 9950 2250 50  0000 C CNN
 F 1 "Conn_02x16_Odd_Even" H 9950 2350 50  0000 C CNN
 F 2 "" H 9900 1450 50  0001 C CNN
 F 3 "~" H 9900 1450 50  0001 C CNN
@@ -160,10 +160,10 @@ dut13_n
 Text Label 10350 2250 0    50   ~ 0
 dut16_n
 $Comp
-L Relay:EE2-12SNUH K13
+L Relay:EE2-12SNUH K23
 U 1 1 5FC14030
 P 2650 3900
-F 0 "K13" V 1950 3850 50  0000 L CNN
+F 0 "K23" V 1950 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 1850 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 2650 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 2650 3900 50  0001 C CNN
@@ -171,10 +171,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 2650 3900 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K15
+L Relay:EE2-12SNUH K25
 U 1 1 5FC1816C
 P 3900 3900
-F 0 "K15" V 3200 3850 50  0000 L CNN
+F 0 "K25" V 3200 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 3100 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 3900 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 3900 3900 50  0001 C CNN
@@ -182,10 +182,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 3900 3900 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K19
+L Relay:EE2-12SNUH K29
 U 1 1 5FC25C02
 P 6400 3900
-F 0 "K19" V 5700 3850 50  0000 L CNN
+F 0 "K29" V 5700 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 5600 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 6400 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 6400 3900 50  0001 C CNN
@@ -193,10 +193,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 6400 3900 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K21
+L Relay:EE2-12SNUH K31
 U 1 1 5FC25C08
 P 7650 3900
-F 0 "K21" V 6950 3850 50  0000 L CNN
+F 0 "K31" V 6950 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 6850 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 7650 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 7650 3900 50  0001 C CNN
@@ -204,10 +204,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 7650 3900 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K23
+L Relay:EE2-12SNUH K33
 U 1 1 5FC25C0E
 P 8900 3900
-F 0 "K23" V 8200 3850 50  0000 L CNN
+F 0 "K33" V 8200 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 8100 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 8900 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 8900 3900 50  0001 C CNN
@@ -215,10 +215,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 8900 3900 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K25
+L Relay:EE2-12SNUH K35
 U 1 1 5FC25C14
 P 10150 3900
-F 0 "K25" V 9450 3850 50  0000 L CNN
+F 0 "K35" V 9450 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 9350 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 10150 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 10150 3900 50  0001 C CNN
@@ -226,10 +226,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 10150 3900 50
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K12
+L Relay:EE2-12SNUH K22
 U 1 1 5FC38B22
 P 1400 5750
-F 0 "K12" V 700 5700 50  0000 L CNN
+F 0 "K22" V 700 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 600 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 1400 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 1400 5750 50  0001 C CNN
@@ -237,10 +237,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 1400 5750 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K14
+L Relay:EE2-12SNUH K24
 U 1 1 5FC38B28
 P 2650 5750
-F 0 "K14" V 1950 5700 50  0000 L CNN
+F 0 "K24" V 1950 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 1850 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 2650 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 2650 5750 50  0001 C CNN
@@ -248,10 +248,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 2650 5750 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K20
+L Relay:EE2-12SNUH K30
 U 1 1 5FC38B3A
 P 6400 5750
-F 0 "K20" V 5700 5700 50  0000 L CNN
+F 0 "K30" V 5700 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 5600 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 6400 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 6400 5750 50  0001 C CNN
@@ -259,10 +259,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 6400 5750 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K22
+L Relay:EE2-12SNUH K32
 U 1 1 5FC38B40
 P 7650 5750
-F 0 "K22" V 6950 5700 50  0000 L CNN
+F 0 "K32" V 6950 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 6850 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 7650 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 7650 5750 50  0001 C CNN
@@ -270,10 +270,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 7650 5750 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K24
+L Relay:EE2-12SNUH K34
 U 1 1 5FC38B46
 P 8900 5750
-F 0 "K24" V 8200 5700 50  0000 L CNN
+F 0 "K34" V 8200 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 8100 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 8900 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 8900 5750 50  0001 C CNN
@@ -281,10 +281,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 8900 5750 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K26
+L Relay:EE2-12SNUH K36
 U 1 1 5FC38B4C
 P 10150 5750
-F 0 "K26" V 9450 5700 50  0000 L CNN
+F 0 "K36" V 9450 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 9350 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 10150 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 10150 5750 50  0001 C CNN
@@ -545,10 +545,10 @@ dut14_n
 Text Label 7350 6150 2    50   ~ 0
 dut14_p
 $Comp
-L Relay:EE2-12SNUH K11
+L Relay:EE2-12SNUH K21
 U 1 1 60CA6945
 P 1400 3900
-F 0 "K11" V 700 3850 50  0000 L CNN
+F 0 "K21" V 700 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 600 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 1400 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 1400 3900 50  0001 C CNN
@@ -556,10 +556,10 @@ F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 1400 3900 50 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:EE2-12SNUH K17
+L Relay:EE2-12SNUH K27
 U 1 1 5FC18172
 P 5150 3900
-F 0 "K17" V 4450 3850 50  0000 L CNN
+F 0 "K27" V 4450 3850 50  0000 L CNN
 F 1 "EC2-12SNU" V 4350 3700 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 5150 3900 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 5150 3900 50  0001 C CNN
@@ -695,10 +695,10 @@ Wire Wire Line
 Wire Wire Line
 	10525 5350 10450 5350
 $Comp
-L Relay:EE2-12SNUH K16
+L Relay:EE2-12SNUH K26
 U 1 1 5FC38B2E
 P 3900 5750
-F 0 "K16" V 3200 5700 50  0000 L CNN
+F 0 "K26" V 3200 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 3100 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 3900 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 3900 5750 50  0001 C CNN
@@ -809,10 +809,10 @@ Wire Wire Line
 Wire Wire Line
 	1850 2250 1850 2900
 $Comp
-L Relay:EE2-12SNUH K18
+L Relay:EE2-12SNUH K28
 U 1 1 5FC38B34
 P 5150 5750
-F 0 "K18" V 4450 5700 50  0000 L CNN
+F 0 "K28" V 4450 5700 50  0000 L CNN
 F 1 "EC2-12SNU" V 4350 5550 50  0000 L CNN
 F 2 "Relay_SMD:Relay_DPDT_Kemet_EE2_NUH" H 5150 5750 50  0001 C CNN
 F 3 "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf" H 5150 5750 50  0001 C CNN
