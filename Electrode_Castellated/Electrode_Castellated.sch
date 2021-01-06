@@ -19,7 +19,7 @@ U 1 1 5F33D787
 P 3850 3300
 F 0 "J1" H 3768 4417 50  0000 C CNN
 F 1 "Connector" H 3768 4326 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical_SMD" H 3850 3300 50  0001 C CNN
+F 2 "eaton:Millmax Pad Contacts" H 3850 3300 50  0001 C CNN
 F 3 "~" H 3850 3300 50  0001 C CNN
 	1    3850 3300
 	-1   0    0    -1  
