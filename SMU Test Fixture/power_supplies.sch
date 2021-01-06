@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 7 8
 Title ""
 Date ""
 Rev ""
@@ -863,30 +863,6 @@ F 3 "~" H 3825 2300 50  0001 C CNN
 $EndComp
 Connection ~ 3825 2300
 $Comp
-L power:PWR_FLAG #FLG06
-U 1 1 60083B87
-P 9275 900
-F 0 "#FLG06" H 9275 975 50  0001 C CNN
-F 1 "PWR_FLAG" H 9275 1073 50  0000 C CNN
-F 2 "" H 9275 900 50  0001 C CNN
-F 3 "~" H 9275 900 50  0001 C CNN
-	1    9275 900 
-	1    0    0    -1  
-$EndComp
-Connection ~ 9275 900 
-$Comp
-L power:PWR_FLAG #FLG07
-U 1 1 600846E1
-P 9275 3500
-F 0 "#FLG07" H 9275 3575 50  0001 C CNN
-F 1 "PWR_FLAG" H 9275 3673 50  0000 C CNN
-F 2 "" H 9275 3500 50  0001 C CNN
-F 3 "~" H 9275 3500 50  0001 C CNN
-	1    9275 3500
-	-1   0    0    1   
-$EndComp
-Connection ~ 9275 3500
-$Comp
 L power:PWR_FLAG #FLG08
 U 1 1 600854E3
 P 11025 2200
@@ -1475,8 +1451,6 @@ Connection ~ 7150 900
 Wire Wire Line
 	7150 900  7325 900 
 Connection ~ 7325 900 
-Wire Wire Line
-	7325 900  7550 900 
 Connection ~ 7325 1325
 Wire Wire Line
 	7325 1325 7150 1325
@@ -2032,8 +2006,6 @@ Connection ~ 7150 3500
 Wire Wire Line
 	7150 3500 7325 3500
 Connection ~ 7325 3500
-Wire Wire Line
-	7325 3500 7550 3500
 Connection ~ 7325 3075
 Wire Wire Line
 	7325 3075 7150 3075
@@ -2638,4 +2610,32 @@ Wire Wire Line
 	5200 5300 5575 5300
 Connection ~ 5200 5300
 Connection ~ 5125 5650
+Wire Wire Line
+	7325 900  7550 900 
+Wire Wire Line
+	7325 3500 7550 3500
+Connection ~ 9275 3500
+$Comp
+L power:PWR_FLAG #FLG07
+U 1 1 600846E1
+P 9275 3500
+F 0 "#FLG07" H 9275 3575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9275 3673 50  0000 C CNN
+F 2 "" H 9275 3500 50  0001 C CNN
+F 3 "~" H 9275 3500 50  0001 C CNN
+	1    9275 3500
+	-1   0    0    1   
+$EndComp
+Connection ~ 9275 900 
+$Comp
+L power:PWR_FLAG #FLG06
+U 1 1 60083B87
+P 9275 900
+F 0 "#FLG06" H 9275 975 50  0001 C CNN
+F 1 "PWR_FLAG" H 9275 1073 50  0000 C CNN
+F 2 "" H 9275 900 50  0001 C CNN
+F 3 "~" H 9275 900 50  0001 C CNN
+	1    9275 900 
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
