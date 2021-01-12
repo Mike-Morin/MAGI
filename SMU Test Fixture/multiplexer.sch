@@ -159,8 +159,10 @@ AR Path="/6011CEB7/60609621" Ref="J?"  Part="1"
 AR Path="/5FC2AF5A/60609621" Ref="J?"  Part="1" 
 F 0 "J1" H 1450 2417 50  0000 C CNN
 F 1 "AD2 Connector" H 1450 2326 50  0000 C CNN
-F 2 "" H 1400 1500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x15_P2.54mm_Horizontal" H 1400 1500 50  0001 C CNN
 F 3 "~" H 1400 1500 50  0001 C CNN
+F 4 "PPPC152LJBN-RC" H 1400 1500 50  0001 C CNN "PN"
+F 5 "" H 1400 1500 50  0001 C CNN "Field5"
 	1    1400 1500
 	1    0    0    -1  
 $EndComp
@@ -399,8 +401,9 @@ AR Path="/6011CEB7/64A5FE52" Ref="J?"  Part="1"
 AR Path="/5FC2AF5A/64A5FE52" Ref="J?"  Part="1" 
 F 0 "J2" H 9450 2542 50  0000 C CNN
 F 1 "AD2 Connector" H 9450 2451 50  0000 C CNN
-F 2 "" H 9400 1625 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x15_P2.54mm_Horizontal" H 9400 1625 50  0001 C CNN
 F 3 "~" H 9400 1625 50  0001 C CNN
+F 4 "PPPC152LJBN-RC" H 9400 1625 50  0001 C CNN "PN"
 	1    9400 1625
 	1    0    0    -1  
 $EndComp
