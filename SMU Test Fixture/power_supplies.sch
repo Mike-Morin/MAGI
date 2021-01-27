@@ -212,17 +212,6 @@ F 3 "" H 10950 3250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_WallSocket_Earth J13
-U 1 1 6010B62B
-P 3250 2300
-F 0 "J13" H 3575 2375 50  0000 C CNN
-F 1 "Conn_WallSocket_Earth" H 3256 2634 50  0001 C CNN
-F 2 "" H 2950 2400 50  0001 C CNN
-F 3 "~" H 2950 2400 50  0001 C CNN
-	1    3250 2300
-	-1   0    0    -1  
-$EndComp
-$Comp
 L multiplexer:VPP12-4400 T1
 U 1 1 6011077A
 P 2275 5525
@@ -662,7 +651,7 @@ F 4 "1812L050/30PR" V 6125 2700 50  0001 C CNN "PN"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3450 2300 3825 2300
+	3400 2300 3825 2300
 $Comp
 L power:GND #PWR074
 U 1 1 601BB766
@@ -878,35 +867,8 @@ $EndComp
 Connection ~ 9150 5050
 Wire Wire Line
 	9150 5050 9325 5050
-$Comp
-L power:GNDPWR #PWR069
-U 1 1 60086BE8
-P 3525 2575
-F 0 "#PWR069" H 3525 2375 50  0001 C CNN
-F 1 "GNDPWR" H 3529 2421 50  0000 C CNN
-F 2 "" H 3525 2525 50  0001 C CNN
-F 3 "" H 3525 2525 50  0001 C CNN
-	1    3525 2575
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3525 2575 3450 2500
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 600A3F9C
-P 3575 2500
-F 0 "#FLG01" H 3575 2575 50  0001 C CNN
-F 1 "PWR_FLAG" H 3775 2500 50  0000 C CNN
-F 2 "" H 3575 2500 50  0001 C CNN
-F 3 "~" H 3575 2500 50  0001 C CNN
-	1    3575 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3575 2500 3450 2500
-Connection ~ 3450 2500
-Wire Wire Line
-	3450 2100 3825 2100
+	3400 2100 3825 2100
 $Comp
 L power:PWR_FLAG #FLG04
 U 1 1 600C194F
@@ -2666,5 +2628,27 @@ F 3 "~" H 7175 5275 50  0001 C CNN
 F 4 "RS07D-HM3-08" V 7175 5275 50  0001 C CNN "PN"
 	1    7175 5275
 	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J?
+U 1 1 601511D3
+P 3200 2100
+F 0 "J?" H 3325 2150 50  0000 C CNN
+F 1 "120V_Hot" H 3450 2075 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-0.75sqmm_1x01_D1.25mm_OD2.3mm" H 3200 2100 50  0001 C CNN
+F 3 "~" H 3200 2100 50  0001 C CNN
+	1    3200 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J?
+U 1 1 60151E3B
+P 3200 2300
+F 0 "J?" H 3300 2400 50  0000 C CNN
+F 1 "120V_N" H 3425 2300 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-0.75sqmm_1x01_D1.25mm_OD2.3mm" H 3200 2300 50  0001 C CNN
+F 3 "~" H 3200 2300 50  0001 C CNN
+	1    3200 2300
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
