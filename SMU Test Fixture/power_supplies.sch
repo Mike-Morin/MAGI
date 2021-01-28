@@ -1183,15 +1183,15 @@ Wire Wire Line
 Connection ~ 725  3650
 Wire Wire Line
 	725  3650 725  3725
-Text Label 9550 1500 3    50   ~ 0
+Text Label 9550 1500 3    50   ~ 10
 +reg_voic
 Wire Wire Line
 	9550 1500 9625 1500
-Text Label 9550 2950 1    50   ~ 0
+Text Label 9550 2950 1    50   ~ 10
 -reg_voic
 Wire Wire Line
 	9550 2950 9625 2950
-Text Label 1200 3850 2    50   ~ 0
+Text Label 1200 3850 2    50   ~ 10
 -reg_voic
 $Comp
 L Comparator:LM393 U9
@@ -1248,17 +1248,6 @@ Wire Wire Line
 Connection ~ 1025 825 
 Wire Wire Line
 	1025 825  1150 825 
-$Comp
-L power:-15V #PWR066
-U 1 1 6085D19D
-P 1025 1500
-F 0 "#PWR066" H 1025 1600 50  0001 C CNN
-F 1 "-15V" H 1040 1673 50  0000 C CNN
-F 2 "" H 1025 1500 50  0001 C CNN
-F 3 "" H 1025 1500 50  0001 C CNN
-	1    1025 1500
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1025 1500 1025 1425
 Connection ~ 1025 1425
@@ -1553,7 +1542,7 @@ $EndComp
 Connection ~ 7675 1725
 Wire Wire Line
 	7675 1725 7675 1875
-Text Label 2300 3750 0    50   ~ 0
+Text Label 2300 3750 0    50   ~ 10
 -scr_gate
 Wire Wire Line
 	2175 3750 2225 3750
@@ -1590,7 +1579,7 @@ Wire Wire Line
 	1500 3850 1550 3850
 Wire Wire Line
 	1200 3850 1300 3850
-Text Label 7250 1850 0    50   ~ 0
+Text Label 7250 1850 0    50   ~ 10
 +scr_gate
 $Comp
 L Device:R_Small_US R37
@@ -1668,7 +1657,7 @@ Wire Wire Line
 Connection ~ 750  2350
 Wire Wire Line
 	750  2350 750  2425
-Text Label 1225 2550 2    50   ~ 0
+Text Label 1225 2550 2    50   ~ 10
 +reg_voic
 $Comp
 L Device:R_Small_US R34
@@ -1703,7 +1692,7 @@ F 3 "" H 725 3250 50  0001 C CNN
 	1    725  3250
 	1    0    0    -1  
 $EndComp
-Text Label 2325 2450 0    50   ~ 0
+Text Label 2325 2450 0    50   ~ 10
 +scr_gate
 Wire Wire Line
 	2200 2450 2250 2450
@@ -2098,7 +2087,7 @@ F 3 "~" H 7250 2775 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7250 2475 7200 2475
-Text Label 7250 2475 0    50   ~ 0
+Text Label 7250 2475 0    50   ~ 10
 -scr_gate
 $Comp
 L Device:Q_SCR_KAG D55
@@ -2277,7 +2266,7 @@ F 4 "S8X8TS1RP" H 4775 5875 50  0001 C CNN "PN"
 $EndComp
 Wire Wire Line
 	4775 6025 4775 6550
-Text Label 4575 5975 2    50   ~ 0
+Text Label 4575 5975 2    50   ~ 10
 5V_scr_gate
 Wire Wire Line
 	4575 5975 4600 5975
@@ -2438,7 +2427,7 @@ F 3 "~" H 8625 4275 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8950 4275 8775 4275
-Text Label 8350 4275 2    50   ~ 0
+Text Label 8350 4275 2    50   ~ 10
 5V_scr_gate
 Wire Wire Line
 	8350 4275 8475 4275
@@ -2630,10 +2619,10 @@ F 4 "RS07D-HM3-08" V 7175 5275 50  0001 C CNN "PN"
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J?
+L Connector_Generic:Conn_01x01 J13
 U 1 1 601511D3
 P 3200 2100
-F 0 "J?" H 3325 2150 50  0000 C CNN
+F 0 "J13" H 3325 2150 50  0000 C CNN
 F 1 "120V_Hot" H 3450 2075 50  0000 C CNN
 F 2 "Connector_Wire:SolderWire-0.75sqmm_1x01_D1.25mm_OD2.3mm" H 3200 2100 50  0001 C CNN
 F 3 "~" H 3200 2100 50  0001 C CNN
@@ -2641,14 +2630,25 @@ F 3 "~" H 3200 2100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J?
+L Connector_Generic:Conn_01x01 J15
 U 1 1 60151E3B
 P 3200 2300
-F 0 "J?" H 3300 2400 50  0000 C CNN
+F 0 "J15" H 3300 2400 50  0000 C CNN
 F 1 "120V_N" H 3425 2300 50  0000 C CNN
 F 2 "Connector_Wire:SolderWire-0.75sqmm_1x01_D1.25mm_OD2.3mm" H 3200 2300 50  0001 C CNN
 F 3 "~" H 3200 2300 50  0001 C CNN
 	1    3200 2300
 	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 603456AB
+P 1025 1500
+F 0 "#PWR?" H 1025 1250 50  0001 C CNN
+F 1 "GND" H 1030 1327 50  0000 C CNN
+F 2 "" H 1025 1500 50  0001 C CNN
+F 3 "" H 1025 1500 50  0001 C CNN
+	1    1025 1500
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
