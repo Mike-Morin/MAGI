@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP LT3045xMSE-1
-D 500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12
-K linear voltage regulator low-noise
-F https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf
-$ENDCMP
-#
-#End Doc Library

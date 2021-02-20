@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name multiplexer)(type Legacy)(uri ${KIPRJMOD}/multiplexer.lib)(options "")(descr ""))
 )
