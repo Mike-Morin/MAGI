@@ -260,25 +260,13 @@ $EndComp
 Wire Wire Line
 	1600 6675 1600 6300
 $Comp
-L Device:CP_Small C30
-U 1 1 6045E283
-P 5900 1850
-F 0 "C30" H 5988 1896 50  0000 L CNN
-F 1 "4.7m" H 5988 1805 50  0000 L CNN
-F 2 "MAGI_Footprints:d=22_L=50_Radial_Horiz_P=10" H 5900 1850 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/293/e_uvy-1315204.pdf" H 5900 1850 50  0001 C CNN
-F 4 "UVY1J472MRD" H 5900 1850 50  0001 C CNN "PN"
-	1    5900 1850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP_Small C29
 U 1 1 6045E28B
 P 5725 1850
 F 0 "C29" H 5813 1896 50  0000 L CNN
-F 1 "4.7m" H 5813 1805 50  0000 L CNN
-F 2 "MAGI_Footprints:d=22_L=50_Radial_Horiz_P=10" H 5725 1850 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/293/e_uvy-1315204.pdf" H 5725 1850 50  0001 C CNN
+F 1 "510u" H 5813 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_18x22" H 5725 1850 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/293/e_ucm-883824.pdf" H 5725 1850 50  0001 C CNN
 F 4 "UVY1J472MRD" H 5725 1850 50  0001 C CNN "PN"
 	1    5725 1850
 	-1   0    0    -1  
@@ -334,24 +322,12 @@ L Device:CP_Small C27
 U 1 1 6041E113
 P 5750 1400
 F 0 "C27" H 5838 1446 50  0000 L CNN
-F 1 "4.7m" H 5838 1355 50  0000 L CNN
-F 2 "MAGI_Footprints:d=22_L=50_Radial_Horiz_P=10" H 5750 1400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/293/e_uvy-1315204.pdf" H 5750 1400 50  0001 C CNN
-F 4 "UVY1J472MRD" H 5750 1400 50  0001 C CNN "PN"
+F 1 "510u" H 5838 1355 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_18x22" H 5750 1400 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/293/e_ucm-883824.pdf" H 5750 1400 50  0001 C CNN
+F 4 "UCM2A511MNJ1MS" H 5750 1400 50  0001 C CNN "PN"
 	1    5750 1400
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:CP_Small C28
-U 1 1 601B953F
-P 5925 1400
-F 0 "C28" H 6013 1446 50  0000 L CNN
-F 1 "4.7m" H 6013 1355 50  0000 L CNN
-F 2 "MAGI_Footprints:d=22_L=50_Radial_Horiz_P=10" H 5925 1400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/293/e_uvy-1315204.pdf" H 5925 1400 50  0001 C CNN
-F 4 "UVY1J472MRD" H 5925 1400 50  0001 C CNN "PN"
-	1    5925 1400
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1550 3700 1625 3700
@@ -375,8 +351,6 @@ F 3 "~" H 1625 4225 50  0001 C CNN
 	1    1625 4225
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5925 1500 5925 1625
 Connection ~ 1625 3700
 Wire Wire Line
 	1625 3700 1800 3700
@@ -625,36 +599,12 @@ Wire Wire Line
 	9500 4150 9500 4275
 Wire Wire Line
 	5200 1150 5750 1150
-Connection ~ 5750 1625
-Wire Wire Line
-	5750 1625 5900 1625
 Wire Wire Line
 	5750 1300 5750 1150
-Connection ~ 5750 1150
-Wire Wire Line
-	5750 1150 5925 1150
-Wire Wire Line
-	5925 1300 5925 1150
-Connection ~ 5925 1150
-Wire Wire Line
-	5925 1150 6125 1150
 Wire Wire Line
 	5200 2100 5725 2100
 Wire Wire Line
 	5725 1950 5725 2100
-Connection ~ 5725 2100
-Wire Wire Line
-	5725 2100 5900 2100
-Wire Wire Line
-	5900 1950 5900 2100
-Connection ~ 5900 2100
-Wire Wire Line
-	5900 2100 6125 2100
-Wire Wire Line
-	5900 1750 5900 1625
-Connection ~ 5900 1625
-Wire Wire Line
-	5900 1625 5925 1625
 Wire Wire Line
 	5725 1750 5725 1625
 Connection ~ 5725 1625
@@ -682,10 +632,6 @@ Wire Wire Line
 	4775 1525 4825 1525
 Wire Wire Line
 	4825 1550 4825 1525
-Text Label 6375 2100 0    50   ~ 10
-unreg_neg_18VDC
-Text Label 6375 1150 0    50   ~ 10
-unreg_pos_18VDC
 Wire Wire Line
 	1925 6125 1925 6325
 NoConn ~ 1925 6425
@@ -845,25 +791,6 @@ Wire Wire Line
 	5475 5775 5550 5775
 Text Label 5475 5775 2    50   ~ 10
 unreg_pos_18VDC
-$Comp
-L Device:D_TVS_x2_AAC D39
-U 1 1 608D3A5D
-P 6300 1625
-F 0 "D39" V 6254 1705 50  0000 L CNN
-F 1 "20V Clamp" V 6345 1705 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6150 1625 50  0001 C CNN
-F 3 "~" H 6150 1625 50  0001 C CNN
-F 4 "NUP1301U,115" V 6300 1625 50  0001 C CNN "PN"
-	1    6300 1625
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6300 1150 6300 1275
-Wire Wire Line
-	6300 1975 6300 2100
-Wire Wire Line
-	6150 1625 5925 1625
-Connection ~ 5925 1625
 Wire Wire Line
 	4375 1625 4375 2325
 Connection ~ 4375 1625
@@ -871,12 +798,6 @@ Wire Wire Line
 	6500 3600 6500 3550
 Wire Wire Line
 	6575 5725 6575 5775
-Wire Wire Line
-	6375 1150 6300 1150
-Connection ~ 6300 1150
-Wire Wire Line
-	6375 2100 6300 2100
-Connection ~ 6300 2100
 Text Notes 1275 3125 0    118  ~ 24
 + 15V for analog section
 Text Notes 1375 5300 0    118  ~ 24
@@ -935,7 +856,7 @@ F 4 "1217136-1" H 1775 1725 50  0001 C CNN "PN"
 	1    0    0    1   
 $EndComp
 Text Notes 700  1450 0    50   ~ 0
-To BVB01/Z0000/10\nSwitchable, fused, power entry module\n3.5A Slow Blow
+To BZH01/Z0000/01\nSwitchable, fused, power entry module\n3.5A Slow Blow
 Wire Wire Line
 	2025 4650 2300 4650
 Wire Wire Line
@@ -978,34 +899,6 @@ $EndComp
 Connection ~ 4375 2325
 Wire Wire Line
 	4375 2325 4375 2375
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 603046A9
-P 6125 1150
-F 0 "#FLG01" H 6125 1225 50  0001 C CNN
-F 1 "PWR_FLAG" H 6125 1323 50  0000 C CNN
-F 2 "" H 6125 1150 50  0001 C CNN
-F 3 "~" H 6125 1150 50  0001 C CNN
-	1    6125 1150
-	1    0    0    -1  
-$EndComp
-Connection ~ 6125 1150
-Wire Wire Line
-	6125 1150 6300 1150
-$Comp
-L power:PWR_FLAG #FLG02
-U 1 1 603052F0
-P 6125 2100
-F 0 "#FLG02" H 6125 2175 50  0001 C CNN
-F 1 "PWR_FLAG" H 6125 2273 50  0000 C CNN
-F 2 "" H 6125 2100 50  0001 C CNN
-F 3 "~" H 6125 2100 50  0001 C CNN
-	1    6125 2100
-	-1   0    0    1   
-$EndComp
-Connection ~ 6125 2100
-Wire Wire Line
-	6125 2100 6300 2100
 Wire Wire Line
 	2975 1525 3475 1525
 Wire Wire Line
@@ -1208,22 +1101,18 @@ $Comp
 L Device:MEMRISTOR THJ1
 U 1 1 6036E34F
 P 800 6125
-F 0 "THJ1" H 725 6350 50  0000 L CNN
+F 0 "THJ1" H 700 6450 50  0000 L CNN
 F 1 "Thermal Jumper" V 650 5850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 730 6125 50  0001 C CNN
 F 3 "~" H 800 6125 50  0001 C CNN
 	1    800  6125
 	1    0    0    -1  
 $EndComp
-NoConn ~ 800  5975
-NoConn ~ 800  6275
-NoConn ~ 1125 6275
-NoConn ~ 1125 5975
 $Comp
 L Device:MEMRISTOR THJ2
 U 1 1 6036CE97
 P 1125 6125
-F 0 "THJ2" H 1075 6350 50  0000 L CNN
+F 0 "THJ2" H 1075 6450 50  0000 L CNN
 F 1 "Thermal Jumper" V 1025 5850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 1055 6125 50  0001 C CNN
 F 3 "~" H 1125 6125 50  0001 C CNN
@@ -1232,4 +1121,145 @@ F 3 "~" H 1125 6125 50  0001 C CNN
 $EndComp
 Text Notes 625  5725 0    39   ~ 0
 LT3045 bottom pad is input.\nUse thermal jumpers to\nconduct into ground.
+Text Label 800  5925 0    12   ~ 0
+unreg_neg_18VDC
+Wire Wire Line
+	800  5975 800  5925
+Text Label 1125 5925 0    12   ~ 0
+unreg_neg_18VDC
+Wire Wire Line
+	1125 5975 1125 5925
+$Comp
+L power:GND #PWR0101
+U 1 1 60340F9F
+P 800 6325
+F 0 "#PWR0101" H 800 6075 50  0001 C CNN
+F 1 "GND" H 805 6152 50  0000 C CNN
+F 2 "" H 800 6325 50  0001 C CNN
+F 3 "" H 800 6325 50  0001 C CNN
+	1    800  6325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 60341841
+P 1125 6325
+F 0 "#PWR0102" H 1125 6075 50  0001 C CNN
+F 1 "GND" H 1130 6152 50  0000 C CNN
+F 2 "" H 1125 6325 50  0001 C CNN
+F 3 "" H 1125 6325 50  0001 C CNN
+	1    1125 6325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1125 6325 1125 6275
+Wire Wire Line
+	800  6325 800  6275
+Wire Wire Line
+	6125 2100 6300 2100
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 603052F0
+P 6125 2100
+F 0 "#FLG02" H 6125 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 6125 2273 50  0000 C CNN
+F 2 "" H 6125 2100 50  0001 C CNN
+F 3 "~" H 6125 2100 50  0001 C CNN
+	1    6125 2100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6125 1150 6300 1150
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 603046A9
+P 6125 1150
+F 0 "#FLG01" H 6125 1225 50  0001 C CNN
+F 1 "PWR_FLAG" H 6125 1323 50  0000 C CNN
+F 2 "" H 6125 1150 50  0001 C CNN
+F 3 "~" H 6125 1150 50  0001 C CNN
+	1    6125 1150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6300 2100
+Wire Wire Line
+	6375 2100 6300 2100
+Connection ~ 6300 1150
+Wire Wire Line
+	6375 1150 6300 1150
+Wire Wire Line
+	6300 1975 6300 2100
+Wire Wire Line
+	6300 1150 6300 1275
+$Comp
+L Device:D_TVS_x2_AAC D39
+U 1 1 608D3A5D
+P 6300 1625
+F 0 "D39" V 6254 1705 50  0000 L CNN
+F 1 "20V Clamp" V 6345 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6150 1625 50  0001 C CNN
+F 3 "~" H 6150 1625 50  0001 C CNN
+F 4 "NUP1301U,115" V 6300 1625 50  0001 C CNN "PN"
+	1    6300 1625
+	0    1    1    0   
+$EndComp
+Text Label 6375 1150 0    50   ~ 10
+unreg_pos_18VDC
+Text Label 6375 2100 0    50   ~ 10
+unreg_neg_18VDC
+Connection ~ 6125 2100
+Connection ~ 5725 2100
+Connection ~ 6125 1150
+Connection ~ 5750 1150
+Connection ~ 5750 1625
+Wire Wire Line
+	5750 1625 5900 1625
+Connection ~ 5900 1625
+Wire Wire Line
+	5900 1750 5900 1625
+Wire Wire Line
+	5900 2100 6125 2100
+Wire Wire Line
+	5725 2100 5900 2100
+Connection ~ 5900 2100
+Wire Wire Line
+	5900 1950 5900 2100
+$Comp
+L Device:CP_Small C30
+U 1 1 6045E283
+P 5900 1850
+F 0 "C30" H 5988 1896 50  0000 L CNN
+F 1 "510u" H 5988 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_18x22" H 5900 1850 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/293/e_ucm-883824.pdf" H 5900 1850 50  0001 C CNN
+F 4 "UCM2A511MNJ1MS " H 5900 1850 50  0001 C CNN "PN"
+	1    5900 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1625 5925 1625
+Wire Wire Line
+	5900 1625 5925 1625
+Connection ~ 5925 1625
+Wire Wire Line
+	5925 1500 5925 1625
+Wire Wire Line
+	5925 1150 6125 1150
+Wire Wire Line
+	5750 1150 5925 1150
+Connection ~ 5925 1150
+Wire Wire Line
+	5925 1300 5925 1150
+$Comp
+L Device:CP_Small C28
+U 1 1 601B953F
+P 5925 1400
+F 0 "C28" H 6013 1446 50  0000 L CNN
+F 1 "510u" H 6013 1355 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_18x22" H 5925 1400 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/293/e_ucm-883824.pdf" H 5925 1400 50  0001 C CNN
+F 4 "UCM2A511MNJ1MS " H 5925 1400 50  0001 C CNN "PN"
+	1    5925 1400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
