@@ -2,3 +2,4 @@
 *.pro linguist-language=KiCad
 *.sch linguist-language=KiCad
 *.kicad_mod linguist-language=KiCad
+*.lib linguist-language=KiCad
