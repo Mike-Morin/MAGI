@@ -153,81 +153,75 @@ Connection ~ 3475 1525
 $Comp
 L Device:R_Small_US R37
 U 1 1 5FC9A651
-P 1900 4350
-F 0 "R37" H 1968 4396 50  0000 L CNN
-F 1 "150k" H 1925 4275 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 1900 4350 50  0001 C CNN
-F 3 "~" H 1900 4350 50  0001 C CNN
-	1    1900 4350
+P 1900 4375
+F 0 "R37" H 1968 4421 50  0000 L CNN
+F 1 "150k" H 1925 4300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 1900 4375 50  0001 C CNN
+F 3 "~" H 1900 4375 50  0001 C CNN
+	1    1900 4375
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small_US R38
 U 1 1 5FC9B12D
-P 1925 5975
-F 0 "R38" H 1993 6021 50  0000 L CNN
-F 1 "150k" H 1950 5900 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 1925 5975 50  0001 C CNN
-F 3 "~" H 1925 5975 50  0001 C CNN
-	1    1925 5975
+P 1775 5975
+F 0 "R38" H 1843 6021 50  0000 L CNN
+F 1 "150k" H 1800 5900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 1775 5975 50  0001 C CNN
+F 3 "~" H 1775 5975 50  0001 C CNN
+	1    1775 5975
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 4250 1900 4200
+	1900 4275 1900 4225
 Wire Wire Line
-	1900 4450 1900 4500
+	1900 4475 1900 4500
 Wire Wire Line
-	1925 6075 1925 6125
+	1775 6075 1775 6125
 $Comp
 L Device:C_Small C35
 U 1 1 5FCA03E8
-P 2150 4350
-F 0 "C35" H 2000 4450 50  0000 L CNN
-F 1 "22u" H 2000 4275 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2150 4350 50  0001 C CNN
-F 3 "~" H 2150 4350 50  0001 C CNN
-	1    2150 4350
+P 2150 4375
+F 0 "C35" H 2000 4475 50  0000 L CNN
+F 1 "22u" H 2000 4300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2150 4375 50  0001 C CNN
+F 3 "~" H 2150 4375 50  0001 C CNN
+	1    2150 4375
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C36
 U 1 1 5FCA1017
-P 2175 5975
-F 0 "C36" H 2025 6050 50  0000 L CNN
-F 1 "22u" H 2025 5900 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2175 5975 50  0001 C CNN
-F 3 "~" H 2175 5975 50  0001 C CNN
-	1    2175 5975
+P 2025 5975
+F 0 "C36" H 1875 6050 50  0000 L CNN
+F 1 "22u" H 1875 5900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2025 5975 50  0001 C CNN
+F 3 "~" H 2025 5975 50  0001 C CNN
+	1    2025 5975
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2175 5875 2175 5825
+	2025 5875 2025 5825
 Wire Wire Line
-	2175 5825 2050 5825
+	1775 5825 1775 5875
 Wire Wire Line
-	1925 5825 1925 5875
+	2025 6075 2025 6125
 Wire Wire Line
-	2175 6075 2175 6125
+	2025 6125 1900 6125
 Wire Wire Line
-	2175 6125 1925 6125
-Connection ~ 1925 6125
-Wire Wire Line
-	2150 4450 2150 4500
+	2150 4475 2150 4500
 Wire Wire Line
 	2150 4500 2025 4500
 Wire Wire Line
-	2150 4250 2150 4200
+	2150 4275 2150 4225
 Wire Wire Line
-	2150 4200 1900 4200
-Connection ~ 1900 4200
+	2150 4225 1900 4225
+Connection ~ 1900 4225
 Connection ~ 1800 3700
 Wire Wire Line
 	1800 3700 1800 3750
 Wire Wire Line
-	2875 6875 1850 6875
-Wire Wire Line
-	1850 6625 1850 6675
-Connection ~ 1850 6675
+	2875 6875 1750 6875
 Wire Wire Line
 	2800 6625 2800 6725
 Wire Wire Line
@@ -258,7 +252,7 @@ F 3 "" H 3475 6825 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1600 6675 1600 6300
+	1550 6675 1550 6300
 $Comp
 L Device:CP_Small C29
 U 1 1 6045E28B
@@ -299,20 +293,18 @@ F 3 "~" H 3100 6100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1600 5675 1600 6100
+	1550 5675 1550 6100
 $Comp
 L Device:C_Small C40
 U 1 1 60124B22
-P 1600 6200
-F 0 "C40" H 1692 6246 50  0000 L CNN
-F 1 "4.7u" H 1692 6155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1600 6200 50  0001 C CNN
-F 3 "~" H 1600 6200 50  0001 C CNN
-	1    1600 6200
+P 1550 6200
+F 0 "C40" H 1642 6246 50  0000 L CNN
+F 1 "4.7u" H 1642 6155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1550 6200 50  0001 C CNN
+F 3 "~" H 1550 6200 50  0001 C CNN
+	1    1550 6200
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2850 3550 2850 3850
 Wire Wire Line
 	2875 6525 2875 6875
 Wire Wire Line
@@ -332,10 +324,7 @@ $EndComp
 Wire Wire Line
 	1550 3700 1625 3700
 Wire Wire Line
-	1575 6675 1600 6675
-Connection ~ 1600 6675
-Wire Wire Line
-	1600 6675 1850 6675
+	1500 6675 1550 6675
 Wire Wire Line
 	1625 4650 1625 4325
 Wire Wire Line
@@ -633,23 +622,14 @@ Wire Wire Line
 Wire Wire Line
 	4825 1550 4825 1525
 Wire Wire Line
-	1925 6125 1925 6325
-NoConn ~ 1925 6425
-Wire Wire Line
-	2875 6425 2725 6425
-Wire Wire Line
 	2725 6525 2875 6525
-NoConn ~ 1925 6525
-Wire Wire Line
-	1925 6625 1850 6625
+NoConn ~ 1925 6425
 Wire Wire Line
 	2725 6625 2800 6625
 Wire Wire Line
 	2800 6725 2725 6725
 Wire Wire Line
-	1900 4200 1900 4050
-Wire Wire Line
-	2700 3850 2850 3850
+	1900 4225 1900 4150
 Wire Wire Line
 	2850 3950 2700 3950
 NoConn ~ 1900 3850
@@ -674,13 +654,13 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/LT3094.
 	1    0    0    1   
 $EndComp
 $Comp
-L MAGI_Symbols:LT3045xMSE-1 U10
+L MAGI_Symbols:LT3045xMSE U10
 U 1 1 5FC8B975
 P 2300 3800
 AR Path="/5FC8B975" Ref="U10"  Part="1" 
 AR Path="/64A89145/5FC8B975" Ref="U10"  Part="1" 
 F 0 "U10" H 2300 4281 50  0000 C CNN
-F 1 "LT3045xMSE-1" H 2300 4190 50  0000 C CNN
+F 1 "MAGI_Symbols_LT3045xMSE-1" H 2300 4190 50  0000 C CNN
 F 2 "Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm" H 2300 4125 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf" H 2300 3800 50  0001 C CNN
 	1    2300 3800
@@ -691,8 +671,6 @@ Wire Wire Line
 Connection ~ 2025 4500
 Wire Wire Line
 	2025 4500 1900 4500
-Wire Wire Line
-	2850 3950 2850 4650
 Wire Wire Line
 	3075 4300 3075 4650
 Wire Wire Line
@@ -717,28 +695,10 @@ $EndComp
 Text Label 1550 3700 2    50   ~ 10
 unreg_pos_18VDC
 Wire Wire Line
-	2050 5825 2050 5675
-Connection ~ 2050 5825
-Wire Wire Line
-	2050 5825 1925 5825
-Wire Wire Line
 	2325 6125 2325 5675
 Wire Wire Line
-	2875 6425 2875 5675
-Wire Wire Line
 	3100 6000 3100 5675
-Wire Wire Line
-	3100 5675 2875 5675
-Wire Wire Line
-	2875 5675 2575 5675
-Connection ~ 2875 5675
-Wire Wire Line
-	2325 5675 2050 5675
-Connection ~ 2325 5675
-Wire Wire Line
-	2050 5675 1600 5675
-Connection ~ 2050 5675
-Text Label 1575 6675 2    50   ~ 10
+Text Label 1500 6675 2    50   ~ 10
 unreg_neg_18VDC
 $Comp
 L power:GND #PWR078
@@ -758,8 +718,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 5425 2650 5450
 Connection ~ 2575 5675
-Wire Wire Line
-	2575 5675 2325 5675
 $Comp
 L power:+15V #PWR074
 U 1 1 5FED1ED6
@@ -858,25 +816,13 @@ $EndComp
 Text Notes 700  1450 0    50   ~ 0
 To BZH01/Z0000/01\nSwitchable, fused, power entry module\n3.5A Slow Blow
 Wire Wire Line
-	2025 4650 2300 4650
-Wire Wire Line
-	2300 4200 2300 4650
-Connection ~ 2300 4650
+	2250 4300 2250 4375
 Wire Wire Line
 	5725 3600 5475 3600
 Connection ~ 5475 3600
 Wire Wire Line
 	6025 3900 6025 3950
 Connection ~ 6025 3950
-Wire Wire Line
-	1850 6675 1850 6725
-Wire Wire Line
-	1925 6725 1850 6725
-Connection ~ 1850 6725
-Wire Wire Line
-	1850 6725 1850 6875
-Wire Wire Line
-	2300 4650 2550 4650
 Wire Wire Line
 	2550 4650 2550 4725
 Connection ~ 2550 4650
@@ -1262,4 +1208,77 @@ F 4 "UCM2A511MNJ1MS " H 5925 1400 50  0001 C CNN "PN"
 	1    5925 1400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1775 5825 1900 5825
+Wire Wire Line
+	1750 6675 1750 6700
+Wire Wire Line
+	1900 5825 1900 5675
+Connection ~ 1900 5825
+Wire Wire Line
+	1900 5825 2025 5825
+Wire Wire Line
+	1900 6325 1900 6125
+Connection ~ 1900 6125
+Wire Wire Line
+	1900 6125 1775 6125
+Wire Wire Line
+	1900 6625 1925 6625
+Wire Wire Line
+	1900 6625 1900 6700
+Wire Wire Line
+	1900 6725 1925 6725
+Wire Wire Line
+	1750 6700 1900 6700
+Connection ~ 1750 6700
+Wire Wire Line
+	1750 6700 1750 6875
+Connection ~ 1900 6700
+Wire Wire Line
+	1900 6700 1900 6725
+Connection ~ 1550 6675
+Wire Wire Line
+	1550 6675 1750 6675
+Connection ~ 2325 5675
+Wire Wire Line
+	2325 5675 2575 5675
+Wire Wire Line
+	2575 5675 2725 5675
+Wire Wire Line
+	1550 5675 1900 5675
+Wire Wire Line
+	1900 6325 1925 6325
+Connection ~ 1900 5675
+Wire Wire Line
+	1900 5675 2325 5675
+NoConn ~ 1925 6525
+Wire Wire Line
+	2725 6425 2725 5675
+Connection ~ 2725 5675
+Wire Wire Line
+	2725 5675 3100 5675
+Wire Wire Line
+	2025 4650 2250 4650
+Connection ~ 2250 4650
+Wire Wire Line
+	2250 4650 2550 4650
+Wire Wire Line
+	2250 4375 2350 4375
+Wire Wire Line
+	2350 4375 2350 4300
+Connection ~ 2250 4375
+Wire Wire Line
+	2250 4375 2250 4650
+NoConn ~ 1900 4050
+Wire Wire Line
+	2700 4050 2850 4050
+Wire Wire Line
+	2850 4050 2850 4650
+Wire Wire Line
+	2850 3550 2850 3950
+Wire Wire Line
+	2700 3850 2775 3850
+Wire Wire Line
+	2775 3850 2775 3750
+Connection ~ 2775 3750
 $EndSCHEMATC
