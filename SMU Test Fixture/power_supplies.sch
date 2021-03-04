@@ -276,7 +276,7 @@ U 1 1 603108E6
 P 3075 4200
 F 0 "C33" H 3167 4246 50  0000 L CNN
 F 1 "10u" H 3167 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3075 4200 50  0001 C CNN
+F 2 "MAGI_Footprints:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder_Kelvin" H 3075 4200 50  0001 C CNN
 F 3 "~" H 3075 4200 50  0001 C CNN
 	1    3075 4200
 	1    0    0    -1  
@@ -287,7 +287,7 @@ U 1 1 60311D75
 P 3100 6100
 F 0 "C39" H 3192 6146 50  0000 L CNN
 F 1 "10u" H 3192 6055 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3100 6100 50  0001 C CNN
+F 2 "MAGI_Footprints:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder_Kelvin" H 3100 6100 50  0001 C CNN
 F 3 "~" H 3100 6100 50  0001 C CNN
 	1    3100 6100
 	1    0    0    -1  
@@ -647,7 +647,7 @@ L Regulator_Linear:LT3094xMSE U12
 U 1 1 5FC8B375
 P 2325 6525
 F 0 "U12" H 2325 7025 50  0000 C CNN
-F 1 "LT3094xMSE" H 2325 7125 50  0000 C CNN
+F 1 "LT3094" H 2325 7125 50  0000 C CNN
 F 2 "Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm" H 2325 6950 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/LT3094.pdf" H 2325 6625 50  0001 C CNN
 	1    2325 6525
@@ -660,7 +660,7 @@ P 2300 3800
 AR Path="/5FC8B975" Ref="U10"  Part="1" 
 AR Path="/64A89145/5FC8B975" Ref="U10"  Part="1" 
 F 0 "U10" H 2300 4281 50  0000 C CNN
-F 1 "MAGI_Symbols_LT3045xMSE-1" H 2300 4190 50  0000 C CNN
+F 1 "LT3045" H 2300 4190 50  0000 C CNN
 F 2 "Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm" H 2300 4125 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf" H 2300 3800 50  0001 C CNN
 	1    2300 3800
