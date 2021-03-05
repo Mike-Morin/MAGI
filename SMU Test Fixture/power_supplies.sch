@@ -742,10 +742,6 @@ Wire Wire Line
 Wire Wire Line
 	3475 6825 3475 6725
 Wire Wire Line
-	5400 3600 5475 3600
-Text Label 5400 3600 2    50   ~ 10
-unreg_pos_18VDC
-Wire Wire Line
 	5400 5725 5475 5725
 Text Label 5400 5725 2    50   ~ 10
 unreg_pos_18VDC
@@ -817,7 +813,6 @@ Wire Wire Line
 	2250 4300 2250 4375
 Wire Wire Line
 	5725 3600 5475 3600
-Connection ~ 5475 3600
 Wire Wire Line
 	6025 3900 6025 3950
 Connection ~ 6025 3950
@@ -1422,4 +1417,18 @@ Wire Wire Line
 	6050 2100 6150 2100
 Text Notes 9100 725  0    118  ~ 24
 OVP
+$Comp
+L power:+12V #PWR?
+U 1 1 60F40CB4
+P 5475 3550
+F 0 "#PWR?" H 5475 3400 50  0001 C CNN
+F 1 "+12V" H 5490 3723 50  0000 C CNN
+F 2 "" H 5475 3550 50  0001 C CNN
+F 3 "" H 5475 3550 50  0001 C CNN
+	1    5475 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 3600 5475 3550
+Connection ~ 5475 3600
 $EndSCHEMATC
