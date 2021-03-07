@@ -1,9 +1,3 @@
-# Welcome
-These public tools, devices, and data are developed and collected to advance our understanding of intelligence through the exploration of exotic computing hardware.
-
-Unfortunately, most of my work on this subject is not public due to ethical concerns. Much of this falls into the "bad AI" category and is not fit for sharing. Feel free to contact me to commiserate.
-
-
 ## 20 Pin Electrode Connector
  Pogo pin connector to bare wire. For mounting to a microscope stage and make contact with a microscope slide electrode array. This PCB goes on the stage, slides slide under the pogo pins, and a very flexible wiring harness comes off this board and into your test gear. The idea is to save a lot of money on a probe station microscope combo.
 
