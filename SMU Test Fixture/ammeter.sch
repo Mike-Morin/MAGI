@@ -525,10 +525,10 @@ L pspice:OPAMP U6
 U 1 1 5FB601B4
 P 7400 4850
 F 0 "U6" H 7500 4950 50  0000 L CNN
-F 1 "OPA1611" H 7350 5050 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7400 4850 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/opa1611.pdf?HQS=TI-null-null-mousermode-df-pf-null-wwe&ts=1605474705530&ref_url=https%253A%252F%252Fwww.mouser.com%252F" H 7400 4850 50  0001 C CNN
-F 4 "OPA1611AIDR " H 7400 4850 50  0001 C CNN "PN"
+F 1 "OPA1622" H 7350 5050 50  0000 L CNN
+F 2 "Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.2x2mm" H 7400 4850 50  0001 C CNN
+F 3 "https://www.ti.com/lit/gpn/opa1622" H 7400 4850 50  0001 C CNN
+F 4 "OPA1622" H 7400 4850 50  0001 C CNN "PN"
 	1    7400 4850
 	1    0    0    -1  
 $EndComp
