@@ -248,7 +248,6 @@ Wire Wire Line
 Connection ~ 6050 2700
 Wire Wire Line
 	3550 1725 3550 1825
-NoConn ~ 6250 2275
 Wire Wire Line
 	5725 1825 5550 1825
 Wire Wire Line
@@ -256,7 +255,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 1975 5550 1975
 Wire Wire Line
-	6050 2700 6050 2575
+	6050 2700 6050 2425
 Text GLabel 6375 2550 1    50   BiDi ~ 0
 ext_src_sel_r
 Text GLabel 5725 1825 2    50   BiDi ~ 0
@@ -265,7 +264,6 @@ Text GLabel 4600 2850 2    50   Input ~ 0
 cur_volt_mode_sel_s
 Text GLabel 5400 3700 1    50   Input ~ 0
 cur_volt_mode_sel_r
-NoConn ~ 5250 2275
 Wire Wire Line
 	4650 1825 4550 1825
 Connection ~ 4550 1825
@@ -282,14 +280,14 @@ Connection ~ 4550 1975
 Wire Wire Line
 	4550 1975 4550 2850
 Wire Wire Line
-	5050 2575 5050 2700
+	5050 2425 5050 2700
 Connection ~ 5050 2700
 Wire Wire Line
 	5050 2700 5375 2700
 Wire Wire Line
 	4050 1975 3550 1975
 Wire Wire Line
-	4050 2575 4050 2700
+	4050 2425 4050 2700
 Connection ~ 4050 2700
 Wire Wire Line
 	4050 2700 4375 2700
@@ -299,92 +297,90 @@ Wire Wire Line
 Wire Wire Line
 	3050 1975 2550 1975
 Wire Wire Line
-	3050 2575 3050 2700
+	3050 2425 3050 2700
 Wire Wire Line
 	2050 1975 1550 1975
 Wire Wire Line
-	2050 2575 2050 2700
+	2050 2425 2050 2700
 $Comp
-L Device:D_Zener_x2_ACom_AKK D?
+L Device:D_TVS D?
 U 1 1 612D7647
 P 1050 2275
 AR Path="/6011CEB7/612D7647" Ref="D?"  Part="1" 
 AR Path="/602F30C4/612D7647" Ref="D1"  Part="1" 
 F 0 "D1" V 1004 2355 50  0000 L CNN
-F 1 "Vz=+-15V" V 1095 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 1050 2275 50  0001 C CNN
-F 3 "~" H 1050 2275 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 1050 2275 50  0001 C CNN "PN"
+F 1 "Vcl=14V" V 1095 2355 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 1050 2275 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 1050 2275 50  0001 C CNN
+F 4 "VS12VBA1HS" V 1050 2275 50  0001 C CNN "PN"
 	1    1050 2275
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	1050 1975 550  1975
-Wire Wire Line
-	1050 2575 1050 2700
 Connection ~ 550  1975
 Wire Wire Line
 	550  1975 550  1825
 Wire Wire Line
 	6050 3000 5550 3000
 Wire Wire Line
-	6050 3600 6050 3725
+	6050 3450 6050 3725
 Wire Wire Line
 	5050 3000 4550 3000
 Wire Wire Line
-	5050 3600 5050 3725
+	5050 3450 5050 3725
 Wire Wire Line
 	4050 3000 3550 3000
 Wire Wire Line
-	4050 3600 4050 3725
+	4050 3450 4050 3725
 Wire Wire Line
 	3050 3000 2550 3000
 Wire Wire Line
-	3050 3600 3050 3725
+	3050 3450 3050 3725
 Wire Wire Line
 	2050 3000 1550 3000
 Wire Wire Line
-	2050 3600 2050 3725
+	2050 3450 2050 3725
 Wire Wire Line
 	1050 3000 550  3000
 Wire Wire Line
-	1050 3600 1050 3725
+	1050 3450 1050 3725
 Wire Wire Line
 	1050 4000 550  4000
 Wire Wire Line
-	1050 4600 1050 4725
+	1050 4450 1050 4725
 Wire Wire Line
 	2050 4000 1550 4000
 Wire Wire Line
-	2050 4600 2050 4725
+	2050 4450 2050 4725
 Wire Wire Line
 	3050 4000 2550 4000
 Wire Wire Line
-	3050 4600 3050 4725
+	3050 4450 3050 4725
 Wire Wire Line
 	4050 4000 3550 4000
 Wire Wire Line
-	4050 4600 4050 4725
+	4050 4450 4050 4725
 Wire Wire Line
 	5050 4000 4550 4000
 Wire Wire Line
-	5050 4600 5050 4725
+	5050 4450 5050 4725
 Wire Wire Line
 	6050 4000 5550 4000
 Wire Wire Line
-	6050 4600 6050 4725
+	6050 4450 6050 4725
 Wire Wire Line
 	1050 5000 550  5000
 Wire Wire Line
-	1050 5600 1050 5725
+	1050 5475 1050 5725
 Wire Wire Line
 	2050 5000 1550 5000
 Wire Wire Line
-	2050 5600 2050 5725
+	2050 5475 2050 5725
 Wire Wire Line
 	3050 5000 2550 5000
 Wire Wire Line
-	3050 5600 3050 5725
+	3050 5475 3050 5725
 Connection ~ 2550 5000
 Wire Wire Line
 	2550 5000 2550 5850
@@ -394,44 +390,44 @@ Wire Wire Line
 Wire Wire Line
 	4050 5000 3550 5000
 Wire Wire Line
-	4050 5600 4050 5725
+	4050 5475 4050 5725
 Wire Wire Line
 	5050 5000 4550 5000
 Wire Wire Line
-	5050 5600 5050 5725
+	5050 5475 5050 5725
 Wire Wire Line
 	6050 5000 5550 5000
 Wire Wire Line
-	6050 5600 6050 5725
+	6050 5475 6050 5725
 Connection ~ 5550 5000
 Connection ~ 6050 5725
 Wire Wire Line
 	6050 5725 6375 5725
 Wire Wire Line
-	1050 6600 1050 6725
+	1050 6475 1050 6725
 Wire Wire Line
 	1050 6000 550  6000
 Connection ~ 550  6000
 Wire Wire Line
 	2050 6000 1550 6000
 Wire Wire Line
-	2050 6600 2050 6725
+	2050 6475 2050 6725
 Wire Wire Line
 	3050 6000 2550 6000
 Wire Wire Line
-	3050 6600 3050 6725
+	3050 6475 3050 6725
 Wire Wire Line
 	4050 6000 3550 6000
 Wire Wire Line
-	4050 6600 4050 6725
+	4050 6475 4050 6725
 Wire Wire Line
 	5050 6000 4550 6000
 Wire Wire Line
-	5050 6600 5050 6725
+	5050 6475 5050 6725
 Wire Wire Line
 	6050 6000 5550 6000
 Wire Wire Line
-	6050 6600 6050 6725
+	6050 6475 6050 6725
 Connection ~ 5550 6000
 Wire Wire Line
 	5550 6000 5550 6875
@@ -441,61 +437,25 @@ Wire Wire Line
 Wire Wire Line
 	1050 7000 550  7000
 Wire Wire Line
-	1050 7600 1050 7725
+	1050 7475 1050 7725
 Wire Wire Line
 	2050 7000 1550 7000
 Wire Wire Line
-	2050 7600 2050 7725
+	2050 7475 2050 7725
 Wire Wire Line
 	3050 7000 2550 7000
 Wire Wire Line
-	3050 7600 3050 7725
+	3050 7475 3050 7725
 Wire Wire Line
 	4050 7000 3550 7000
 Wire Wire Line
-	4050 7600 4050 7725
+	4050 7475 4050 7725
 Wire Wire Line
 	5050 7000 4550 7000
 Wire Wire Line
-	5050 7600 5050 7725
+	5050 7475 5050 7725
 Wire Wire Line
 	6050 7000 5550 7000
-Wire Wire Line
-	6050 7600 6050 7725
-NoConn ~ 4250 2275
-NoConn ~ 3250 2275
-NoConn ~ 2250 2275
-NoConn ~ 1250 2275
-NoConn ~ 1250 3300
-NoConn ~ 2250 3300
-NoConn ~ 3250 3300
-NoConn ~ 4250 3300
-NoConn ~ 5250 3300
-NoConn ~ 6250 3300
-NoConn ~ 6250 4300
-NoConn ~ 5250 4300
-NoConn ~ 4250 4300
-NoConn ~ 3250 4300
-NoConn ~ 2250 4300
-NoConn ~ 1250 4300
-NoConn ~ 1250 5300
-NoConn ~ 2250 5300
-NoConn ~ 3250 5300
-NoConn ~ 4250 5300
-NoConn ~ 5250 5300
-NoConn ~ 6250 5300
-NoConn ~ 6250 6300
-NoConn ~ 5250 6300
-NoConn ~ 4250 6300
-NoConn ~ 3250 6300
-NoConn ~ 2250 6300
-NoConn ~ 1250 6300
-NoConn ~ 1250 7300
-NoConn ~ 2250 7300
-NoConn ~ 4250 7300
-NoConn ~ 5250 7300
-NoConn ~ 6250 7300
-NoConn ~ 3250 7300
 Wire Wire Line
 	4375 2600 4375 2700
 Connection ~ 4375 2700
@@ -1287,8 +1247,6 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG1414
 $EndComp
 Wire Wire Line
 	8700 4400 8600 4400
-Wire Wire Line
-	8700 2075 8625 2075
 Text Label 7875 3675 2    50   ~ 0
 sd_a_to_b
 Wire Wire Line
@@ -1426,496 +1384,6 @@ ext_acdc_p_r
 Text GLabel 2775 3875 2    50   Output ~ 0
 ext_acdc_p_s
 $Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 608D0CC2
-P 2050 2275
-AR Path="/6011CEB7/608D0CC2" Ref="D?"  Part="1" 
-AR Path="/602F30C4/608D0CC2" Ref="D2"  Part="1" 
-F 0 "D2" V 2004 2355 50  0000 L CNN
-F 1 "Vz=+-15V" V 2095 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2050 2275 50  0001 C CNN
-F 3 "~" H 2050 2275 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 2050 2275 50  0001 C CNN "PN"
-	1    2050 2275
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 608F3B5F
-P 3050 2275
-AR Path="/6011CEB7/608F3B5F" Ref="D?"  Part="1" 
-AR Path="/602F30C4/608F3B5F" Ref="D3"  Part="1" 
-F 0 "D3" V 3004 2355 50  0000 L CNN
-F 1 "Vz=+-15V" V 3095 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 3050 2275 50  0001 C CNN
-F 3 "~" H 3050 2275 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 3050 2275 50  0001 C CNN "PN"
-	1    3050 2275
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60916C42
-P 4050 2275
-AR Path="/6011CEB7/60916C42" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60916C42" Ref="D4"  Part="1" 
-F 0 "D4" V 4004 2355 50  0000 L CNN
-F 1 "Vz=+-15V" V 4095 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 4050 2275 50  0001 C CNN
-F 3 "~" H 4050 2275 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 4050 2275 50  0001 C CNN "PN"
-	1    4050 2275
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60939BED
-P 5050 2275
-AR Path="/6011CEB7/60939BED" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60939BED" Ref="D5"  Part="1" 
-F 0 "D5" V 5004 2355 50  0000 L CNN
-F 1 "Vz=+-15V" V 5095 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5050 2275 50  0001 C CNN
-F 3 "~" H 5050 2275 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 5050 2275 50  0001 C CNN "PN"
-	1    5050 2275
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 6095CB35
-P 6050 2275
-AR Path="/6011CEB7/6095CB35" Ref="D?"  Part="1" 
-AR Path="/602F30C4/6095CB35" Ref="D6"  Part="1" 
-F 0 "D6" V 6004 2355 50  0000 L CNN
-F 1 "Vz=+-15V" V 6095 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6050 2275 50  0001 C CNN
-F 3 "~" H 6050 2275 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 6050 2275 50  0001 C CNN "PN"
-	1    6050 2275
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 6097FC1E
-P 1050 3300
-AR Path="/6011CEB7/6097FC1E" Ref="D?"  Part="1" 
-AR Path="/602F30C4/6097FC1E" Ref="D7"  Part="1" 
-F 0 "D7" V 1004 3380 50  0000 L CNN
-F 1 "Vz=+-15V" V 1095 3380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 1050 3300 50  0001 C CNN
-F 3 "~" H 1050 3300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 1050 3300 50  0001 C CNN "PN"
-	1    1050 3300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 609A2935
-P 2050 3300
-AR Path="/6011CEB7/609A2935" Ref="D?"  Part="1" 
-AR Path="/602F30C4/609A2935" Ref="D8"  Part="1" 
-F 0 "D8" V 2004 3380 50  0000 L CNN
-F 1 "Vz=+-15V" V 2095 3380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2050 3300 50  0001 C CNN
-F 3 "~" H 2050 3300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 2050 3300 50  0001 C CNN "PN"
-	1    2050 3300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 609C57AE
-P 3050 3300
-AR Path="/6011CEB7/609C57AE" Ref="D?"  Part="1" 
-AR Path="/602F30C4/609C57AE" Ref="D9"  Part="1" 
-F 0 "D9" V 3004 3380 50  0000 L CNN
-F 1 "Vz=+-15V" V 3095 3380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 3050 3300 50  0001 C CNN
-F 3 "~" H 3050 3300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 3050 3300 50  0001 C CNN "PN"
-	1    3050 3300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 609E879B
-P 4050 3300
-AR Path="/6011CEB7/609E879B" Ref="D?"  Part="1" 
-AR Path="/602F30C4/609E879B" Ref="D10"  Part="1" 
-F 0 "D10" V 4004 3380 50  0000 L CNN
-F 1 "Vz=+-15V" V 4095 3380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 4050 3300 50  0001 C CNN
-F 3 "~" H 4050 3300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 4050 3300 50  0001 C CNN "PN"
-	1    4050 3300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60A0B7AE
-P 5050 3300
-AR Path="/6011CEB7/60A0B7AE" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60A0B7AE" Ref="D11"  Part="1" 
-F 0 "D11" V 5004 3380 50  0000 L CNN
-F 1 "Vz=+-15V" V 5095 3380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5050 3300 50  0001 C CNN
-F 3 "~" H 5050 3300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 5050 3300 50  0001 C CNN "PN"
-	1    5050 3300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60A2E525
-P 6050 3300
-AR Path="/6011CEB7/60A2E525" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60A2E525" Ref="D12"  Part="1" 
-F 0 "D12" V 6004 3380 50  0000 L CNN
-F 1 "Vz=+-15V" V 6095 3380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6050 3300 50  0001 C CNN
-F 3 "~" H 6050 3300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 6050 3300 50  0001 C CNN "PN"
-	1    6050 3300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60A51368
-P 1050 4300
-AR Path="/6011CEB7/60A51368" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60A51368" Ref="D13"  Part="1" 
-F 0 "D13" V 1004 4380 50  0000 L CNN
-F 1 "Vz=+-15V" V 1095 4380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 1050 4300 50  0001 C CNN
-F 3 "~" H 1050 4300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 1050 4300 50  0001 C CNN "PN"
-	1    1050 4300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60A74193
-P 2050 4300
-AR Path="/6011CEB7/60A74193" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60A74193" Ref="D14"  Part="1" 
-F 0 "D14" V 2004 4380 50  0000 L CNN
-F 1 "Vz=+-15V" V 2095 4380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2050 4300 50  0001 C CNN
-F 3 "~" H 2050 4300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 2050 4300 50  0001 C CNN "PN"
-	1    2050 4300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60A9726A
-P 3050 4300
-AR Path="/6011CEB7/60A9726A" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60A9726A" Ref="D15"  Part="1" 
-F 0 "D15" V 3004 4380 50  0000 L CNN
-F 1 "Vz=+-15V" V 3095 4380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 3050 4300 50  0001 C CNN
-F 3 "~" H 3050 4300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 3050 4300 50  0001 C CNN "PN"
-	1    3050 4300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60ABA84F
-P 4050 4300
-AR Path="/6011CEB7/60ABA84F" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60ABA84F" Ref="D16"  Part="1" 
-F 0 "D16" V 4004 4380 50  0000 L CNN
-F 1 "Vz=+-15V" V 4095 4380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 4050 4300 50  0001 C CNN
-F 3 "~" H 4050 4300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 4050 4300 50  0001 C CNN "PN"
-	1    4050 4300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60ADD76C
-P 5050 4300
-AR Path="/6011CEB7/60ADD76C" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60ADD76C" Ref="D17"  Part="1" 
-F 0 "D17" V 5004 4380 50  0000 L CNN
-F 1 "Vz=+-15V" V 5095 4380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5050 4300 50  0001 C CNN
-F 3 "~" H 5050 4300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 5050 4300 50  0001 C CNN "PN"
-	1    5050 4300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60B0063F
-P 6050 4300
-AR Path="/6011CEB7/60B0063F" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60B0063F" Ref="D18"  Part="1" 
-F 0 "D18" V 6004 4380 50  0000 L CNN
-F 1 "Vz=+-15V" V 6095 4380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6050 4300 50  0001 C CNN
-F 3 "~" H 6050 4300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 6050 4300 50  0001 C CNN "PN"
-	1    6050 4300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60B23476
-P 1050 5300
-AR Path="/6011CEB7/60B23476" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60B23476" Ref="D19"  Part="1" 
-F 0 "D19" V 1004 5380 50  0000 L CNN
-F 1 "Vz=+-15V" V 1095 5380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 1050 5300 50  0001 C CNN
-F 3 "~" H 1050 5300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 1050 5300 50  0001 C CNN "PN"
-	1    1050 5300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60B46181
-P 2050 5300
-AR Path="/6011CEB7/60B46181" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60B46181" Ref="D20"  Part="1" 
-F 0 "D20" V 2004 5380 50  0000 L CNN
-F 1 "Vz=+-15V" V 2095 5380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2050 5300 50  0001 C CNN
-F 3 "~" H 2050 5300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 2050 5300 50  0001 C CNN "PN"
-	1    2050 5300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60B68F16
-P 3050 5300
-AR Path="/6011CEB7/60B68F16" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60B68F16" Ref="D21"  Part="1" 
-F 0 "D21" V 3004 5380 50  0000 L CNN
-F 1 "Vz=+-15V" V 3095 5380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 3050 5300 50  0001 C CNN
-F 3 "~" H 3050 5300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 3050 5300 50  0001 C CNN "PN"
-	1    3050 5300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60B8BC8D
-P 4050 5300
-AR Path="/6011CEB7/60B8BC8D" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60B8BC8D" Ref="D22"  Part="1" 
-F 0 "D22" V 4004 5380 50  0000 L CNN
-F 1 "Vz=+-15V" V 4095 5380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 4050 5300 50  0001 C CNN
-F 3 "~" H 4050 5300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 4050 5300 50  0001 C CNN "PN"
-	1    4050 5300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60BAEA1C
-P 5050 5300
-AR Path="/6011CEB7/60BAEA1C" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60BAEA1C" Ref="D23"  Part="1" 
-F 0 "D23" V 5004 5380 50  0000 L CNN
-F 1 "Vz=+-15V" V 5095 5380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5050 5300 50  0001 C CNN
-F 3 "~" H 5050 5300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 5050 5300 50  0001 C CNN "PN"
-	1    5050 5300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60BD1B43
-P 6050 5300
-AR Path="/6011CEB7/60BD1B43" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60BD1B43" Ref="D24"  Part="1" 
-F 0 "D24" V 6004 5380 50  0000 L CNN
-F 1 "Vz=+-15V" V 6095 5380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6050 5300 50  0001 C CNN
-F 3 "~" H 6050 5300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 6050 5300 50  0001 C CNN "PN"
-	1    6050 5300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60BF49B6
-P 1050 6300
-AR Path="/6011CEB7/60BF49B6" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60BF49B6" Ref="D25"  Part="1" 
-F 0 "D25" V 1004 6380 50  0000 L CNN
-F 1 "Vz=+-15V" V 1095 6380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 1050 6300 50  0001 C CNN
-F 3 "~" H 1050 6300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 1050 6300 50  0001 C CNN "PN"
-	1    1050 6300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60C178A1
-P 2050 6300
-AR Path="/6011CEB7/60C178A1" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60C178A1" Ref="D26"  Part="1" 
-F 0 "D26" V 2004 6380 50  0000 L CNN
-F 1 "Vz=+-15V" V 2095 6380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2050 6300 50  0001 C CNN
-F 3 "~" H 2050 6300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 2050 6300 50  0001 C CNN "PN"
-	1    2050 6300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60C3A70E
-P 3050 6300
-AR Path="/6011CEB7/60C3A70E" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60C3A70E" Ref="D27"  Part="1" 
-F 0 "D27" V 3004 6380 50  0000 L CNN
-F 1 "Vz=+-15V" V 3095 6380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 3050 6300 50  0001 C CNN
-F 3 "~" H 3050 6300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 3050 6300 50  0001 C CNN "PN"
-	1    3050 6300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60C5D41F
-P 4050 6300
-AR Path="/6011CEB7/60C5D41F" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60C5D41F" Ref="D28"  Part="1" 
-F 0 "D28" V 4004 6380 50  0000 L CNN
-F 1 "Vz=+-15V" V 4095 6380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 4050 6300 50  0001 C CNN
-F 3 "~" H 4050 6300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 4050 6300 50  0001 C CNN "PN"
-	1    4050 6300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60C80366
-P 5050 6300
-AR Path="/6011CEB7/60C80366" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60C80366" Ref="D29"  Part="1" 
-F 0 "D29" V 5004 6380 50  0000 L CNN
-F 1 "Vz=+-15V" V 5095 6380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5050 6300 50  0001 C CNN
-F 3 "~" H 5050 6300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 5050 6300 50  0001 C CNN "PN"
-	1    5050 6300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60CA313D
-P 6050 6300
-AR Path="/6011CEB7/60CA313D" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60CA313D" Ref="D30"  Part="1" 
-F 0 "D30" V 6004 6380 50  0000 L CNN
-F 1 "Vz=+-15V" V 6095 6380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6050 6300 50  0001 C CNN
-F 3 "~" H 6050 6300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 6050 6300 50  0001 C CNN "PN"
-	1    6050 6300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60CC5FD2
-P 1050 7300
-AR Path="/6011CEB7/60CC5FD2" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60CC5FD2" Ref="D31"  Part="1" 
-F 0 "D31" V 1004 7380 50  0000 L CNN
-F 1 "Vz=+-15V" V 1095 7380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 1050 7300 50  0001 C CNN
-F 3 "~" H 1050 7300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 1050 7300 50  0001 C CNN "PN"
-	1    1050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60CE8B3F
-P 2050 7300
-AR Path="/6011CEB7/60CE8B3F" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60CE8B3F" Ref="D32"  Part="1" 
-F 0 "D32" V 2004 7380 50  0000 L CNN
-F 1 "Vz=+-15V" V 2095 7380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2050 7300 50  0001 C CNN
-F 3 "~" H 2050 7300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 2050 7300 50  0001 C CNN "PN"
-	1    2050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60D0B73C
-P 3050 7300
-AR Path="/6011CEB7/60D0B73C" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60D0B73C" Ref="D33"  Part="1" 
-F 0 "D33" V 3004 7380 50  0000 L CNN
-F 1 "Vz=+-15V" V 3095 7380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 3050 7300 50  0001 C CNN
-F 3 "~" H 3050 7300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 3050 7300 50  0001 C CNN "PN"
-	1    3050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60D2E54F
-P 4050 7300
-AR Path="/6011CEB7/60D2E54F" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60D2E54F" Ref="D34"  Part="1" 
-F 0 "D34" V 4004 7380 50  0000 L CNN
-F 1 "Vz=+-15V" V 4095 7380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 4050 7300 50  0001 C CNN
-F 3 "~" H 4050 7300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 4050 7300 50  0001 C CNN "PN"
-	1    4050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60D515E4
-P 5050 7300
-AR Path="/6011CEB7/60D515E4" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60D515E4" Ref="D35"  Part="1" 
-F 0 "D35" V 5004 7380 50  0000 L CNN
-F 1 "Vz=+-15V" V 5095 7380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5050 7300 50  0001 C CNN
-F 3 "~" H 5050 7300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 5050 7300 50  0001 C CNN "PN"
-	1    5050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:D_Zener_x2_ACom_AKK D?
-U 1 1 60D744DB
-P 6050 7300
-AR Path="/6011CEB7/60D744DB" Ref="D?"  Part="1" 
-AR Path="/602F30C4/60D744DB" Ref="D36"  Part="1" 
-F 0 "D36" V 6004 7380 50  0000 L CNN
-F 1 "Vz=+-15V" V 6095 7380 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 6050 7300 50  0001 C CNN
-F 3 "~" H 6050 7300 50  0001 C CNN
-F 4 "MMBZH15VAWT1G" V 6050 7300 50  0001 C CNN "PN"
-	1    6050 7300
-	0    -1   1    0   
-$EndComp
-$Comp
 L power:+12V #PWR059
 U 1 1 60DA986C
 P 7250 5275
@@ -1992,14 +1460,14 @@ L power:+3V8 #PWR051
 U 1 1 60E46539
 P 10925 2775
 F 0 "#PWR051" H 10925 2625 50  0001 C CNN
-F 1 "+3V8" H 10940 2948 50  0000 C CNN
+F 1 "+3V8" H 10925 2950 50  0000 C CNN
 F 2 "" H 10925 2775 50  0001 C CNN
 F 3 "" H 10925 2775 50  0001 C CNN
 	1    10925 2775
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10925 2775 10425 2775
+	10925 2775 10900 2775
 Connection ~ 10425 2775
 Wire Wire Line
 	10425 2775 10425 2750
@@ -2025,4 +1493,586 @@ F 3 "" H 8600 4400 50  0001 C CNN
 	1    8600 4400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1050 2425 1050 2700
+Wire Wire Line
+	1050 2125 1050 1975
+$Comp
+L Device:D_TVS D?
+U 1 1 6222DBDF
+P 2050 2275
+AR Path="/6011CEB7/6222DBDF" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6222DBDF" Ref="D2"  Part="1" 
+F 0 "D2" V 2004 2355 50  0000 L CNN
+F 1 "Vcl=14V" V 2095 2355 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 2050 2275 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 2050 2275 50  0001 C CNN
+F 4 "VS12VBA1HS" V 2050 2275 50  0001 C CNN "PN"
+	1    2050 2275
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62251A07
+P 3050 2275
+AR Path="/6011CEB7/62251A07" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62251A07" Ref="D3"  Part="1" 
+F 0 "D3" V 3004 2355 50  0000 L CNN
+F 1 "Vcl=14V" V 3095 2355 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 3050 2275 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 3050 2275 50  0001 C CNN
+F 4 "VS12VBA1HS" V 3050 2275 50  0001 C CNN "PN"
+	1    3050 2275
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62275847
+P 4050 2275
+AR Path="/6011CEB7/62275847" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62275847" Ref="D4"  Part="1" 
+F 0 "D4" V 4004 2355 50  0000 L CNN
+F 1 "Vcl=14V" V 4095 2355 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4050 2275 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 4050 2275 50  0001 C CNN
+F 4 "VS12VBA1HS" V 4050 2275 50  0001 C CNN "PN"
+	1    4050 2275
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 622995B5
+P 5050 2275
+AR Path="/6011CEB7/622995B5" Ref="D?"  Part="1" 
+AR Path="/602F30C4/622995B5" Ref="D5"  Part="1" 
+F 0 "D5" V 5004 2355 50  0000 L CNN
+F 1 "Vcl=14V" V 5095 2355 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5050 2275 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 5050 2275 50  0001 C CNN
+F 4 "VS12VBA1HS" V 5050 2275 50  0001 C CNN "PN"
+	1    5050 2275
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 622BD315
+P 6050 2275
+AR Path="/6011CEB7/622BD315" Ref="D?"  Part="1" 
+AR Path="/602F30C4/622BD315" Ref="D6"  Part="1" 
+F 0 "D6" V 6004 2355 50  0000 L CNN
+F 1 "Vcl=14V" V 6095 2355 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6050 2275 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6050 2275 50  0001 C CNN
+F 4 "VS12VBA1HS" V 6050 2275 50  0001 C CNN "PN"
+	1    6050 2275
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 622E0FB7
+P 1050 3300
+AR Path="/6011CEB7/622E0FB7" Ref="D?"  Part="1" 
+AR Path="/602F30C4/622E0FB7" Ref="D7"  Part="1" 
+F 0 "D7" V 1004 3380 50  0000 L CNN
+F 1 "Vcl=14V" V 1095 3380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 1050 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 1050 3300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 1050 3300 50  0001 C CNN "PN"
+	1    1050 3300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62304D41
+P 2050 3300
+AR Path="/6011CEB7/62304D41" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62304D41" Ref="D8"  Part="1" 
+F 0 "D8" V 2004 3380 50  0000 L CNN
+F 1 "Vcl=14V" V 2095 3380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 2050 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 2050 3300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 2050 3300 50  0001 C CNN "PN"
+	1    2050 3300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 623289E7
+P 3050 3300
+AR Path="/6011CEB7/623289E7" Ref="D?"  Part="1" 
+AR Path="/602F30C4/623289E7" Ref="D9"  Part="1" 
+F 0 "D9" V 3004 3380 50  0000 L CNN
+F 1 "Vcl=14V" V 3095 3380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 3050 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 3050 3300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 3050 3300 50  0001 C CNN "PN"
+	1    3050 3300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6234C721
+P 4050 3300
+AR Path="/6011CEB7/6234C721" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6234C721" Ref="D10"  Part="1" 
+F 0 "D10" V 4004 3380 50  0000 L CNN
+F 1 "Vcl=14V" V 4095 3380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4050 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 4050 3300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 4050 3300 50  0001 C CNN "PN"
+	1    4050 3300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6237043D
+P 5050 3300
+AR Path="/6011CEB7/6237043D" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6237043D" Ref="D11"  Part="1" 
+F 0 "D11" V 5004 3380 50  0000 L CNN
+F 1 "Vcl=14V" V 5095 3380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5050 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 5050 3300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 5050 3300 50  0001 C CNN "PN"
+	1    5050 3300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6239437B
+P 6050 3300
+AR Path="/6011CEB7/6239437B" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6239437B" Ref="D12"  Part="1" 
+F 0 "D12" V 6004 3380 50  0000 L CNN
+F 1 "Vcl=14V" V 6095 3380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6050 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6050 3300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 6050 3300 50  0001 C CNN "PN"
+	1    6050 3300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 623B8237
+P 1050 4300
+AR Path="/6011CEB7/623B8237" Ref="D?"  Part="1" 
+AR Path="/602F30C4/623B8237" Ref="D13"  Part="1" 
+F 0 "D13" V 1004 4380 50  0000 L CNN
+F 1 "Vcl=14V" V 1095 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 1050 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 1050 4300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 1050 4300 50  0001 C CNN "PN"
+	1    1050 4300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 623DBF9B
+P 2050 4300
+AR Path="/6011CEB7/623DBF9B" Ref="D?"  Part="1" 
+AR Path="/602F30C4/623DBF9B" Ref="D14"  Part="1" 
+F 0 "D14" V 2004 4380 50  0000 L CNN
+F 1 "Vcl=14V" V 2095 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 2050 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 2050 4300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 2050 4300 50  0001 C CNN "PN"
+	1    2050 4300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 623FFD93
+P 3050 4300
+AR Path="/6011CEB7/623FFD93" Ref="D?"  Part="1" 
+AR Path="/602F30C4/623FFD93" Ref="D15"  Part="1" 
+F 0 "D15" V 3004 4380 50  0000 L CNN
+F 1 "Vcl=14V" V 3095 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 3050 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 3050 4300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 3050 4300 50  0001 C CNN "PN"
+	1    3050 4300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62423AD1
+P 4050 4300
+AR Path="/6011CEB7/62423AD1" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62423AD1" Ref="D16"  Part="1" 
+F 0 "D16" V 4004 4380 50  0000 L CNN
+F 1 "Vcl=14V" V 4095 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4050 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 4050 4300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 4050 4300 50  0001 C CNN "PN"
+	1    4050 4300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62447883
+P 5050 4300
+AR Path="/6011CEB7/62447883" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62447883" Ref="D17"  Part="1" 
+F 0 "D17" V 5004 4380 50  0000 L CNN
+F 1 "Vcl=14V" V 5095 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5050 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 5050 4300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 5050 4300 50  0001 C CNN "PN"
+	1    5050 4300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6246B5B3
+P 6050 4300
+AR Path="/6011CEB7/6246B5B3" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6246B5B3" Ref="D18"  Part="1" 
+F 0 "D18" V 6004 4380 50  0000 L CNN
+F 1 "Vcl=14V" V 6095 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6050 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6050 4300 50  0001 C CNN
+F 4 "VS12VBA1HS" V 6050 4300 50  0001 C CNN "PN"
+	1    6050 4300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6248F323
+P 1050 5325
+AR Path="/6011CEB7/6248F323" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6248F323" Ref="D19"  Part="1" 
+F 0 "D19" V 1004 5405 50  0000 L CNN
+F 1 "Vcl=14V" V 1095 5405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 1050 5325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 1050 5325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 1050 5325 50  0001 C CNN "PN"
+	1    1050 5325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 624B318F
+P 2050 5325
+AR Path="/6011CEB7/624B318F" Ref="D?"  Part="1" 
+AR Path="/602F30C4/624B318F" Ref="D20"  Part="1" 
+F 0 "D20" V 2004 5405 50  0000 L CNN
+F 1 "Vcl=14V" V 2095 5405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 2050 5325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 2050 5325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 2050 5325 50  0001 C CNN "PN"
+	1    2050 5325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 624D6F69
+P 3050 5325
+AR Path="/6011CEB7/624D6F69" Ref="D?"  Part="1" 
+AR Path="/602F30C4/624D6F69" Ref="D21"  Part="1" 
+F 0 "D21" V 3004 5405 50  0000 L CNN
+F 1 "Vcl=14V" V 3095 5405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 3050 5325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 3050 5325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 3050 5325 50  0001 C CNN "PN"
+	1    3050 5325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 624FAE0F
+P 4050 5325
+AR Path="/6011CEB7/624FAE0F" Ref="D?"  Part="1" 
+AR Path="/602F30C4/624FAE0F" Ref="D22"  Part="1" 
+F 0 "D22" V 4004 5405 50  0000 L CNN
+F 1 "Vcl=14V" V 4095 5405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4050 5325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 4050 5325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 4050 5325 50  0001 C CNN "PN"
+	1    4050 5325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6251EDC7
+P 5050 5325
+AR Path="/6011CEB7/6251EDC7" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6251EDC7" Ref="D23"  Part="1" 
+F 0 "D23" V 5004 5405 50  0000 L CNN
+F 1 "Vcl=14V" V 5095 5405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5050 5325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 5050 5325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 5050 5325 50  0001 C CNN "PN"
+	1    5050 5325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62542B8D
+P 6050 5325
+AR Path="/6011CEB7/62542B8D" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62542B8D" Ref="D24"  Part="1" 
+F 0 "D24" V 6004 5405 50  0000 L CNN
+F 1 "Vcl=14V" V 6095 5405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6050 5325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6050 5325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 6050 5325 50  0001 C CNN "PN"
+	1    6050 5325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 625668B7
+P 1050 6325
+AR Path="/6011CEB7/625668B7" Ref="D?"  Part="1" 
+AR Path="/602F30C4/625668B7" Ref="D25"  Part="1" 
+F 0 "D25" V 1004 6405 50  0000 L CNN
+F 1 "Vcl=14V" V 1095 6405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 1050 6325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 1050 6325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 1050 6325 50  0001 C CNN "PN"
+	1    1050 6325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6258A7FD
+P 2050 6325
+AR Path="/6011CEB7/6258A7FD" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6258A7FD" Ref="D26"  Part="1" 
+F 0 "D26" V 2004 6405 50  0000 L CNN
+F 1 "Vcl=14V" V 2095 6405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 2050 6325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 2050 6325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 2050 6325 50  0001 C CNN "PN"
+	1    2050 6325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 625AE645
+P 3050 6325
+AR Path="/6011CEB7/625AE645" Ref="D?"  Part="1" 
+AR Path="/602F30C4/625AE645" Ref="D27"  Part="1" 
+F 0 "D27" V 3004 6405 50  0000 L CNN
+F 1 "Vcl=14V" V 3095 6405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 3050 6325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 3050 6325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 3050 6325 50  0001 C CNN "PN"
+	1    3050 6325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 625D259F
+P 4050 6325
+AR Path="/6011CEB7/625D259F" Ref="D?"  Part="1" 
+AR Path="/602F30C4/625D259F" Ref="D28"  Part="1" 
+F 0 "D28" V 4004 6405 50  0000 L CNN
+F 1 "Vcl=14V" V 4095 6405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4050 6325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 4050 6325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 4050 6325 50  0001 C CNN "PN"
+	1    4050 6325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 625F64F7
+P 5050 6325
+AR Path="/6011CEB7/625F64F7" Ref="D?"  Part="1" 
+AR Path="/602F30C4/625F64F7" Ref="D29"  Part="1" 
+F 0 "D29" V 5004 6405 50  0000 L CNN
+F 1 "Vcl=14V" V 5095 6405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5050 6325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 5050 6325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 5050 6325 50  0001 C CNN "PN"
+	1    5050 6325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6261A3B9
+P 6050 6325
+AR Path="/6011CEB7/6261A3B9" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6261A3B9" Ref="D30"  Part="1" 
+F 0 "D30" V 6004 6405 50  0000 L CNN
+F 1 "Vcl=14V" V 6095 6405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6050 6325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6050 6325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 6050 6325 50  0001 C CNN "PN"
+	1    6050 6325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 6263E103
+P 1050 7325
+AR Path="/6011CEB7/6263E103" Ref="D?"  Part="1" 
+AR Path="/602F30C4/6263E103" Ref="D31"  Part="1" 
+F 0 "D31" V 1004 7405 50  0000 L CNN
+F 1 "Vcl=14V" V 1095 7405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 1050 7325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 1050 7325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 1050 7325 50  0001 C CNN "PN"
+	1    1050 7325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62661DFF
+P 2050 7325
+AR Path="/6011CEB7/62661DFF" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62661DFF" Ref="D32"  Part="1" 
+F 0 "D32" V 2004 7405 50  0000 L CNN
+F 1 "Vcl=14V" V 2095 7405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 2050 7325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 2050 7325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 2050 7325 50  0001 C CNN "PN"
+	1    2050 7325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 62685D35
+P 3050 7325
+AR Path="/6011CEB7/62685D35" Ref="D?"  Part="1" 
+AR Path="/602F30C4/62685D35" Ref="D33"  Part="1" 
+F 0 "D33" V 3004 7405 50  0000 L CNN
+F 1 "Vcl=14V" V 3095 7405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 3050 7325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 3050 7325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 3050 7325 50  0001 C CNN "PN"
+	1    3050 7325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 626A9AD7
+P 4050 7325
+AR Path="/6011CEB7/626A9AD7" Ref="D?"  Part="1" 
+AR Path="/602F30C4/626A9AD7" Ref="D34"  Part="1" 
+F 0 "D34" V 4004 7405 50  0000 L CNN
+F 1 "Vcl=14V" V 4095 7405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4050 7325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 4050 7325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 4050 7325 50  0001 C CNN "PN"
+	1    4050 7325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 626CD9B3
+P 5050 7325
+AR Path="/6011CEB7/626CD9B3" Ref="D?"  Part="1" 
+AR Path="/602F30C4/626CD9B3" Ref="D35"  Part="1" 
+F 0 "D35" V 5004 7405 50  0000 L CNN
+F 1 "Vcl=14V" V 5095 7405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5050 7325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 5050 7325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 5050 7325 50  0001 C CNN "PN"
+	1    5050 7325
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 626F1669
+P 6050 7325
+AR Path="/6011CEB7/626F1669" Ref="D?"  Part="1" 
+AR Path="/602F30C4/626F1669" Ref="D36"  Part="1" 
+F 0 "D36" V 6004 7405 50  0000 L CNN
+F 1 "Vcl=14V" V 6095 7405 50  0000 L CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6050 7325 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6050 7325 50  0001 C CNN
+F 4 "VS12VBA1HS" V 6050 7325 50  0001 C CNN "PN"
+	1    6050 7325
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6050 7475 6050 7725
+Wire Wire Line
+	1050 7000 1050 7175
+Wire Wire Line
+	2050 7000 2050 7175
+Wire Wire Line
+	3050 7000 3050 7175
+Wire Wire Line
+	4050 7000 4050 7175
+Wire Wire Line
+	5050 7000 5050 7175
+Wire Wire Line
+	6050 7000 6050 7175
+Wire Wire Line
+	1050 6175 1050 6000
+Wire Wire Line
+	2050 6175 2050 6000
+Wire Wire Line
+	3050 6175 3050 6000
+Wire Wire Line
+	4050 6175 4050 6000
+Wire Wire Line
+	5050 6175 5050 6000
+Wire Wire Line
+	6050 6175 6050 6000
+Wire Wire Line
+	1050 5175 1050 5000
+Wire Wire Line
+	2050 5175 2050 5000
+Wire Wire Line
+	3050 5175 3050 5000
+Wire Wire Line
+	4050 5175 4050 5000
+Wire Wire Line
+	5050 5175 5050 5000
+Wire Wire Line
+	6050 5175 6050 5000
+Wire Wire Line
+	6050 4150 6050 4000
+Wire Wire Line
+	5050 4150 5050 4000
+Wire Wire Line
+	4050 4150 4050 4000
+Wire Wire Line
+	3050 4000 3050 4150
+Wire Wire Line
+	2050 4150 2050 4000
+Wire Wire Line
+	1050 4150 1050 4000
+Wire Wire Line
+	1050 3150 1050 3000
+Wire Wire Line
+	2050 3000 2050 3150
+Wire Wire Line
+	3050 3150 3050 3000
+Wire Wire Line
+	4050 3150 4050 3000
+Wire Wire Line
+	5050 3150 5050 3000
+Wire Wire Line
+	6050 3150 6050 3000
+Wire Wire Line
+	6050 2125 6050 1975
+Wire Wire Line
+	5050 2125 5050 1975
+Wire Wire Line
+	4050 2125 4050 1975
+Wire Wire Line
+	3050 2125 3050 1975
+Wire Wire Line
+	2050 2125 2050 1975
+Wire Wire Line
+	8625 2075 8700 2075
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 63246BD4
+P 10900 2775
+F 0 "#FLG0101" H 10900 2850 50  0001 C CNN
+F 1 "PWR_FLAG" H 10800 2950 50  0000 C CNN
+F 2 "" H 10900 2775 50  0001 C CNN
+F 3 "~" H 10900 2775 50  0001 C CNN
+	1    10900 2775
+	-1   0    0    1   
+$EndComp
+Connection ~ 10900 2775
+Wire Wire Line
+	10900 2775 10425 2775
 $EndSCHEMATC
