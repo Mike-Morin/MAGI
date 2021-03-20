@@ -1,5 +1,5 @@
 ## 20 Pin Electrode Connector
- Pogo pin connector to bare wire. For mounting to a microscope stage and make contact with a microscope slide electrode array. This PCB goes on the stage, slides slide under the pogo pins, and a very flexible wiring harness comes off this board and into your test gear. The idea is to save a lot of money on a probe station microscope combo.
+ Pogo pin connector to bare wire. For mounting to a microscope stage and making contact with a microscope slide electrode array. This PCB goes on the stage, slides clip under the pogo pins, and a very flexible wiring harness comes off this board and into your test gear. The idea is to save a lot of money on a probe station microscope combo.
 
 ## Electrode Castellated
  Microscope slide electrode array utilizing castellations as electrodes. This electrode array provides two independent cavities for testing colloidal neuromorphic devices, or, potentially, real biological neurons (use biocompatible plating such as ENIG gold). This should be epoxied to a glass slide and can be sealed over top with ports for pumping in and out materials. The cutouts allow microscopy while performing electrical excitation and measurement.
