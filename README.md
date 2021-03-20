@@ -26,6 +26,10 @@ Source measure unit with relay multiplexer for the Analog Discovery 2 (AD2). Int
  - AC/DC coupling scope switch
  - BNC ports for the scope to be used for other projects so you don't have to keep swapping it out for other uses
 
+## SMU Shunt Amp (In Progress)
+ - Prototype board for SMU Test Fixture current shunt amp.
+ - New composite amp design.
+
 ## Coming Soon
  - SMU Test Fixture completion
  - CuS-based memristor fabrication and characterization (very old research, needs write-up)
