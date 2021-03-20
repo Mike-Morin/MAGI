@@ -68,13 +68,13 @@ Connection ~ 1000 1100
 Wire Wire Line
 	1000 1100 1000 1200
 $Comp
-L pspice:OPAMP U4
+L MAGI_Symbols:OPA192IDBVx U4
 U 1 1 5FBD0B5D
 P 8600 4000
 F 0 "U4" H 8750 3900 50  0000 C CNN
-F 1 "OPA192" H 8700 3800 50  0000 C CNN
+F 1 "OPA192IDBVx" H 8900 4175 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 8600 4000 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/opa192.pdf?HQS=TI-null-null-mousermode-df-pf-null-wwe&ts=1605478144919&ref_url=https%253A%252F%252Fwww.mouser.com%252F" H 8600 4000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/opa192.pdf?ts=1616148990548" H 8600 4000 50  0001 C CNN
 F 4 "OPA192IDBVR" H 8600 4000 50  0001 C CNN "PN"
 	1    8600 4000
 	1    0    0    1   
@@ -260,15 +260,15 @@ Wire Wire Line
 Wire Wire Line
 	10975 2850 10975 2650
 $Comp
-L pspice:OPAMP U1
+L MAGI_Symbols:OPA192IDBVx U1
 U 1 1 60366EC0
 P 8550 2550
 AR Path="/62B74232/60366EC0" Ref="U1"  Part="1" 
 AR Path="/6012FE35/60366EC0" Ref="U?"  Part="1" 
 F 0 "U1" H 8700 2450 50  0000 C CNN
-F 1 "OPA192" H 8650 2350 50  0000 C CNN
+F 1 "OPA192IDBVx" H 8850 2725 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 8550 2550 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/opa192.pdf?HQS=TI-null-null-mousermode-df-pf-null-wwe&ts=1605478144919&ref_url=https%253A%252F%252Fwww.mouser.com%252F" H 8550 2550 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/opa192.pdf?ts=1616148990548" H 8550 2550 50  0001 C CNN
 F 4 "OPA192IDBVR" H 8550 2550 50  0001 C CNN "PN"
 	1    8550 2550
 	1    0    0    1   
@@ -399,15 +399,15 @@ $EndComp
 Wire Wire Line
 	2150 3200 2200 3200
 $Comp
-L pspice:OPAMP U2
+L MAGI_Symbols:OPA189IDBVx U2
 U 1 1 60366F19
 P 2500 3100
 AR Path="/62B74232/60366F19" Ref="U2"  Part="1" 
 AR Path="/6012FE35/60366F19" Ref="U?"  Part="1" 
 F 0 "U2" H 2600 3200 50  0000 L CNN
-F 1 "OPA189" H 2450 3300 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 2500 3100 50  0001 C CNN
-F 3 "https://www.ti.com/lit/gpn/opa189" H 2500 3100 50  0001 C CNN
+F 1 "OPA189IDBVx" H 2450 3300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-5" H 2500 3100 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/opa189.pdf" H 2500 3100 50  0001 C CNN
 F 4 "OPA189IDBVR" H 2500 3100 50  0001 C CNN "PN"
 	1    2500 3100
 	1    0    0    -1  
@@ -509,13 +509,13 @@ Wire Wire Line
 Text HLabel 8200 5200 2    50   Output ~ 0
 ammeter_meas_output
 $Comp
-L pspice:OPAMP U5
+L MAGI_Symbols:OPA189IDBVx U5
 U 1 1 5FAFE6A7
 P 6500 4750
 F 0 "U5" H 6600 4850 50  0000 L CNN
-F 1 "OPA189" H 6450 4950 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 6500 4750 50  0001 C CNN
-F 3 "https://www.ti.com/lit/gpn/opa189" H 6500 4750 50  0001 C CNN
+F 1 "OPA189IDBVx" H 6450 4950 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-5" H 6500 4750 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/opa189.pdf" H 6500 4750 50  0001 C CNN
 F 4 "OPA189IDBVR" H 6500 4750 50  0001 C CNN "PN"
 	1    6500 4750
 	1    0    0    -1  
