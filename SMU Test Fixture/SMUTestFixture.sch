@@ -202,8 +202,6 @@ F 3 "" H 4575 1225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3975 1475 3825 1475
-Wire Wire Line
 	4325 2775 4050 2775
 $Comp
 L Device:R_Small_US R?
@@ -255,8 +253,6 @@ F 4 " RN73C2A5K9BTDF" V 3050 2875 50  0001 C CNN "PN"
 	1    3050 2875
 	1    0    0    -1  
 $EndComp
-Text HLabel 3825 1475 0    50   Input ~ 0
-IV_src_input
 $Comp
 L MAGI_Symbols:OPA189IDBVx U?
 U 1 1 60931E14
@@ -278,74 +274,38 @@ Wire Wire Line
 $Comp
 L Device:C_Small C?
 U 1 1 60931E1C
-P 5000 2975
+P 4875 2975
 AR Path="/62B74232/60931E1C" Ref="C?"  Part="1" 
 AR Path="/6012FE35/60931E1C" Ref="C?"  Part="1" 
 AR Path="/607BAEF6/60931E1C" Ref="C?"  Part="1" 
 AR Path="/60931E1C" Ref="C?"  Part="1" 
-F 0 "C?" H 5092 3021 50  0000 L CNN
-F 1 "33p" H 5092 2930 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 5000 2975 50  0001 C CNN
-F 3 "~" H 5000 2975 50  0001 C CNN
-F 4 "GRM0335C1H330FA01D" H 5000 2975 50  0001 C CNN "PN"
-	1    5000 2975
+F 0 "C?" H 4967 3021 50  0000 L CNN
+F 1 "33p" H 4967 2930 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 4875 2975 50  0001 C CNN
+F 3 "~" H 4875 2975 50  0001 C CNN
+F 4 "GRM0335C1H330FA01D" H 4875 2975 50  0001 C CNN "PN"
+	1    4875 2975
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 2875 5000 2775
+	4875 2875 4875 2775
 $Comp
 L power:GND #PWR?
 U 1 1 60931E2D
-P 5000 3175
+P 4875 3175
 AR Path="/62B74232/60931E2D" Ref="#PWR?"  Part="1" 
 AR Path="/6012FE35/60931E2D" Ref="#PWR?"  Part="1" 
 AR Path="/607BAEF6/60931E2D" Ref="#PWR?"  Part="1" 
 AR Path="/60931E2D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5000 2925 50  0001 C CNN
-F 1 "GND" H 4875 3175 50  0000 C CNN
-F 2 "" H 5000 3175 50  0001 C CNN
-F 3 "" H 5000 3175 50  0001 C CNN
-	1    5000 3175
+F 0 "#PWR?" H 4875 2925 50  0001 C CNN
+F 1 "GND" H 4750 3175 50  0000 C CNN
+F 2 "" H 4875 3175 50  0001 C CNN
+F 3 "" H 4875 3175 50  0001 C CNN
+	1    4875 3175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 3075 5000 3175
-$Comp
-L Device:R_Small_US R?
-U 1 1 60931E3B
-P 3975 1575
-AR Path="/62B74232/60931E3B" Ref="R?"  Part="1" 
-AR Path="/6012FE35/60931E3B" Ref="R?"  Part="1" 
-AR Path="/607BAEF6/60931E3B" Ref="R?"  Part="1" 
-AR Path="/60931E3B" Ref="R?"  Part="1" 
-F 0 "R?" H 3875 1575 50  0000 C CNN
-F 1 "56K" H 3875 1475 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3975 1575 50  0001 C CNN
-F 3 "~" H 3975 1575 50  0001 C CNN
-F 4 "CRCW080556K0JNEA" H 3975 1575 50  0001 C CNN "PN"
-	1    3975 1575
-	1    0    0    -1  
-$EndComp
-Connection ~ 3975 1475
-Wire Wire Line
-	4375 1475 3975 1475
-$Comp
-L power:GND #PWR?
-U 1 1 60931E43
-P 3975 1825
-AR Path="/62B74232/60931E43" Ref="#PWR?"  Part="1" 
-AR Path="/6012FE35/60931E43" Ref="#PWR?"  Part="1" 
-AR Path="/607BAEF6/60931E43" Ref="#PWR?"  Part="1" 
-AR Path="/60931E43" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3975 1575 50  0001 C CNN
-F 1 "GND" H 3980 1652 50  0000 C CNN
-F 2 "" H 3975 1825 50  0001 C CNN
-F 3 "" H 3975 1825 50  0001 C CNN
-	1    3975 1825
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3975 1825 3975 1675
+	4875 3075 4875 3175
 Wire Wire Line
 	9500 1675 9025 1675
 Wire Wire Line
@@ -408,12 +368,12 @@ Wire Wire Line
 $Comp
 L MAGI_Symbols:ADGS1412 U?
 U 1 1 60A0C618
-P 1400 2225
-F 0 "U?" H 1930 1921 50  0000 L CNN
-F 1 "ADGS1412" H 1930 1830 50  0000 L CNN
-F 2 "Package_CSP:LFCSP-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 1150 3825 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS1412.pdf" H -50 2875 50  0001 C CNN
-	1    1400 2225
+P 1700 2550
+F 0 "U?" H 2230 2246 50  0000 L CNN
+F 1 "ADGS1412" H 2230 2155 50  0000 L CNN
+F 2 "Package_CSP:LFCSP-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 1450 4150 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS1412.pdf" H 250 3200 50  0001 C CNN
+	1    1700 2550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -450,13 +410,10 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS141
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4325 2775 5000 2775
+	4325 2775 4875 2775
 Connection ~ 4325 2775
 Wire Wire Line
 	4325 1675 4325 2775
-Connection ~ 5000 2775
-Wire Wire Line
-	5000 2775 5400 2775
 Connection ~ 5400 2775
 Wire Wire Line
 	5400 2775 5650 2775
@@ -472,9 +429,9 @@ Wire Wire Line
 Wire Wire Line
 	9250 1975 9025 1975
 Wire Wire Line
-	7075 3000 10400 3025
+	7075 3000 10400 3000
 Wire Wire Line
-	10400 3025 10400 2275
+	10400 3000 10400 2275
 Wire Wire Line
 	10400 1800 10125 1800
 $Comp
@@ -662,10 +619,10 @@ Wire Wire Line
 Connection ~ 10400 2275
 Wire Wire Line
 	10400 2275 10400 1800
-Text GLabel 3550 4225 0    50   Input ~ 0
+Text GLabel 1000 4225 0    50   Input ~ 0
 v_dut
 Wire Wire Line
-	3550 4225 3725 4225
+	1000 4225 3725 4225
 Text GLabel 1075 4900 0    50   Input ~ 0
 v_shunt
 Wire Wire Line
@@ -1004,53 +961,53 @@ Connection ~ 4625 4325
 $Comp
 L MAGI_Symbols:ADGS1412 U?
 U 4 1 6068C695
-P 9475 4650
-F 0 "U?" H 9475 4915 50  0000 C CNN
-F 1 "ADGS1412" H 9475 4824 50  0000 C CNN
-F 2 "Package_CSP:LFCSP-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 9225 6250 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS1412.pdf" H 8025 5300 50  0001 C CNN
-	4    9475 4650
+P 8150 6150
+F 0 "U?" H 8150 6415 50  0000 C CNN
+F 1 "ADGS1412" H 8150 6324 50  0000 C CNN
+F 2 "Package_CSP:LFCSP-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 7900 7750 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS1412.pdf" H 6700 6800 50  0001 C CNN
+	4    8150 6150
 	1    0    0    -1  
 $EndComp
 $Comp
 L MAGI_Symbols:ADGS1412 U?
 U 5 1 60690805
-P 9475 4225
-F 0 "U?" H 9475 4490 50  0000 C CNN
-F 1 "ADGS1412" H 9475 4399 50  0000 C CNN
-F 2 "Package_CSP:LFCSP-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 9225 5825 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS1412.pdf" H 8025 4875 50  0001 C CNN
-	5    9475 4225
+P 8150 5575
+F 0 "U?" H 8150 5840 50  0000 C CNN
+F 1 "ADGS1412" H 8150 5749 50  0000 C CNN
+F 2 "Package_CSP:LFCSP-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 7900 7175 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADGS1412.pdf" H 6700 6225 50  0001 C CNN
+	5    8150 5575
 	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:BCP56 Q?
 U 1 1 606FF800
-P 7125 5775
-F 0 "Q?" H 7316 5821 50  0000 L CNN
-F 1 "BCP56" H 7316 5730 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 7325 5700 50  0001 L CIN
-F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 7125 5775 50  0001 L CNN
-	1    7125 5775
+P 7125 5925
+F 0 "Q?" H 7316 5971 50  0000 L CNN
+F 1 "BCP56" H 7316 5880 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 7325 5850 50  0001 L CIN
+F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 7125 5925 50  0001 L CNN
+	1    7125 5925
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:BCP56 Q?
 U 1 1 6071F4DE
-P 6125 5750
-F 0 "Q?" H 6316 5796 50  0000 L CNN
-F 1 "BCP56" H 6316 5705 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6325 5675 50  0001 L CIN
-F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 6125 5750 50  0001 L CNN
-	1    6125 5750
+P 6125 5900
+F 0 "Q?" H 6316 5946 50  0000 L CNN
+F 1 "BCP56" H 6316 5855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6325 5825 50  0001 L CIN
+F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 6125 5900 50  0001 L CNN
+	1    6125 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7025 5575 7025 5200
+	7025 5725 7025 5675
 Wire Wire Line
 	7025 5200 6925 5200
 Wire Wire Line
-	6225 5550 6225 5200
+	6225 5700 6225 5675
 Wire Wire Line
 	6225 5200 6325 5200
 $Comp
@@ -1078,23 +1035,23 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 6074FEA1
-P 6225 6050
-F 0 "#PWR?" H 6225 5800 50  0001 C CNN
-F 1 "GND" H 6230 5877 50  0000 C CNN
-F 2 "" H 6225 6050 50  0001 C CNN
-F 3 "" H 6225 6050 50  0001 C CNN
-	1    6225 6050
+P 6225 6200
+F 0 "#PWR?" H 6225 5950 50  0001 C CNN
+F 1 "GND" H 6230 6027 50  0000 C CNN
+F 2 "" H 6225 6200 50  0001 C CNN
+F 3 "" H 6225 6200 50  0001 C CNN
+	1    6225 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 60750C4D
-P 7025 6050
-F 0 "#PWR?" H 7025 5800 50  0001 C CNN
-F 1 "GND" H 7030 5877 50  0000 C CNN
-F 2 "" H 7025 6050 50  0001 C CNN
-F 3 "" H 7025 6050 50  0001 C CNN
-	1    7025 6050
+P 7025 6200
+F 0 "#PWR?" H 7025 5950 50  0001 C CNN
+F 1 "GND" H 7030 6027 50  0000 C CNN
+F 2 "" H 7025 6200 50  0001 C CNN
+F 3 "" H 7025 6200 50  0001 C CNN
+	1    7025 6200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1133,4 +1090,185 @@ Wire Wire Line
 	5975 5200 5925 5200
 Wire Wire Line
 	5925 5200 5925 5150
+Wire Wire Line
+	6225 6200 6225 6100
+Wire Wire Line
+	7025 6125 7025 6200
+Wire Wire Line
+	7325 5925 7325 5575
+Wire Wire Line
+	5925 6150 5925 5900
+$Comp
+L power:+12V #PWR?
+U 1 1 6069C621
+P 8750 5400
+F 0 "#PWR?" H 8750 5250 50  0001 C CNN
+F 1 "+12V" H 8765 5573 50  0000 C CNN
+F 2 "" H 8750 5400 50  0001 C CNN
+F 3 "" H 8750 5400 50  0001 C CNN
+	1    8750 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 6150 8750 6150
+Wire Wire Line
+	8750 6150 8750 5575
+Wire Wire Line
+	8600 5575 8750 5575
+Connection ~ 8750 5575
+Wire Wire Line
+	8750 5575 8750 5400
+$Comp
+L Device:R_Small_US R?
+U 1 1 606B6E6B
+P 7525 5575
+F 0 "R?" V 7320 5575 50  0000 C CNN
+F 1 "100R" V 7411 5575 50  0000 C CNN
+F 2 "" H 7525 5575 50  0001 C CNN
+F 3 "~" H 7525 5575 50  0001 C CNN
+	1    7525 5575
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 606B943C
+P 7525 6150
+F 0 "R?" V 7320 6150 50  0000 C CNN
+F 1 "100R" V 7411 6150 50  0000 C CNN
+F 2 "" H 7525 6150 50  0001 C CNN
+F 3 "~" H 7525 6150 50  0001 C CNN
+	1    7525 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5925 6150 7425 6150
+Wire Wire Line
+	7625 6150 7700 6150
+Wire Wire Line
+	7325 5575 7425 5575
+Wire Wire Line
+	7625 5575 7700 5575
+$Comp
+L Device:D_TVS D?
+U 1 1 606DAB3B
+P 6625 5675
+F 0 "D?" H 6625 5892 50  0000 C CNN
+F 1 "Vcl=14V" H 6625 5801 50  0000 C CNN
+F 2 "Diode_SMD:D_0201_0603Metric_Pad0.64x0.40mm_HandSolder" H 6625 5675 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/vs12vba1hs-e-1871858.pdf" H 6625 5675 50  0001 C CNN
+F 4 "VS12VBA1HS" H 6625 5675 50  0001 C CNN "PN"
+	1    6625 5675
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6475 5675 6225 5675
+Connection ~ 6225 5675
+Wire Wire Line
+	6225 5675 6225 5200
+Wire Wire Line
+	6775 5675 7025 5675
+Connection ~ 7025 5675
+Wire Wire Line
+	7025 5675 7025 5200
+$Comp
+L Device:C_Small C?
+U 1 1 608552D8
+P 1425 2225
+AR Path="/60A09ED7/608552D8" Ref="C?"  Part="1" 
+AR Path="/608552D8" Ref="C?"  Part="1" 
+F 0 "C?" V 1600 2175 50  0000 L CNN
+F 1 "1u" V 1525 2175 50  0000 L CNN
+F 2 "" H 1425 2225 50  0001 C CNN
+F 3 "~" H 1425 2225 50  0001 C CNN
+	1    1425 2225
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608552DE
+P 1275 2225
+AR Path="/60A09ED7/608552DE" Ref="#PWR?"  Part="1" 
+AR Path="/608552DE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1275 1975 50  0001 C CNN
+F 1 "GND" H 1280 2052 50  0000 C CNN
+F 2 "" H 1275 2225 50  0001 C CNN
+F 3 "" H 1275 2225 50  0001 C CNN
+	1    1275 2225
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1275 2225 1325 2225
+$Comp
+L Device:R_Small_US R?
+U 1 1 608552E7
+P 1625 2225
+AR Path="/60A09ED7/608552E7" Ref="R?"  Part="1" 
+AR Path="/608552E7" Ref="R?"  Part="1" 
+F 0 "R?" V 1775 2150 50  0000 L CNN
+F 1 "100R" V 1700 2150 50  0000 L CNN
+F 2 "" H 1625 2225 50  0001 C CNN
+F 3 "~" H 1625 2225 50  0001 C CNN
+	1    1625 2225
+	0    1    -1   0   
+$EndComp
+Connection ~ 1525 2225
+$Comp
+L power:+15V #PWR?
+U 1 1 608552EE
+P 1800 2225
+AR Path="/60A09ED7/608552EE" Ref="#PWR?"  Part="1" 
+AR Path="/608552EE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1800 2075 50  0001 C CNN
+F 1 "+15V" H 1815 2398 50  0000 C CNN
+F 2 "" H 1800 2225 50  0001 C CNN
+F 3 "" H 1800 2225 50  0001 C CNN
+	1    1800 2225
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 2225 1775 2225
+Connection ~ 1775 2225
+Wire Wire Line
+	1775 2225 1725 2225
+Wire Wire Line
+	1525 2225 1525 2350
+Wire Wire Line
+	1775 2225 1775 2350
+Wire Wire Line
+	1600 2350 1525 2350
+Wire Wire Line
+	1700 2350 1775 2350
+$Comp
+L power:GND #PWR?
+U 1 1 608ED835
+P 1700 3500
+F 0 "#PWR?" H 1700 3250 50  0001 C CNN
+F 1 "GND" H 1705 3327 50  0000 C CNN
+F 2 "" H 1700 3500 50  0001 C CNN
+F 3 "" H 1700 3500 50  0001 C CNN
+	1    1700 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3500 1700 3450
+$Comp
+L power:-15V #PWR?
+U 1 1 608FD318
+P 1550 3500
+F 0 "#PWR?" H 1550 3600 50  0001 C CNN
+F 1 "-15V" H 1600 3675 50  0000 C CNN
+F 2 "" H 1550 3500 50  0001 C CNN
+F 3 "" H 1550 3500 50  0001 C CNN
+	1    1550 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 3500 1550 3450
+Text GLabel 3825 1475 0    50   Input ~ 0
+wg_1
+Wire Wire Line
+	3825 1475 4375 1475
+Connection ~ 4875 2775
+Wire Wire Line
+	4875 2775 5400 2775
 $EndSCHEMATC
