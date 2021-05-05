@@ -1,4 +1,4 @@
-update=Sun 11 Apr 2021 01:53:08 PM PDT
+update=Tue 20 Apr 2021 06:13:45 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -247,7 +247,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=/home/penguin/Pictures/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
