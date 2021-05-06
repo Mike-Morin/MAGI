@@ -324,7 +324,7 @@ F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Hor
 F 3 "~" H 1325 1800 50  0001 C CNN
 F 4 "1729018" H 1325 1800 50  0001 C CNN "PN"
 	1    1325 1800
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:D_Schottky D2

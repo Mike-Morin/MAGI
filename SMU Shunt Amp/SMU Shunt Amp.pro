@@ -1,4 +1,4 @@
-update=Tue 20 Apr 2021 06:13:45 PM PDT
+update=Wed 05 May 2021 09:23:37 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -247,7 +247,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=/home/penguin/Pictures/
+PlotDirectoryName=/home/penguin/KiCad Projects/SMU Shunt Amp/Images/revb/svg_raw/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
