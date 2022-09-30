@@ -1,14 +1,14 @@
 
 ## SMU Test Fixture (In Progress)
-Source measure unit with relay multiplexer for the Analog Discovery 2 (AD2). Intended to interface with a 20 pin electrode array. Provides:
+16-Channel source measure unit with multiplexer for the Analog Discovery 2 (AD2). Intended to interface with a 32 pin electrode array. Provides:
 
- - Clean ±15 V outputs using 3X gain on the AD2 adjustable supply
- - Current source with precision current shunt for sourcing and measuring currents as small as 100 pA (to be confirmed) using AD2
+ - ±13 V excitation driven by AD2 wavegen
+ - Current source with precision current shunt for sourcing and measuring currents as small as 100 pA using AD2
  - Flux-linkage and charge count outputs to AD2
- - Auxiliary input and power for pH measurement
+ - Auxiliary 5V power output
  - Switchable impedance analysis shunt resistor network
  - Auxiliary outputs for device measurement and excitation using other instruments
- - Calibration mode to semi-automate Waveforms calibration with external precision multimeter
+ - Calibration mode to automate Waveforms calibration using external precision multimeter
  - Differential to single-ended scope switch
  - AC/DC coupling scope switch
  - BNC ports for the scope to be used for other projects so you don't have to keep swapping it out for other uses
