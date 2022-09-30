@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name "SMUTestFixture-rescue")(type "Legacy")(uri "${KIPRJMOD}/SMUTestFixture-rescue.lib")(options "")(descr ""))
-  (lib (name "power_supplies-rescue")(type "Legacy")(uri "${KIPRJMOD}/power_supplies-rescue.lib")(options "")(descr ""))
+  (lib (name "SMUTestFixture-rescue")(type "KiCad")(uri "${KIPRJMOD}/SMUTestFixture-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "power_supplies-rescue")(type "KiCad")(uri "${KIPRJMOD}/power_supplies-rescue.kicad_sym")(options "")(descr ""))
 )
