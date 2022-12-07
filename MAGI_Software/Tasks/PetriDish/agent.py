@@ -18,8 +18,8 @@ class Agent:
                 position = np.array([0,0]),
                 velocity = np.array([0,0]),
                 acceleration = np.array([0,0]),
-                decay_rate = 1000,
-                energy = 100):
+                decay_rate = 10,
+                energy = 500):
 
         self.dish = dish
         self.timestep = dish.dish_timestep
@@ -41,6 +41,7 @@ class Agent:
             x_displacement = self.position[0] + (0.5* self.acceleration[0] * elapsed_time * elapsed_time)
             y_displacement = self.position[1] + (0.5* self.acceleration[1] * elapsed_time * elapsed_time)
             new_position = np.add((x_displacement,y_displacement), self.dish.dish_location)
+            self.energy = self.energy - np.linalg.norm(new_position - self.position)
             if np.linalg.norm(new_position) < self.dish.dish_size:
                 self.dish.agent_pen.speed(0)
                 self.dish.agent_pen.goto(new_position)
@@ -78,13 +79,20 @@ class Agent:
                     turtle.hideturtle()
             if not self.dish.food_locations:
                 self.dish.draw_foods(5)
-
-            self.energy = self.energy*elapsed_time/self.decay_rate
-            turtle.penup()
-            turtle.clear()
-            turtle.goto(self.dish.dish_size,30)
-            turtle.pendown()
-            turtle.write("Energy: " + str(self.energy), font=('Arial', 16, 'bold'))
-            turtle.hideturtle()
+            if self.energy > 0:
+                self.energy = self.energy - elapsed_time*self.decay_rate
+                turtle.penup()
+                turtle.clear()
+                turtle.goto(self.dish.dish_size,30)
+                turtle.pendown()
+                turtle.write("Energy: " + str(self.energy), font=('Arial', 16, 'bold'))
+                turtle.hideturtle()
+            else:
+                turtle.penup()
+                turtle.clear()
+                turtle.goto(self.dish.dish_size,30)
+                turtle.pendown()
+                turtle.write("Energy: 0", font=('Arial', 16, 'bold'))
+                turtle.hideturtle()
         
             self.last_time = time.time()
