@@ -5690,11 +5690,11 @@
     (uuid ff51a989-8b0b-4f77-b621-ba149c666918)
   )
 
-  (text ".010\" grid" (at 178.562 169.418 0)
+  (text ".010\"/0.050\" grid" (at 178.562 169.418 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3e9e6ab6-8382-477e-b34e-1f028f29397a)
   )
-  (text "Current Shunt Amplifier" (at 35.56 167.64 0)
+  (text "Current Shunt Amplifier" (at 14.478 102.362 0)
     (effects (font (size 1.4986 1.4986) (thickness 0.2997) bold) (justify left bottom))
     (uuid 842d680d-1ca8-44ed-aba0-0557c5c6dc15)
   )
