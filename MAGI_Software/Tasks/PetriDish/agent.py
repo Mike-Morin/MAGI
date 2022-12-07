@@ -19,20 +19,27 @@ class Agent:
                 velocity = np.array([0,0]),
                 acceleration = np.array([0,0]),
                 decay_rate = 10,
-                energy = 500):
+                energy = 500,
+                dot_size = 20,
+                starting_location = None):
 
         self.dish = dish
+        dish.agents[self] = self
         self.timestep = dish.dish_timestep
         self.position = position
         self.velocity = velocity
         self.acceleration = acceleration
         self.decay_rate = decay_rate
         self.energy = energy
-
+        self.dot_size = dot_size
+        self.starting_location = starting_location
 
         self.viscosity = dish.dish_viscosity
         self.last_time = time.time()
         self.score = 0
+
+        self.agent_pen = turtle.Turtle()
+        self.agent_pen.shape("circle")
 
 
     def update_agent(self):
@@ -43,8 +50,8 @@ class Agent:
             new_position = np.add((x_displacement,y_displacement), self.dish.dish_location)
             self.energy = self.energy - np.linalg.norm(new_position - self.position)
             if np.linalg.norm(new_position) < self.dish.dish_size:
-                self.dish.agent_pen.speed(0)
-                self.dish.agent_pen.goto(new_position)
+                self.dish.agents[self].agent_pen.speed(0)
+                self.dish.agents[self].agent_pen.goto(new_position)
                 self.velocity = np.divide(np.absolute(np.subtract(self.position, new_position)),elapsed_time)
                 self.position = new_position
 

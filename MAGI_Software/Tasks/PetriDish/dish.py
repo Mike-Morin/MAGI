@@ -11,8 +11,7 @@ class Dish:
                 dish_timestep = 0.01,
                 n_starting_foods = 1,
                 dot_size = 50,
-                food_locations = None,
-                starting_location = None):
+                food_locations = None):
 
         self.dish_size = dish_size
         self.dish_location = dish_location
@@ -21,23 +20,13 @@ class Dish:
         self.n_starting_foods = n_starting_foods
         self.dot_size = dot_size
         self.food_locations = food_locations
-        self.starting_location = starting_location
-
+        self.agents = {}
         
-
-        #self.food_locations = self.draw_foods(
-        #    self.n_starting_foods,
-        #    self.dish_size,
-        #    self.dot_size,
-        #    self.starting_food_locations)
-
-        self.agent_pen = turtle.Turtle()
-        self.agent_pen.shape("circle")
-
         self.food_pen = turtle.Turtle()
         self.dish_pen = turtle.Turtle()
+        self.stat_pen = turtle.Turtle()
         self.__draw_dish()
-        self.__draw_start()
+        self.__draw_starts()
 
     def __draw_dish(self):
         dish_bottom_edge = np.subtract(self.dish_location, (0, self.dish_size))
@@ -49,20 +38,20 @@ class Dish:
         self.dish_pen.penup()
         self.dish_pen.hideturtle()
 
-    def __draw_start(self):
-        if not self.starting_location:
-            starting_location_angle = random.uniform(0, 2 * math.pi)
-            starting_location_radius = random.randint(0, self.dish_size - self.dot_size / 2)
-            starting_location_x = int(starting_location_radius * math.cos(starting_location_angle))
-            starting_location_y = int(starting_location_radius * math.sin(starting_location_angle))
-            self.starting_location = np.array((starting_location_x, starting_location_y))
-        self.agent_pen.penup()
-        self.agent_pen.clear()
-        dish_mapped_location = np.subtract(self.starting_location, self.dish_location)
-        self.agent_pen.goto(dish_mapped_location)
-        self.agent_pen.pendown()
-        self.agent_pen.dot(self.dot_size, "green")
-
+    def __draw_starts(self):
+        for agent in self.agents:
+            if not agent.starting_location:
+                starting_location_angle = random.uniform(0, 2 * math.pi)
+                starting_location_radius = random.randint(0, self.dish_size - self.dot_size / 2)
+                starting_location_x = int(starting_location_radius * math.cos(starting_location_angle))
+                starting_location_y = int(starting_location_radius * math.sin(starting_location_angle))
+                agent.starting_location = np.array((starting_location_x, starting_location_y))
+            agent.agent_pen.penup()
+            agent.agent_pen.clear()
+            dish_mapped_location = np.subtract(agent.starting_location, self.dish_location)
+            agent.agent_pen.goto(dish_mapped_location)
+            agent.agent_pen.pendown()
+            agent.agent_pen.dot(agent.dot_size, "green")
 
     def draw_foods(self,n_foods=None, food_locations=None):
         # If no food locations are specified, generate them randomly
