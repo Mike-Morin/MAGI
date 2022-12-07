@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "353_electrode")(type "KiCad")(uri "${KIPRJMOD}/353_electrode.kicad_sym")(options "")(descr ""))
+)
