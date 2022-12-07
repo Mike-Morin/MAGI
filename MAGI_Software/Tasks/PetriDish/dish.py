@@ -24,7 +24,7 @@ class Dish:
         
         self.food_pen = turtle.Turtle()
         self.dish_pen = turtle.Turtle()
-        self.stat_pen = turtle.Turtle()
+        self.statistics_pen = turtle.Turtle()
         self.__draw_dish()
         self.__draw_starts()
 
@@ -53,6 +53,30 @@ class Dish:
             agent.agent_pen.pendown()
             agent.agent_pen.dot(agent.dot_size, "green")
 
+    def __draw_statistics(self):
+        turtle.tracer(False)
+        self.statistics_pen.clear()
+        text_offset = 30
+        for idx, agent in enumerate(self.agents):
+
+            #Update energies
+            self.statistics_pen.penup()
+            self.statistics_pen.goto(self.dish_size, text_offset+20*idx)
+            self.statistics_pen.pendown()
+            if agent.energy > 0:
+                self.statistics_pen.write("Energy: " + str(agent.energy), font=('Arial', 16, 'bold'))
+            else:
+                self.statistics_pen.write("Energy: 0", font=('Arial', 16, 'bold'))
+            self.statistics_pen.penup()
+
+            #Update score
+            self.statistics_pen.goto(self.dish_size,text_offset+20+20*idx)
+            self.statistics_pen.pendown()
+            self.statistics_pen.write("Score: " + str(agent.score), font=('Arial', 16, 'bold'))
+            self.statistics_pen.penup()
+
+            self.statistics_pen.hideturtle()
+        turtle.tracer(True)
     def draw_foods(self,n_foods=None, food_locations=None):
         # If no food locations are specified, generate them randomly
         self.food_pen.clear()
@@ -81,6 +105,14 @@ class Dish:
                 self.food_pen.hideturtle()
         turtle.update()
         turtle.tracer(True)
+
+    def update_agents(self):
+         for agent in self.agents:
+            agent.update_agent()
+
+    def update_dish(self):
+        self.update_agents()
+        self.__draw_statistics()
         
 
 

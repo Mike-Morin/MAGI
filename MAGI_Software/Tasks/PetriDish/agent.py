@@ -20,6 +20,7 @@ class Agent:
                 acceleration = np.array([0,0]),
                 decay_rate = 10,
                 energy = 500,
+                score = 0,
                 dot_size = 20,
                 starting_location = None):
 
@@ -31,6 +32,7 @@ class Agent:
         self.acceleration = acceleration
         self.decay_rate = decay_rate
         self.energy = energy
+        self.score = score
         self.dot_size = dot_size
         self.starting_location = starting_location
 
@@ -78,28 +80,9 @@ class Agent:
                     self.energy = self.energy + 100
                     self.score = self.score + 1
                     self.dish.draw_foods(food_locations = self.dish.food_locations)
-                    turtle.penup()
-                    turtle.clear()
-                    turtle.goto(self.dish.dish_size,50)
-                    turtle.pendown()
-                    turtle.write("Score: " + str(self.score), font=('Arial', 16, 'bold'))
-                    turtle.hideturtle()
             if not self.dish.food_locations:
                 self.dish.draw_foods(5)
             if self.energy > 0:
                 self.energy = self.energy - elapsed_time*self.decay_rate
-                turtle.penup()
-                turtle.clear()
-                turtle.goto(self.dish.dish_size,30)
-                turtle.pendown()
-                turtle.write("Energy: " + str(self.energy), font=('Arial', 16, 'bold'))
-                turtle.hideturtle()
-            else:
-                turtle.penup()
-                turtle.clear()
-                turtle.goto(self.dish.dish_size,30)
-                turtle.pendown()
-                turtle.write("Energy: 0", font=('Arial', 16, 'bold'))
-                turtle.hideturtle()
         
             self.last_time = time.time()

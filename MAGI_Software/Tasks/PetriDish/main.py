@@ -33,4 +33,4 @@ screen = turtle.Screen()
 screen.title("PetriDish")
 
 while(True):
-    agent.update_agent()
+    dishA.update_dish()
