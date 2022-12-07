@@ -52,7 +52,7 @@ class Dish:
             agent.agent_pen.goto(dish_mapped_location)
             agent.agent_pen.pendown()
             agent.agent_pen.dot(agent.dot_size, "green")
-
+            
     def __draw_statistics(self):
         turtle.tracer(False)
         self.statistics_pen.clear()
@@ -77,6 +77,7 @@ class Dish:
 
             self.statistics_pen.hideturtle()
         turtle.tracer(True)
+        
     def draw_foods(self,n_foods=None, food_locations=None):
         # If no food locations are specified, generate them randomly
         self.food_pen.clear()

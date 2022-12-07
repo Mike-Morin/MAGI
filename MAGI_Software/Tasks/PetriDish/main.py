@@ -6,24 +6,23 @@ import agent
 import time
 import turtle
 
-
 dishA = dish.Dish()
 dishA.draw_foods(5)
 
 agent = agent.Agent(dishA)
 
-
 def up():
-    agent.acceleration[1] = agent.acceleration[1]+1000
+    agent.up()
 
 def down():
-    agent.acceleration[1] = agent.acceleration[1]-1000
+    agent.down()
 
 def left():
-    agent.acceleration[0] = agent.acceleration[0]-1000
+    agent.left()
 
 def right():
-    agent.acceleration[0] = agent.acceleration[0]+1000
+    agent.right()
+    
 turtle.listen()
 turtle.onkey(up,'w')
 turtle.onkey(down,'s')

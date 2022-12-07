@@ -22,6 +22,7 @@ class Agent:
                 energy = 500,
                 score = 0,
                 dot_size = 20,
+                generation = 0,
                 starting_location = None):
 
         self.dish = dish
@@ -34,6 +35,7 @@ class Agent:
         self.energy = energy
         self.score = score
         self.dot_size = dot_size
+        self.generation = generation
         self.starting_location = starting_location
 
         self.viscosity = dish.dish_viscosity
@@ -43,7 +45,18 @@ class Agent:
         self.agent_pen = turtle.Turtle()
         self.agent_pen.shape("circle")
 
+    def up(self):
+        self.acceleration[1] = self.acceleration[1]+1000
 
+    def down(self):
+        self.acceleration[1] = self.acceleration[1]-1000
+
+    def left(self):
+        self.acceleration[0] = self.acceleration[0]-1000
+
+    def right(self):
+        self.acceleration[0] = self.acceleration[0]+1000
+        
     def update_agent(self):
         elapsed_time = time.time() - self.last_time
         if elapsed_time > self.timestep:
@@ -84,5 +97,5 @@ class Agent:
                 self.dish.draw_foods(5)
             if self.energy > 0:
                 self.energy = self.energy - elapsed_time*self.decay_rate
-        
+                
             self.last_time = time.time()
