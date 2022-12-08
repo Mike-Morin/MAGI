@@ -4,16 +4,6 @@ import math
 import random
 import numpy as np
 
-def removearray(L,arr):
-    ind = 0
-    size = len(L)
-    while ind != size and not np.array_equal(L[ind],arr):
-        ind += 1
-    if ind != size:
-        L.pop(ind)
-    else:
-        raise ValueError('array not found in list.')
-
 class Agent:
     def __init__(self,
                 dish,
@@ -125,15 +115,7 @@ class Agent:
            
             # Compute food concentrion
             self.concentration = self.dish.get_concentration(self.position)
-            for food_location in self.dish.food_locations:
-                #print(np.linalg.norm(food_location-self.position))
-                if np.linalg.norm(food_location-self.position) < self.dish.dot_size*2/3:
-                    removearray(self.dish.food_locations, food_location)
-                    self.energy = self.energy + 100
-                    self.score = self.score + 1
-                    self.dish.draw_foods(food_locations = self.dish.food_locations)
-            if not self.dish.food_locations:
-                self.dish.draw_foods(50)
+            
             if self.energy > 0:
                 self.energy = self.energy - elapsed_time*self.decay_rate
 

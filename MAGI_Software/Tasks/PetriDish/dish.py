@@ -113,8 +113,28 @@ class Dish:
         return accumulator
 
     def update_agents(self):
-         for agent in self.agents:
+
+        def removearray(L,arr):
+            ind = 0
+            size = len(L)
+            while ind != size and not np.array_equal(L[ind],arr):
+                ind += 1
+            if ind != size:
+                L.pop(ind)
+            else:
+                raise ValueError('array not found in list.')
+
+        for agent in self.agents:
             agent.update_agent()
+
+            for food_location in self.food_locations:
+                if np.linalg.norm(food_location - agent.position) < self.dot_size*2/3:
+                    removearray(self.food_locations, food_location)
+                    agent.energy = agent.energy + 100
+                    agent.score = agent.score + 1
+                    self.draw_foods(food_locations = self.food_locations)
+            if not self.food_locations:
+                self.draw_foods(50)
 
     def update_dish(self):
         self.update_agents()
