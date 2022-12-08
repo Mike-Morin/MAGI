@@ -1,5 +1,7 @@
 import turtle
 import time
+import math
+import random
 import numpy as np
 
 def removearray(L,arr):
@@ -23,7 +25,7 @@ class Agent:
                 score = 0,
                 dot_size = 20,
                 generation = 0,
-                starting_location = None):
+                starting_location = np.array([])):
 
         self.dish = dish
         dish.agents[self] = self
@@ -33,6 +35,7 @@ class Agent:
         self.acceleration = acceleration
         self.decay_rate = decay_rate
         self.energy = energy
+        self.starting_energy = energy
         self.score = score
         self.dot_size = dot_size
         self.generation = generation
@@ -45,6 +48,8 @@ class Agent:
         self.agent_pen = turtle.Turtle()
         self.agent_pen.shape("circle")
 
+        self.create()
+
     def up(self):
         self.acceleration[1] = self.acceleration[1]+1000
 
@@ -56,7 +61,35 @@ class Agent:
 
     def right(self):
         self.acceleration[0] = self.acceleration[0]+1000
-        
+
+    def create(self):
+        if self.starting_location.size == 0:
+                starting_location_angle = random.uniform(0, 2 * math.pi)
+                starting_location_radius = random.randint(0, self.dish.dish_size - self.dot_size / 2)
+                starting_location_x = int(starting_location_radius * math.cos(starting_location_angle))
+                starting_location_y = int(starting_location_radius * math.sin(starting_location_angle))
+                self.starting_location = np.array((starting_location_x, starting_location_y))
+        self.agent_pen.penup()
+        self.agent_pen.clear()
+        dish_mapped_location = np.subtract(self.starting_location, self.dish.dish_location)
+        self.agent_pen.goto(dish_mapped_location)
+        self.agent_pen.pendown()
+        self.agent_pen.dot(self.dot_size, "green")
+
+        self.position = dish_mapped_location
+
+    def kill(self):
+        self.generation = self.generation + 1
+        self.agent_pen.clear()
+        self.agent_pen.penup()
+        self.agent_pen.goto(self.starting_location)
+        self.agent_pen.pendown()
+        self.energy = self.starting_energy
+        self.score = 0
+        self.acceleration = np.array([0,0])
+        self.create()
+
+
     def update_agent(self):
         elapsed_time = time.time() - self.last_time
         if elapsed_time > self.timestep:
@@ -97,5 +130,5 @@ class Agent:
                 self.dish.draw_foods(5)
             if self.energy > 0:
                 self.energy = self.energy - elapsed_time*self.decay_rate
-                
+
             self.last_time = time.time()

@@ -26,7 +26,6 @@ class Dish:
         self.dish_pen = turtle.Turtle()
         self.statistics_pen = turtle.Turtle()
         self.__draw_dish()
-        self.__draw_starts()
 
     def __draw_dish(self):
         dish_bottom_edge = np.subtract(self.dish_location, (0, self.dish_size))
@@ -38,21 +37,6 @@ class Dish:
         self.dish_pen.penup()
         self.dish_pen.hideturtle()
 
-    def __draw_starts(self):
-        for agent in self.agents:
-            if not agent.starting_location:
-                starting_location_angle = random.uniform(0, 2 * math.pi)
-                starting_location_radius = random.randint(0, self.dish_size - self.dot_size / 2)
-                starting_location_x = int(starting_location_radius * math.cos(starting_location_angle))
-                starting_location_y = int(starting_location_radius * math.sin(starting_location_angle))
-                agent.starting_location = np.array((starting_location_x, starting_location_y))
-            agent.agent_pen.penup()
-            agent.agent_pen.clear()
-            dish_mapped_location = np.subtract(agent.starting_location, self.dish_location)
-            agent.agent_pen.goto(dish_mapped_location)
-            agent.agent_pen.pendown()
-            agent.agent_pen.dot(agent.dot_size, "green")
-            
     def __draw_statistics(self):
         turtle.tracer(False)
         self.statistics_pen.clear()
@@ -67,12 +51,19 @@ class Dish:
                 self.statistics_pen.write("Energy: " + str(agent.energy), font=('Arial', 16, 'bold'))
             else:
                 self.statistics_pen.write("Energy: 0", font=('Arial', 16, 'bold'))
+                agent.kill()
             self.statistics_pen.penup()
 
             #Update score
             self.statistics_pen.goto(self.dish_size,text_offset+20+20*idx)
             self.statistics_pen.pendown()
             self.statistics_pen.write("Score: " + str(agent.score), font=('Arial', 16, 'bold'))
+            self.statistics_pen.penup()
+
+            #Update Generation
+            self.statistics_pen.goto(self.dish_size,text_offset+40+20*idx)
+            self.statistics_pen.pendown()
+            self.statistics_pen.write("Generation: " + str(agent.generation), font=('Arial', 16, 'bold'))
             self.statistics_pen.penup()
 
             self.statistics_pen.hideturtle()
