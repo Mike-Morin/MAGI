@@ -7,7 +7,7 @@ class Dish:
     def __init__(self,
                 dish_size = 400,
                 dish_location = np.array([0,0]),
-                dish_viscosity = 10000.0,
+                dish_viscosity = 10000,
                 dish_timestep = 0.01,
                 n_starting_foods = 1,
                 dot_size = 50,
@@ -66,9 +66,15 @@ class Dish:
             self.statistics_pen.write("Generation: " + str(agent.generation), font=('Arial', 16, 'bold'))
             self.statistics_pen.penup()
 
+            #Update Concentration
+            self.statistics_pen.goto(self.dish_size,text_offset+60+20*idx)
+            self.statistics_pen.pendown()
+            self.statistics_pen.write("Concentration: " + str(agent.concentration), font=('Arial', 16, 'bold'))
+            self.statistics_pen.penup()
+
             self.statistics_pen.hideturtle()
         turtle.tracer(True)
-        
+    
     def draw_foods(self,n_foods=None, food_locations=None):
         # If no food locations are specified, generate them randomly
         self.food_pen.clear()
@@ -97,6 +103,14 @@ class Dish:
                 self.food_pen.hideturtle()
         turtle.update()
         turtle.tracer(True)
+
+    def get_concentration(self, position):
+        accumulator = 0
+        for food_location in self.food_locations:
+            distance = np.linalg.norm(position - food_location)
+            exponent = 1/distance
+            accumulator += 10**exponent
+        return accumulator
 
     def update_agents(self):
          for agent in self.agents:

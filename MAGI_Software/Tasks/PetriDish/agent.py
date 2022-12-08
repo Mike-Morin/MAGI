@@ -40,6 +40,7 @@ class Agent:
         self.dot_size = dot_size
         self.generation = generation
         self.starting_location = starting_location
+        self.concentration = 0
 
         self.viscosity = dish.dish_viscosity
         self.last_time = time.time()
@@ -51,16 +52,21 @@ class Agent:
         self.create()
 
     def up(self):
-        self.acceleration[1] = self.acceleration[1]+1000
+        self.acceleration[1] = self.acceleration[1]+10000
+        self.energy = self.energy - 10
+
 
     def down(self):
-        self.acceleration[1] = self.acceleration[1]-1000
+        self.acceleration[1] = self.acceleration[1]-10000
+        self.energy = self.energy - 10
 
     def left(self):
-        self.acceleration[0] = self.acceleration[0]-1000
+        self.acceleration[0] = self.acceleration[0]-10000
+        self.energy = self.energy - 10
 
     def right(self):
-        self.acceleration[0] = self.acceleration[0]+1000
+        self.acceleration[0] = self.acceleration[0]+10000
+        self.energy = self.energy - 10
 
     def create(self):
         if self.starting_location.size == 0:
@@ -96,38 +102,38 @@ class Agent:
             x_displacement = self.position[0] + (0.5* self.acceleration[0] * elapsed_time * elapsed_time)
             y_displacement = self.position[1] + (0.5* self.acceleration[1] * elapsed_time * elapsed_time)
             new_position = np.add((x_displacement,y_displacement), self.dish.dish_location)
-            self.energy = self.energy - np.linalg.norm(new_position - self.position)
             if np.linalg.norm(new_position) < self.dish.dish_size:
                 self.dish.agents[self].agent_pen.speed(0)
                 self.dish.agents[self].agent_pen.goto(new_position)
                 self.velocity = np.divide(np.absolute(np.subtract(self.position, new_position)),elapsed_time)
                 self.position = new_position
 
-                if self.acceleration[0] > 10:
-                    self.acceleration[0] = self.acceleration[0] - self.viscosity*elapsed_time
+                if self.acceleration[0] > 0:
+                    self.acceleration[0] = self.acceleration[0] - elapsed_time * self.dish.dish_viscosity
 
-                if self.acceleration[1] > 10:
-                    self.acceleration[1] = self.acceleration[1] - self.viscosity*elapsed_time
+                if self.acceleration[1] > 0:
+                    self.acceleration[1] = self.acceleration[1] - elapsed_time * self.dish.dish_viscosity
 
-                if self.acceleration[0] < -10:
-                    self.acceleration[0] = self.acceleration[0] + self.viscosity*elapsed_time
+                if self.acceleration[0] < 0:
+                    self.acceleration[0] = self.acceleration[0] + elapsed_time * self.dish.dish_viscosity
 
-                if self.acceleration[1] < -10:
-                    self.acceleration[1] = self.acceleration[1] + self.viscosity*elapsed_time
+                if self.acceleration[1] < 0:
+                    self.acceleration[1] = self.acceleration[1] + elapsed_time * self.dish.dish_viscosity
             else:
                 self.acceleration[0] = 0
                 self.acceleration[1] = 0
            
-
+            # Compute food concentrion
+            self.concentration = self.dish.get_concentration(self.position)
             for food_location in self.dish.food_locations:
                 #print(np.linalg.norm(food_location-self.position))
-                if np.linalg.norm(food_location-self.position) < self.dish.dot_size:
+                if np.linalg.norm(food_location-self.position) < self.dish.dot_size*2/3:
                     removearray(self.dish.food_locations, food_location)
                     self.energy = self.energy + 100
                     self.score = self.score + 1
                     self.dish.draw_foods(food_locations = self.dish.food_locations)
             if not self.dish.food_locations:
-                self.dish.draw_foods(5)
+                self.dish.draw_foods(50)
             if self.energy > 0:
                 self.energy = self.energy - elapsed_time*self.decay_rate
 
