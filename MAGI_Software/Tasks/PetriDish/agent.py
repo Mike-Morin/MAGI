@@ -113,7 +113,7 @@ class Agent:
                 self.acceleration[0] = 0
                 self.acceleration[1] = 0
            
-            # Compute food concentrion
+            # Compute food concentration
             self.concentration = self.dish.get_concentration(self.position)
             
             if self.energy > 0:

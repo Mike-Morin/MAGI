@@ -69,7 +69,7 @@ class Dish:
             #Update Concentration
             self.statistics_pen.goto(self.dish_size,text_offset+60+20*idx)
             self.statistics_pen.pendown()
-            self.statistics_pen.write("Concentration: " + str(agent.concentration), font=('Arial', 16, 'bold'))
+            self.statistics_pen.write("Concentration: " + str(agent.concentration) + "%", font=('Arial', 16, 'bold'))
             self.statistics_pen.penup()
 
             self.statistics_pen.hideturtle()
@@ -108,9 +108,9 @@ class Dish:
         accumulator = 0
         for food_location in self.food_locations:
             distance = np.linalg.norm(position - food_location)
-            exponent = 1/distance
-            accumulator += 10**exponent
-        return accumulator
+            item_contribution = self.dot_size/3*2/distance
+            accumulator += item_contribution
+        return accumulator / len(self.food_locations) * 100
 
     def update_agents(self):
 
