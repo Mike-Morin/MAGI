@@ -1,0 +1,3 @@
+[submodule "MAGI_Software/Tasks/PetriDish/Waveforms"]
+	path = MAGI_Software/Tasks/PetriDish/Waveforms
+	url = https://github.com/Digilent/WaveForms-SDK-Getting-Started-PY
