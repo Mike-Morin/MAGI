@@ -1,9 +1,28 @@
 import time
 import random
+from tkinter import *
+from tkinter import messagebox
 
-from Waveforms.WF_SDK import device
-from Waveforms.WF_SDK import static as io
-from Waveforms.WF_SDK import pattern
+try:
+    from Waveforms.WF_SDK import device
+    from Waveforms.WF_SDK import static as io
+    from Waveforms.WF_SDK import pattern
+    WAVEFORMS_PRESENT = True
+
+except ImportError as e:
+    WAVEFORMS_PRESENT = False
+    print(e)
+    print("Warning: No waveforms SD detected.")
+    window = Tk()
+    window.wm_withdraw()
+    window.geometry(
+        "1x1+"+str(int(window.winfo_screenwidth()/2))+"+"+str(int(window.winfo_screenheight()/2))
+        )
+    messagebox.showinfo(title="No Waveforms SDK", message=
+        "Could not load waveforms SDK. Check console for error details. \
+        You'll need to install Digilent Waveforms and connect an \
+        appropriate device (Analog Discovery 2) if you want to\
+        connect up a physical neural network. But for now, you can still play as a human!")
 
 class WFC:
     """

@@ -27,7 +27,7 @@ class Agent:
     """
     def __init__(self,
                 dish,                                   # Dish instance
-                wfc,                                    # Waveforms control inst
+                wfc = None,                             # Waveforms control inst
                 position = np.array([0,0]),             # Current position
                 velocity = np.array([0,0]),             # Current velocity
                 acceleration = np.array([0,0]),         # Current acceleration
@@ -168,28 +168,30 @@ class Agent:
 
         # Send state to waveforms controller.
         # WFC is expecting values <= 1 so normalize.
-        self.wfc.output_state = {"CONC":self.concentration, 
-            "ENERGY": self.energy / self.starting_energy, 
-            "ACCEL_UP": accel_up / self.max_acel, 
-            "ACCEL_DOWN": accel_down / self.max_acel, 
-            "ACCEL_LEFT": accel_left / self.max_acel, 
-            "ACCEL_RIGHT": accel_right / self.max_acel, 
-            "KILL": self.dead}
+        if self.wfc:
+            self.wfc.output_state = {"CONC":self.concentration,
+                "ENERGY": self.energy / self.starting_energy,
+                "ACCEL_UP": accel_up / self.max_acel,
+                "ACCEL_DOWN": accel_down / self.max_acel,
+                "ACCEL_LEFT": accel_left / self.max_acel,
+                "ACCEL_RIGHT": accel_right / self.max_acel,
+                "KILL": self.dead}
 
-        self.wfc.update()
+            self.wfc.update()
 
     def get_inputs(self):
         """Gets the input state from the waveforms controller
         to enable PNN to control the agent."""
-        self.wfc.update()
-        if self.wfc.input_state["UP"]:
-            self.up()
-        if self.wfc.input_state["DOWN"]:
-            self.down()
-        if self.wfc.input_state["LEFT"]:
-            self.left()
-        if self.wfc.input_state["RIGHT"]:
-            self.right()
+        if self.wfc:
+            self.wfc.update()
+            if self.wfc.input_state["UP"]:
+                self.up()
+            if self.wfc.input_state["DOWN"]:
+                self.down()
+            if self.wfc.input_state["LEFT"]:
+                self.left()
+            if self.wfc.input_state["RIGHT"]:
+                self.right()
 
     def update_agent(self):
         """Updates agent alive/dead status, position, acceleration,

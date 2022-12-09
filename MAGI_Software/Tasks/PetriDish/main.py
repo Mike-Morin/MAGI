@@ -23,14 +23,16 @@ output_pins: pins.OutputPins = {"CONC":8,
     "KILL":14
     }
 
-# Waveforms controller object
-wfcA = wfc.WFC(input_pins, output_pins)
-
 # Dishes
 dishA = dish.Dish()
 dishA.draw_foods(1)
 
-agent = agent.Agent(dishA, wfcA)
+# Waveforms controller object
+if wfc.WAVEFORMS_PRESENT:
+    wfcA = wfc.WFC(input_pins, output_pins)
+    agent = agent.Agent(dishA, wfcA)
+else:
+    agent = agent.Agent(dishA)
 
 # Allows keyboard control of an agent
 def up():
