@@ -49,8 +49,7 @@ class WFC:
         """ Iterates through output pins and sets outputs
             according to output_state."""
         # Set output spike rates based on desired output states
-        for output_name in self.output_state:
-            output_value = self.output_state[output_name]
+        for output_name, output_value in self.output_state.items():
             channel = self.output_pins[output_name]
             if output_value > 1:
                 print("Error: Output value " + output_name + "is " + str(output_value) + " which is > 1")
