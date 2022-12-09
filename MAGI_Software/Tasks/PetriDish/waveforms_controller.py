@@ -91,21 +91,22 @@ class WFC:
         # Set output spike rates based on desired output states
         for output_name, output_value in self.output_state.items():
             channel = self.output_pins[output_name]
+            if output_value <= 0:
+                pattern.disable(self.data, channel)
+                continue
             if output_value > 1:
                 print("Error: Output value " +
-                 output_name + "is " +
-                 str(output_value) + " which is > 1"
-                 )
-            elif output_value == 0:
-                pattern.disable(self.data, channel)
-            else:
-                pattern.enable(self.data, channel)
-                pattern.generate(self.data,
-                                channel,
-                                function=pattern.function.pulse,
-                                frequency=self.max_frequency*output_value,
-                                duty_cycle=self.duty_cycle
-                                )
+                    output_name + "is " +
+                    str(output_value) + " which is > 1. Forcing value to 1."
+                    )
+                output_value = 1
+            pattern.enable(self.data, channel)
+            pattern.generate(self.data,
+                            channel,
+                            function=pattern.function.pulse,
+                            frequency=self.max_frequency*output_value,
+                            duty_cycle=self.duty_cycle
+                            )
 
     def update(self):
         """ Run by agents to do I/O through AD2"""
