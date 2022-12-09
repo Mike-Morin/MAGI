@@ -87,7 +87,6 @@ class Agent:
             self.acceleration[1] = self.acceleration[1]+10000
             self.energy = self.energy - 1
 
-
     def down(self):
         """Add down acceleration and pay for it with energy"""
         if abs(self.acceleration[1] - 10000) < self.max_acel:

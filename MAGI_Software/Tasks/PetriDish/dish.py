@@ -2,6 +2,7 @@ import turtle
 import random
 import math
 import numpy as np
+import time
 
 class Dish:
     """
@@ -211,8 +212,8 @@ class Dish:
                 raise ValueError('array not found in list.')
 
         for agent in self.agents:
-
-            agent.update_agent()
+            refresh_time = time.time()
+            
             # Refresh dish with food if none
             if not self.food_locations:
                 self.draw_foods(self.n_starting_foods)
@@ -230,7 +231,8 @@ class Dish:
                         agent.energy = 100
                     agent.score = agent.score + 1
                     self.draw_foods(food_locations = self.food_locations)
-
+            agent.last_time = agent.last_time + (time.time() - refresh_time)
+            agent.update_agent()
 
 
     def update_dish(self):
