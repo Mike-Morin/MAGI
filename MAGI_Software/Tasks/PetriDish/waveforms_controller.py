@@ -9,7 +9,7 @@ class WFC:
     def __init__(
         self,
         input_pins = {"UP":0, "DOWN":1, "LEFT":2, "RIGHT":3},
-        output_pins = {"CONC":8, "ENERGY":9, "ACCEL_UP":10, "ACCEL_DOWN":11, "ACCEL_LEFT":12, "ACCEL_RIGHT":13, "KILL":0},
+        output_pins = {"CONC":8, "ENERGY":9, "ACCEL_UP":10, "ACCEL_DOWN":11, "ACCEL_LEFT":12, "ACCEL_RIGHT":13, "KILL":14},
         duty_cycle = 50, #%
         max_frequency = 1000 #hz
         ):
