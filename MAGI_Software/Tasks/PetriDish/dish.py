@@ -174,11 +174,13 @@ class Dish:
         Returns: Concentration
         """
         accumulator = 0
-        for food_location in self.food_locations:
-            distance = np.linalg.norm(position - food_location)
-            item_contribution = self.dot_size/3*2/distance # todo: remove magic number
-            accumulator += item_contribution
-        return accumulator / len(self.food_locations)
+        if self.food_locations:
+            for food_location in self.food_locations:
+                distance = np.linalg.norm(position - food_location)
+                item_contribution = self.dot_size/3*2/distance # todo: remove magic number
+                accumulator += item_contribution
+            return accumulator / len(self.food_locations)
+        return 0
 
     def update_agents(self):
         """
@@ -201,7 +203,11 @@ class Dish:
         for agent in self.agents:
 
             agent.update_agent()
-            
+            # Refresh dish with food if none
+            if not self.food_locations:
+                self.draw_foods(self.n_starting_foods)
+                return
+                
             for food_location in self.food_locations:
                 # Compute food collisions
                 if np.linalg.norm(food_location - agent.position) < self.dot_size*2/3: #todo remove magic num
@@ -213,9 +219,7 @@ class Dish:
                     agent.score = agent.score + 1
                     self.draw_foods(food_locations = self.food_locations)
             
-            # Refresh dish with food if food runs out
-            if not self.food_locations:
-                self.draw_foods(self.n_starting_foods)
+
 
     def update_dish(self):
         """Updates all the changing elements in the dish,
