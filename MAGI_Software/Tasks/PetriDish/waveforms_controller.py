@@ -3,37 +3,52 @@ import random
 
 from Waveforms.WF_SDK import device
 from Waveforms.WF_SDK import static as io
+from Waveforms.WF_SDK import pattern
 
+class WFC:
+    def __init__(
+        self,
+        input_pins = {"UP":0, "DOWN":1, "LEFT":2, "RIGHT":3},
+        output_pins = {"CONC":8, "ENERGY":9, "ACCEL_UP":10, "ACCEL_DOWN":11, "ACCEL_LEFT":12, "ACCEL_RIGHT":13, "KILL":0},
+        duty_cycle = 50, #%
+        max_frequency = 1000 #hz
+        ):
 
+        self.input_pins = input_pins
+        self.output_pins = output_pins
+        self.duty_cycle = duty_cycle
+        self.max_frequency = max_frequency
 
-# Inputs from PNN
-input_pins = {"UP":0, "DOWN":1, "LEFT":2, "RIGHT":3}
+        self.input_state = {"UP":0, "DOWN":0, "LEFT":0, "RIGHT":0}
+        self.output_state = {"CONC":0, "ENERGY":0, "ACCEL_UP":0, "ACCEL_DOWN":0, "ACCEL_LEFT":0, "ACCEL_RIGHT":0, "KILL":0}
 
-# Outputs to PNN
-output_pins = {"CONCENTRATION":8, "ENERGY":9, "ACCEL_UP":10, "ACCEL_DOWN":11, "ACCEL_LEFT":12, "ACCEL_RIGHT":13}
+        self.data = device.open()
 
-# Waveforms data
-data = 0
-
-def initialize():
-    data = device.open()
-
-    for pin in input_pins.values():
-        io.set_mode(data, pin, output=False)
+       # for pin in self.input_pins.values():
+        #    io.set_mode(self.data, pin, output=False)
+        
+        #for pin in self.output_pins.values():
+         #   io.set_mode(self.data, pin, output = True)  
     
-    for pin in output_pins.values():
-        io.set_mode(data, pin, output = True)
-    
-def get_inputs():
-    input_states = {"UP":0, "DOWN":0, "LEFT":0, "RIGHT":0}
-    for pin in input_pins.keys():
-        input_states[pin] = io.get_state(data, input_pins[pin])
-    return input_states
+    def get_inputs(self):
+        
+        for pin in self.input_pins.keys():
+            self.input_state[pin] = io.get_state(self.data, self.input_pins[pin])
 
-# output_states = "CONCENTRATION":%, "ENERGY":%, "ACCEL_UP":%, "ACCEL_DOWN":%, "ACCEL_LEFT":%, "ACCEL_RIGHT":% 
-def set_outputs(output_states, pulse_width):
-    # Generate output spikes
-    #for output in output_states:
-    #    output_buffer = []
-     #   output_value = output_states[output]
-    #    for i in range(output_value):
+
+    def set_outputs(self):
+        # Set output spike rates based on desired output states
+        for output_name in self.output_state:
+            output_value = self.output_state[output_name]
+            channel = self.output_pins[output_name]
+            if output_value > 1:
+                print("Error: Output value " + output_name + "is " + str(output_value) + " which is > 1")
+            elif output_value == 0:
+                output_value = output_value + 1
+            else:
+                pattern.enable(self.data, channel)
+                pattern.generate(self.data, channel,function=pattern.function.pulse, frequency=self.max_frequency*output_value, duty_cycle=self.duty_cycle)
+                
+    def update(self):
+        self.get_inputs()
+        self.set_outputs()
