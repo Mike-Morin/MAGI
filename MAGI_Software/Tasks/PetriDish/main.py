@@ -5,11 +5,14 @@ import dish
 import agent
 import time
 import turtle
+import waveforms_controller as wfc
+
+wfcA = wfc.WFC()
 
 dishA = dish.Dish()
-dishA.draw_foods(5)
+dishA.draw_foods(1)
 
-agent = agent.Agent(dishA)
+agent = agent.Agent(dishA, wfcA)
 
 def up():
     agent.up()
