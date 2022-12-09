@@ -24,7 +24,7 @@ class Dish:
             dish_location = np.array([0,0]),#Location on screen
             dish_viscosity = 10000,         #Subtracts acceleration from each agent/timestep
             dish_timestep = 0.01,           #Seconds--how often to update agents and foods
-            n_starting_foods = 1,           #Number of foods we start with
+            n_starting_foods = 10,           #Number of foods we start with
             dot_size = 50,                  #Size of the start and food dots
             food_locations = None           #Optional specification of food locations [(x,y)]
             ):

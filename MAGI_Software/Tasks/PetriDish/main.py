@@ -25,7 +25,7 @@ output_pins: pins.OutputPins = {"CONC":8,
 
 # Dishes
 dishA = dish.Dish()
-dishA.draw_foods(1)
+#dishA.draw_foods(1)
 
 # Waveforms controller object
 if wfc.WAVEFORMS_PRESENT:
