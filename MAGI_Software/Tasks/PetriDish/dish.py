@@ -39,7 +39,7 @@ class Dish:
 
         # Agent instaces get added here.
         self.agents = {}
-        
+
         # Pens for drawing environment objects
         # (Agent pen is over in the Agent class)
         self.food_pen = turtle.Turtle()
@@ -87,7 +87,9 @@ class Dish:
             self.statistics_pen.goto(self.dish_size, text_offset + 20*idx)
             self.statistics_pen.pendown()
             if agent.energy > 0:
-                self.statistics_pen.write("Energy: " + str(agent.energy), font=('Arial', 16, 'bold'))
+                self.statistics_pen.write(
+                    "Energy: " + str(agent.energy), font=('Arial', 16, 'bold')
+                    )
             else:
                 self.statistics_pen.write("Energy: 0", font=('Arial', 16, 'bold'))
                 agent.kill()
@@ -96,24 +98,30 @@ class Dish:
             #Update score
             self.statistics_pen.goto(self.dish_size, text_offset + 20 + 20*idx)
             self.statistics_pen.pendown()
-            self.statistics_pen.write("Score: " + str(agent.score), font=('Arial', 16, 'bold'))
+            self.statistics_pen.write(
+                "Score: " + str(agent.score), font=('Arial', 16, 'bold')
+                )
             self.statistics_pen.penup()
 
             #Update Generation
             self.statistics_pen.goto(self.dish_size, text_offset + 40 + 20*idx)
             self.statistics_pen.pendown()
-            self.statistics_pen.write("Generation: " + str(agent.generation), font=('Arial', 16, 'bold'))
+            self.statistics_pen.write(
+                "Generation: " + str(agent.generation), font=('Arial', 16, 'bold')
+                )
             self.statistics_pen.penup()
 
             #Update Concentration
             self.statistics_pen.goto(self.dish_size, text_offset + 60 + 20*idx)
             self.statistics_pen.pendown()
-            self.statistics_pen.write("Concentration: " + str(agent.concentration * 100) + "%", font=('Arial', 16, 'bold'))
+            self.statistics_pen.write(
+                "Concentration: " + str(agent.concentration * 100) + "%", font=('Arial', 16, 'bold')
+                )
             self.statistics_pen.penup()
 
             self.statistics_pen.hideturtle()
         turtle.tracer(True)
-    
+
     def draw_foods(self,n_foods=None, food_locations=None):
         """
         Draws the food in the dish.
@@ -121,7 +129,7 @@ class Dish:
         draw_foods(self,
                 n_foods=None,       # Creates n random foods
                 food_locations=None)# Creates the foods you specify [(x,y)]
-        
+
         You have to either specify an n_foods or food_locations or this won't do anything
         """
         self.food_pen.clear()
@@ -149,7 +157,9 @@ class Dish:
             # Either generated or user specified,
             for food_location in food_locations:
                 if abs(food_location[0]) > self.dish_size or abs(food_location[1]) > self.dish_size:
-                    print("Error: Skipping specified food location " + str(food_location) + " which is outside dish bounds.")
+                    print("Error: Skipping specified food location " +
+                        str(food_location) + " which is outside dish bounds."
+                        )
                     continue
                 self.food_pen.speed(0)
                 self.food_pen.penup()
@@ -207,10 +217,12 @@ class Dish:
             if not self.food_locations:
                 self.draw_foods(self.n_starting_foods)
                 return
-                
+
             for food_location in self.food_locations:
                 # Compute food collisions
-                if np.linalg.norm(food_location - agent.position) < self.dot_size*2/3: #todo remove magic num
+                if np.linalg.norm(food_location - agent.position) <\
+                    self.dot_size*2/3: #todo remove magic num
+
                     removearray(self.food_locations, food_location)
                     if agent.energy < 90:
                         agent.energy = agent.energy + 10
@@ -218,7 +230,7 @@ class Dish:
                         agent.energy = 100
                     agent.score = agent.score + 1
                     self.draw_foods(food_locations = self.food_locations)
-            
+
 
 
     def update_dish(self):
@@ -226,7 +238,3 @@ class Dish:
         agents and stats."""
         self.update_agents()
         self.__draw_statistics()
-        
-
-
-    

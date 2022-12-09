@@ -9,8 +9,19 @@ import waveforms_controller as wfc
 import pins
 
 # Pin assignments
-input_pins: pins.InputPins = {"UP":0, "DOWN":1, "LEFT":2, "RIGHT":3}
-output_pins: pins.OutputPins = {"CONC":8, "ENERGY":9, "ACCEL_UP":10, "ACCEL_DOWN":11, "ACCEL_LEFT":12, "ACCEL_RIGHT":13, "KILL":14}
+input_pins: pins.InputPins = {"UP":0,
+    "DOWN":1,
+    "LEFT":2,
+    "RIGHT":3
+    }
+output_pins: pins.OutputPins = {"CONC":8,
+    "ENERGY":9,
+    "ACCEL_UP":10,
+    "ACCEL_DOWN":11,
+    "ACCEL_LEFT":12,
+    "ACCEL_RIGHT":13,
+    "KILL":14
+    }
 
 # Waveforms controller object
 wfcA = wfc.WFC(input_pins, output_pins)
@@ -33,7 +44,7 @@ def left():
 
 def right():
     agent.right()
-    
+
 turtle.listen()
 turtle.onkey(up,'w')
 turtle.onkey(down,'s')
@@ -45,5 +56,5 @@ screen = turtle.Screen()
 screen.title("PetriDish")
 
 # Limited by the timestep in the particular dish
-while(True):
+while True:
     dishA.update_dish()

@@ -91,8 +91,8 @@ class Agent:
     def down(self):
         """Add down acceleration and pay for it with energy"""
         if abs(self.acceleration[1] - 10000) < self.max_acel:
-           self.acceleration[1] = self.acceleration[1]-10000
-           self.energy = self.energy - 1
+            self.acceleration[1] = self.acceleration[1]-10000
+            self.energy = self.energy - 1
 
     def left(self):
         """Add left acceleration and pay for it with energy"""
@@ -112,12 +112,15 @@ class Agent:
 
         # Generate a random starting location if one isn't specified
         if self.starting_location.size == 0:
-                # Polar to rect
-                starting_location_angle = random.uniform(0, 2 * math.pi)
-                starting_location_radius = random.randint(0, int(self.dish.dish_size - self.dot_size/2))
-                starting_location_x = int(starting_location_radius * math.cos(starting_location_angle))
-                starting_location_y = int(starting_location_radius * math.sin(starting_location_angle))
-                self.starting_location = np.array((starting_location_x, starting_location_y))
+            # Polar to rect
+            starting_location_angle = random.uniform(0, 2 * math.pi)
+            starting_location_radius = \
+                random.randint(0, int(self.dish.dish_size - self.dot_size/2))
+            starting_location_x = \
+                int(starting_location_radius * math.cos(starting_location_angle))
+            starting_location_y = \
+                int(starting_location_radius * math.sin(starting_location_angle))
+            self.starting_location = np.array((starting_location_x, starting_location_y))
 
         # Draw agent, keeping dish location in mind
         self.agent_pen.penup()
@@ -187,7 +190,7 @@ class Agent:
             self.left()
         if self.wfc.input_state["RIGHT"]:
             self.right()
-            
+
     def update_agent(self):
         """Updates agent alive/dead status, position, acceleration,
          concentration detected, and energy."""
@@ -202,37 +205,44 @@ class Agent:
             self.get_inputs()
 
             # Compute new displacements from acceleration
-            x_displacement = self.position[0] + (0.5* self.acceleration[0] * elapsed_time * elapsed_time)
-            y_displacement = self.position[1] + (0.5* self.acceleration[1] * elapsed_time * elapsed_time)
+            x_displacement = \
+                self.position[0] + (0.5* self.acceleration[0] * elapsed_time * elapsed_time)
+            y_displacement = \
+                self.position[1] + (0.5* self.acceleration[1] * elapsed_time * elapsed_time)
             new_position = np.add((x_displacement,y_displacement), self.dish.dish_location)
-            
+
             # Stay in dish. Compute velocity and decay acceleration due to viscosity
             if np.linalg.norm(new_position) < self.dish.dish_size:
                 self.dish.agents[self].agent_pen.speed(0)
                 self.dish.agents[self].agent_pen.goto(new_position)
-                self.velocity = np.divide(np.absolute(np.subtract(self.position, new_position)),elapsed_time)
+                self.velocity = \
+                    np.divide(np.absolute(np.subtract(self.position, new_position)),elapsed_time)
                 self.position = new_position
 
                 if self.acceleration[0] > 0:
-                    self.acceleration[0] = self.acceleration[0] - elapsed_time * self.dish.dish_viscosity
+                    self.acceleration[0] = \
+                        self.acceleration[0] - elapsed_time * self.dish.dish_viscosity
 
                 if self.acceleration[1] > 0:
-                    self.acceleration[1] = self.acceleration[1] - elapsed_time * self.dish.dish_viscosity
+                    self.acceleration[1] = \
+                        self.acceleration[1] - elapsed_time * self.dish.dish_viscosity
 
                 if self.acceleration[0] < 0:
-                    self.acceleration[0] = self.acceleration[0] + elapsed_time * self.dish.dish_viscosity
+                    self.acceleration[0] = \
+                        self.acceleration[0] + elapsed_time * self.dish.dish_viscosity
 
                 if self.acceleration[1] < 0:
-                    self.acceleration[1] = self.acceleration[1] + elapsed_time * self.dish.dish_viscosity
+                    self.acceleration[1] = \
+                        self.acceleration[1] + elapsed_time * self.dish.dish_viscosity
             else:
                 # Stop if we hit a wall
                 self.acceleration[0] = 0
                 self.acceleration[1] = 0
-            
-           
+
+
             # Compute food concentration
             self.concentration = self.dish.get_concentration(self.position)
-            
+
             # Compute energy decay (basic metabolic rate)
             if self.energy > 0:
                 self.energy = self.energy - elapsed_time*self.decay_rate
@@ -241,3 +251,4 @@ class Agent:
             self.report_state()
 
             self.last_time = time.time()
+            
