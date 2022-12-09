@@ -17,7 +17,7 @@ class Agent:
                 dot_size = 20,
                 generation = 0,
                 death_duration = 5, #s
-                max_acel = 100E6,
+                max_acel = 1E5,
                 starting_location = np.array([])):
 
         self.dish = dish
@@ -146,6 +146,7 @@ class Agent:
             self.create()
 
         if elapsed_time > self.timestep:
+            self.get_inputs()
             x_displacement = self.position[0] + (0.5* self.acceleration[0] * elapsed_time * elapsed_time)
             y_displacement = self.position[1] + (0.5* self.acceleration[1] * elapsed_time * elapsed_time)
             new_position = np.add((x_displacement,y_displacement), self.dish.dish_location)

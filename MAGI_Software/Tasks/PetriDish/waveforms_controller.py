@@ -24,17 +24,13 @@ class WFC:
 
         self.data = device.open()
 
-       # for pin in self.input_pins.values():
-        #    io.set_mode(self.data, pin, output=False)
-        
-        #for pin in self.output_pins.values():
-         #   io.set_mode(self.data, pin, output = True)  
-    
+        for pin in self.input_pins.values():
+            io.set_mode(self.data, pin, output=False)
+
     def get_inputs(self):
         
         for pin in self.input_pins.keys():
             self.input_state[pin] = io.get_state(self.data, self.input_pins[pin])
-
 
     def set_outputs(self):
         # Set output spike rates based on desired output states
@@ -44,7 +40,7 @@ class WFC:
             if output_value > 1:
                 print("Error: Output value " + output_name + "is " + str(output_value) + " which is > 1")
             elif output_value == 0:
-                output_value = output_value + 1
+                pattern.disable(self.data, channel)
             else:
                 pattern.enable(self.data, channel)
                 pattern.generate(self.data, channel,function=pattern.function.pulse, frequency=self.max_frequency*output_value, duty_cycle=self.duty_cycle)
