@@ -139,7 +139,7 @@ class Dish:
                 # We're basically converting from polar to rect coords
                 # Because petri dishes absolutely must be round
                 food_angle = random.uniform(0, 2 * math.pi)
-                food_radius = random.randint(0, self.dish_size - self.dot_size/2)
+                food_radius = random.randint(0, int(self.dish_size - self.dot_size/2))
                 food_x = int(food_radius * math.cos(food_angle))
                 food_y = int(food_radius * math.sin(food_angle))
                 food_locations.append(np.array((food_x,food_y)))

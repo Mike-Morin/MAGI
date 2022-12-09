@@ -114,7 +114,7 @@ class Agent:
         if self.starting_location.size == 0:
                 # Polar to rect
                 starting_location_angle = random.uniform(0, 2 * math.pi)
-                starting_location_radius = random.randint(0, self.dish.dish_size - self.dot_size / 2)
+                starting_location_radius = random.randint(0, int(self.dish.dish_size - self.dot_size/2))
                 starting_location_x = int(starting_location_radius * math.cos(starting_location_angle))
                 starting_location_y = int(starting_location_radius * math.sin(starting_location_angle))
                 self.starting_location = np.array((starting_location_x, starting_location_y))
@@ -239,5 +239,5 @@ class Agent:
 
             # Report agent state to the waveforms controller
             self.report_state()
-            
+
             self.last_time = time.time()
