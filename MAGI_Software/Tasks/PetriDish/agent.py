@@ -62,7 +62,7 @@ class Agent:
         # time so we can track elapsed for updates and death
         # duration.
         self.timestep = dish.dish_timestep
-        self.last_time = time.time()
+        self.last_update = time.time()
 
         # Current concentration experienced by the agent
         self.concentration = 0
@@ -70,37 +70,48 @@ class Agent:
         # Current concentration experienced by the agent
         self.viscosity = dish.dish_viscosity
 
-        # Draw the agent
-        self.agent_pen = turtle.Turtle()
-        self.agent_pen.shape("circle")
-        self.create()
-
         # Death tracking. Self.dead gets reported to
         # the waveforms controller to generate kill
         # signals.
         self.dead = 0
         self.time_of_death = 0
+        self.BLINK_RATE = 1
+        self.last_blink = 0
+
+        # Draw the agent
+        self.agent_pen = turtle.Turtle()
+        self.agent_pen.shape("circle")
+        self.create()
+
 
     def up(self):
         """Add up acceleration and pay for it with energy"""
+        if self.dead:
+            return
         if abs(self.acceleration[1] + 10000) < self.max_acel:
             self.acceleration[1] = self.acceleration[1]+10000
             self.energy = self.energy - 1
 
     def down(self):
         """Add down acceleration and pay for it with energy"""
+        if self.dead:
+            return
         if abs(self.acceleration[1] - 10000) < self.max_acel:
             self.acceleration[1] = self.acceleration[1]-10000
             self.energy = self.energy - 1
 
     def left(self):
         """Add left acceleration and pay for it with energy"""
+        if self.dead:
+            return
         if abs(self.acceleration[0] + 10000) < self.max_acel:
             self.acceleration[0] = self.acceleration[0]-10000
             self.energy = self.energy - 1
 
     def right(self):
         """Add right acceleration and pay for it with energy"""
+        if self.dead:
+            return
         if abs(self.acceleration[0] - 10000) < self.max_acel:
             self.acceleration[0] = self.acceleration[0]+10000
             self.energy = self.energy - 1
@@ -128,6 +139,7 @@ class Agent:
         self.agent_pen.goto(dish_mapped_location)
         self.agent_pen.pendown()
         self.agent_pen.dot(self.dot_size, "green")
+        self.agent_pen.showturtle()
 
         self.position = dish_mapped_location
 
@@ -192,15 +204,27 @@ class Agent:
             if self.wfc.input_state["RIGHT"]:
                 self.right()
 
+    def blink_agent(self):
+        elapsed_time = time.time() - self.last_blink
+        if elapsed_time >= self.BLINK_RATE/2:
+            self.agent_pen.hideturtle()
+        if elapsed_time >= self.BLINK_RATE:
+            self.agent_pen.showturtle()
+            self.last_blink = time.time()
+
     def update_agent(self):
         """Updates agent alive/dead status, position, acceleration,
          concentration detected, and energy."""
 
-        elapsed_time = time.time() - self.last_time
+        elapsed_time = time.time() - self.last_update
 
         # Perform death_duration before being reborn
         if self.dead and time.time() > (self.time_of_death + self.death_duration):
             self.create()
+        elif self.dead and time.time() < (self.time_of_death + self.death_duration):
+            self.blink_agent()
+            self.last_update = time.time()
+            return
 
         if elapsed_time > self.timestep:
             self.get_inputs()
@@ -251,5 +275,5 @@ class Agent:
             # Report agent state to the waveforms controller
             self.report_state()
 
-            self.last_time = time.time()
+            self.last_update = time.time()
             

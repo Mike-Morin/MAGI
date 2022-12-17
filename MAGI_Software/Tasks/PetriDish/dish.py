@@ -231,7 +231,7 @@ class Dish:
                         agent.energy = 100
                     agent.score = agent.score + 1
                     self.draw_foods(food_locations = self.food_locations)
-            agent.last_time = agent.last_time + (time.time() - refresh_time)
+            agent.last_update = agent.last_update + (time.time() - refresh_time)
             agent.update_agent()
 
 
