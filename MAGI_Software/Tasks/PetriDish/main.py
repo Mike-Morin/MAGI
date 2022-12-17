@@ -25,12 +25,16 @@ output_pins: pins.OutputPins = {"CONC":8,
 
 # Dishes
 dishA = dish.Dish()
-#dishA.draw_foods(1)
 
 # Waveforms controller object
 if wfc.WAVEFORMS_PRESENT:
-    wfcA = wfc.WFC(input_pins, output_pins)
-    agent = agent.Agent(dishA, wfcA)
+    try:
+        wfcA = wfc.WFC(input_pins, output_pins)
+        agent = agent.Agent(dishA, wfcA)
+    except wfc.device.error as e:
+        print(e)
+        print("Couldn't connect to Digilent device.")
+        agent = agent.Agent(dishA)
 else:
     agent = agent.Agent(dishA)
 

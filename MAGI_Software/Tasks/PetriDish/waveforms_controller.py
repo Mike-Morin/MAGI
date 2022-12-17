@@ -7,12 +7,13 @@ try:
     from Waveforms.WF_SDK import device
     from Waveforms.WF_SDK import static as io
     from Waveforms.WF_SDK import pattern
+
     WAVEFORMS_PRESENT = True
 
 except ImportError as e:
     WAVEFORMS_PRESENT = False
     print(e)
-    print("Warning: No waveforms SD detected.")
+    print("Warning: No waveforms SDK detected.")
     window = Tk()
     window.wm_withdraw()
     window.geometry(
@@ -75,6 +76,8 @@ class WFC:
 
         # Connect to the AD2. Failure currently unhandled.
         self.data = device.open()
+
+
 
         # Required for input pins (into AD2) only!
         for pin in self.input_pins.values():
