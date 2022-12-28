@@ -89,7 +89,7 @@ class Dish:
             self.statistics_pen.pendown()
             if agent.energy > 0:
                 self.statistics_pen.write(
-                    "Energy: " + str(agent.energy), font=('Arial', 16, 'bold')
+                    "Energy: " + str(round(agent.energy,2)), font=('Arial', 16, 'bold')
                     )
             else:
                 self.statistics_pen.write("Energy: 0", font=('Arial', 16, 'bold'))
@@ -116,7 +116,9 @@ class Dish:
             self.statistics_pen.goto(self.dish_size, text_offset + 60 + 20*idx)
             self.statistics_pen.pendown()
             self.statistics_pen.write(
-                "Concentration: " + str(agent.concentration * 100) + "%", font=('Arial', 16, 'bold')
+                "Concentration: " + \
+                str(round(agent.concentration * 100,2)) + \
+                "%", font=('Arial', 16, 'bold')
                 )
             self.statistics_pen.penup()
 
